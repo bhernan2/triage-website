@@ -44,6 +44,39 @@ navbar= html.Div([
         ])
     ])
 
+title = html.Div([
+    dbc.Container([
+        dbc.Card([
+            dbc.CardBody([
+                html.Div([
+                    html.H1("Texas",),
+                    html.H1("River",),
+                    html.H1("Institute for",),
+                    html.H1("Aquatic &",),
+                    html.H1("Groundwater",),
+                    html.H1("Ecology",),
+                ], className='title-style'),
+                html.Br(),
+                html.Br(),
+                html.P(
+                    "This jumbotron occupies the entire horizontal "
+                    "space of its parent.",
+                    className="lead",
+                ),
+                html.Hr(className="my-2"),
+                html.P(
+                    "You will need to embed a fluid container in "
+                    "the jumbotron.",
+                    className="lead",
+                ),
+            ]),
+        ],className='card-style'),
+    ],className='title-container', fluid=True,)
+], className='img-style')
+def _title():
+    heading= title
+    return heading
+
 def _content():
     heading = content
     return heading
