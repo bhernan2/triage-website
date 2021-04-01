@@ -5,6 +5,7 @@
     padding: 2rem 1rem;
     position:absolute;
     overflow-x: inherit;
+    overflow-y: inherit;
   }
 
 .dd-style {
@@ -18,11 +19,16 @@
     font-size: 100px;
 }
 .title-container {
-    margin-top: 12rem;
-    margin-left: 2rem;
-    margin-right: 2rem;
+    /* margin-top: 12rem; */
+    margin-left:auto;
+    margin-right: auto;
     padding: 2rem 2rem;
-    height: 900px
+    display: flex;
+    align-items: left;
+    justify-content: left; 
+    height: 800px;
+    margin-bottom: 10rem;
+    
 }
     
 .title-style {
@@ -36,12 +42,13 @@
   }
 
 .card-style{
-    margin-top: 6rem;
+    margin-top: 10rem;
     margin-left: 2rem;
     margin-right: 2rem;
     padding: 2rem 2rem;
-    width:40rem;
+    width:auto;
     opacity: 80%;
+    clip-path: plus(50% 0%, 0% 100%, 100% 100%);
 
 }
 .img-style {
