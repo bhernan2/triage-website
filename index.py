@@ -49,12 +49,12 @@ title = html.Div([
         dbc.Card([
             dbc.CardBody([
                 html.Div([
-                    html.H1("Texas",),
-                    html.H1("River",),
-                    html.H1("Institute for",),
-                    html.H1("Aquatic &",),
-                    html.H1("Groundwater",),
-                    html.H1("Ecology",),
+                    html.H3("Texas",),
+                    html.H3("River",),
+                    html.H3("Institute for",),
+                    html.H3("Aquatic &",),
+                    html.H3("Groundwater",),
+                    html.H3("Ecology",),
                 ], className='title-style'),
                 html.Br(),
                 html.Br(),

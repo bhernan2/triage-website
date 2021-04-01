@@ -18,30 +18,38 @@
     font-size: 100px;
 }
 .title-container {
-    margin-top: 15rem;
+    margin-top: 12rem;
     margin-left: 2rem;
     margin-right: 2rem;
     padding: 2rem 2rem;
-    height: 1000px;
+    height: 900px
 }
     
 .title-style {
     color:black;
   }
 
-  h1::first-letter {
+  h3::first-letter {
     font-size: 125%;
     color: black;
     
   }
 
 .card-style{
+    margin-top: 6rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    padding: 2rem 2rem;
     width:40rem;
+    opacity: 80%;
 
 }
 .img-style {
     background-image: url("/assets/background.jpg");
-    background-size: 100% auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 
