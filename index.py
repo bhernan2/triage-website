@@ -13,6 +13,8 @@ import numpy as np
 
 from datetime import datetime
 
+content = html.Div(html.Br(), id="page-content", className='content-style')
+
 items = [
     dbc.DropdownMenuItem("Item 1"),
     dbc.DropdownMenuItem("Item 2"),
@@ -31,7 +33,11 @@ navbar= html.Div([
                 dbc.DropdownMenu(items, label="Link", color="link", className="m-1"),
             ],style={"display": "flex", "flexWrap": "wrap"},)
         ])
-    ])
+    ], className='navbar-style',)
+
+def _content():
+    heading = content
+    return heading
 
 def ddowns():
     heading = items

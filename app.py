@@ -13,14 +13,15 @@ import numpy as np
 
 from datetime import datetime
 
-from index import nav, ddowns
+from index import _content, nav, ddowns
 
 _navbar = nav()
-
+content = _content()
 
 def Dashboard():
     layout= html.Div([
     dcc.Location(id="url"), 
+    content,
     _navbar, 
     ])
     return layout
