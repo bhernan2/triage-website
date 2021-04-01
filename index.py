@@ -15,25 +15,31 @@ from datetime import datetime
 
 content = html.Div(html.Br(), id="page-content", className='content-style')
 
-items = [
-    dbc.DropdownMenuItem("Item 1"),
-    dbc.DropdownMenuItem("Item 2"),
-    dbc.DropdownMenuItem("Item 3"),
+item1 = [
+    dbc.DropdownMenuItem("Misson"),
+    dbc.DropdownMenuItem("Goal"),
+    
 ]
+item2 = [
+    dbc.DropdownMenuItem("Misson"),
+    dbc.DropdownMenuItem("Goal"),
+    
+]
+
 
 navbar= html.Div([
         dbc.Nav([
             html.Div([
-                dbc.DropdownMenu(items, label="Primary", color="primary", className="m-1", bs_size="lg",),
-                dbc.DropdownMenu(items, label="Secondary", color="secondary", className="m-1", bs_size="lg",),
-                dbc.DropdownMenu(items, label="Success", color="success", className="m-1", bs_size="lg",),
-                dbc.DropdownMenu(items, label="Warning", color="warning", className="m-1", bs_size="lg",),
-                dbc.DropdownMenu(items, label="Danger", color="danger", className="m-1", bs_size="lg",),
-                dbc.DropdownMenu(items, label="Info", color="info", className="m-1", bs_size="lg",),
-                dbc.DropdownMenu(items, label="Link", color="link", className="m-1", bs_size="lg",),
-            ],className='dd-style', style=dict(display='flex'))
-        ], )
-    ], className='navbar-style',)
+                dbc.DropdownMenu(item1, label="ABOUT US", color="", className="dd-1", bs_size="lg"),
+                dbc.DropdownMenu(label="Secondary", color="", className="dd-2", bs_size="lg",),
+                dbc.DropdownMenu(label="Success", color="", className="dd-3", bs_size="lg",),
+                dbc.DropdownMenu(label="Warning", color="", className="dd-4", bs_size="lg",),
+                dbc.DropdownMenu(label="Danger", color="", className="dd-5", bs_size="lg",),
+                dbc.DropdownMenu(label="Info", color="", className="dd-6", bs_size="lg",),
+                dbc.DropdownMenu(label="Link", color="", className="dd-7", bs_size="lg",),
+            ], className='dd-style' )
+        ])
+    ])
 
 def _content():
     heading = content
