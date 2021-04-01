@@ -24,15 +24,15 @@ items = [
 navbar= html.Div([
         dbc.Nav([
             html.Div([
-                dbc.DropdownMenu(items, label="Primary", color="primary", className="m-1"),
-                dbc.DropdownMenu(items, label="Secondary", color="secondary", className="m-1"),
-                dbc.DropdownMenu(items, label="Success", color="success", className="m-1"),
-                dbc.DropdownMenu(items, label="Warning", color="warning", className="m-1"),
-                dbc.DropdownMenu(items, label="Danger", color="danger", className="m-1"),
-                dbc.DropdownMenu(items, label="Info", color="info", className="m-1"),
-                dbc.DropdownMenu(items, label="Link", color="link", className="m-1"),
-            ],style={"display": "flex", "flexWrap": "wrap"},)
-        ])
+                dbc.DropdownMenu(items, label="Primary", color="primary", className="m-1", bs_size="lg",),
+                dbc.DropdownMenu(items, label="Secondary", color="secondary", className="m-1", bs_size="lg",),
+                dbc.DropdownMenu(items, label="Success", color="success", className="m-1", bs_size="lg",),
+                dbc.DropdownMenu(items, label="Warning", color="warning", className="m-1", bs_size="lg",),
+                dbc.DropdownMenu(items, label="Danger", color="danger", className="m-1", bs_size="lg",),
+                dbc.DropdownMenu(items, label="Info", color="info", className="m-1", bs_size="lg",),
+                dbc.DropdownMenu(items, label="Link", color="link", className="m-1", bs_size="lg",),
+            ],className='dd-style', style=dict(display='flex'))
+        ], )
     ], className='navbar-style',)
 
 def _content():
