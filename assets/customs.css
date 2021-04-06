@@ -13,7 +13,7 @@
     position:absolute;
     width:100%;
     position:absolute;
-    height:max-content;
+    /* height:max-content; */
     background-color:#f8f9fa;
     color: black;
     font-size: 100px;
@@ -26,8 +26,9 @@
     display: flex;
     align-items: left;
     justify-content: left; 
-    height: 800px;
+    /* height:100%; */
     margin-bottom: 10rem;
+    height: 60rem;
     
 }
     
@@ -40,17 +41,23 @@
     color: black;
     
   }
-
+.card-title-style{
+    color: black;
+    justify-content: center;
+}
 .card-style{
     margin-top: 10rem;
     margin-left: 2rem;
     margin-right: 2rem;
     padding: 2rem 2rem;
     width:auto;
-    opacity: 80%;
-    clip-path: plus(50% 0%, 0% 100%, 100% 100%);
-
+    opacity: 70%;
 }
+
+.circle-image{
+    clip-path: circle(100px at center);
+    }
+  
 .img-style {
     background-image: url("/assets/background.jpg");
     background-position: center center;

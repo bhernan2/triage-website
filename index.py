@@ -47,15 +47,16 @@ navbar= html.Div([
 title = html.Div([
     dbc.Container([
         dbc.Card([
+            dbc.CardHeader(html.H2("Welcome to TRIAGE")),
             dbc.CardBody([
                 html.Div([
-                    html.H3("Texas",),
-                    html.H3("River",),
-                    html.H3("Institute for",),
-                    html.H3("Aquatic &",),
-                    html.H3("Groundwater",),
-                    html.H3("Ecology",),
-                ], className='title-style'),
+                    html.H3(["Texas River Institute for Aquatic & Groundwater Ecology"],className='title-style'),
+                    # html.H3("River",),
+                    # html.H3("Institute for",),
+                    # html.H3("Aquatic &",),
+                    # html.H3("Groundwater",),
+                    # html.H3("Ecology",),
+                ],),
                 html.Br(),
                 html.Br(),
                 html.P(
