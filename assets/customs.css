@@ -31,19 +31,27 @@
     height: 60rem;
     
 }
+.card-header {
+    color: black;
+    font-size: 30pt;
+    font-style: bold;
+}
     
 .title-style {
     color:black;
+    font-size: 25pt;
+    font-style: italic;
   }
 
-  h3::first-letter {
+  /* h3::first-letter {
     font-size: 125%;
     color: black;
     
-  }
+  } */
 .card-title-style{
     color: black;
     justify-content: center;
+    font-size: 18pt;
 }
 .card-style{
     margin-top: 10rem;
@@ -52,6 +60,7 @@
     padding: 2rem 2rem;
     width:auto;
     opacity: 70%;
+    width:max-content;
 }
 
 .circle-image{
