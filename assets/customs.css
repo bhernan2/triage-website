@@ -43,11 +43,12 @@
     font-style: italic;
   }
 
-  /* h3::first-letter {
+  h3::first-letter {
     font-size: 125%;
     color: black;
+    font-style:bold;
     
-  } */
+  }
 .card-title-style{
     color: black;
     justify-content: center;
@@ -58,7 +59,8 @@
     margin-left: 2rem;
     margin-right: 2rem;
     padding: 2rem 2rem;
-    width:auto;
+    height: 600px;
+    width: 400px;
     opacity: 70%;
     width:max-content;
 }
