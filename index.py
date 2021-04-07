@@ -30,16 +30,18 @@ item2 = [
 ]
 
 
+
+
 navbar= html.Div([
         dbc.Nav([
             html.Div([
                 dbc.DropdownMenu(item1, label="ABOUT US", color="", className="dd-1", bs_size="lg"),
                 dbc.DropdownMenu(item2, label="MEET THE TEAMS", color="", className="dd-2", bs_size="lg",),
-                dbc.DropdownMenu(label="Success", color="", className="dd-3", bs_size="lg",),
-                dbc.DropdownMenu(label="Warning", color="", className="dd-4", bs_size="lg",),
-                dbc.DropdownMenu(label="Danger", color="", className="dd-5", bs_size="lg",),
-                dbc.DropdownMenu(label="Info", color="", className="dd-6", bs_size="lg",),
-                dbc.DropdownMenu(label="Link", color="", className="dd-7", bs_size="lg",),
+                dbc.DropdownMenu(label="PROJECTS", color="", className="dd-3", bs_size="lg",),
+                dbc.DropdownMenu(label="PUBLICATIONS", color="", className="dd-4", bs_size="lg",),
+                dbc.DropdownMenu(label="EVENTS", color="", className="dd-5", bs_size="lg",),
+                # dbc.DropdownMenu(label="Info", color="", className="dd-6", bs_size="lg",),
+                # dbc.DropdownMenu(label="Link", color="", className="dd-7", bs_size="lg",),
             ], className='dd-style' )
         ])
     ])
