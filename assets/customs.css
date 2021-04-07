@@ -9,16 +9,20 @@
   }
 
 .dd-style {
-    display:flex;
-    position:absolute;
+    display:flex; 
+    position:fixed;
+    height:auto;
     width:100%;
     position:absolute;
     /* height:max-content; */
     background-color:#f8f9fa;
     color: black;
-    font-size: 100px;
+    font-size: 20pt;
+    justify-content: center;
+
+    
 }
-.title-container {
+.card-container {
     /* margin-top: 12rem; */
     margin-left:auto;
     margin-right: auto;
@@ -42,13 +46,27 @@
     font-size: 25pt;
     font-style: italic;
   }
+  
+  
+.logo-col {
+    font-size: 20pt;
+    color:black;
+    text-align:center; 
 
-  h3::first-letter {
+      
+}
+h3::first-letter {
     font-size: 125%;
     color: black;
     font-style:bold;
-    
   }
+
+.motto_header{
+    font-size: 25pt;
+    width:100%;
+    text-align: center;
+    color: black;
+}
 .card-title-style{
     color: black;
     justify-content: center;
@@ -61,13 +79,9 @@
     padding: 2rem 2rem;
     height: 600px;
     width: 400px;
-    opacity: 70%;
+    opacity: 85%;
     width:max-content;
 }
-
-.circle-image{
-    clip-path: circle(100px at center);
-    }
   
 .img-style {
     background-image: url("/assets/background.jpg");
