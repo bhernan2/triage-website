@@ -31,13 +31,13 @@ item2 = [
 
 nav_row = html.Div([
     dbc.Row([
-        dbc.DropdownMenu(item1, label="ABOUT US", color="", style={'font-size':'20pt'}),
-        dbc.DropdownMenu(item2, label="MEET THE TEAMS", color="",style={'font-size': '20pt'}),
-        dbc.DropdownMenu(label="PROJECTS", color="",style={'font-size':'20pt'}),
-        dbc.DropdownMenu(label="PUBLICATIONS", color="",style={'font-size':'20pt'}),
-        dbc.DropdownMenu(label="EVENTS", color="",style={'font-size':'20pt'}),
-    ],className='dd-row'),
-    ])
+        dbc.DropdownMenu(item1, label="ABOUT US", color="", bs_size='lg'),
+        dbc.DropdownMenu(item2, label="MEET THE TEAMS", color="", bs_size='lg'),
+        dbc.DropdownMenu(label="PROJECTS", color="", bs_size='lg'),
+        dbc.DropdownMenu(label="PUBLICATIONS", color="", bs_size='lg'),
+        dbc.DropdownMenu(label="EVENTS", color="", bs_size='lg'),
+    ]),
+    ],className='dd-row')
 
 # navbar= html.Div([
 #         dbc.Nav([
@@ -63,15 +63,15 @@ title = html.Div([
                 html.Div([
                     dbc.Row([
                         dbc.Col([
-                            html.H3('Texas'),
-                            html.H3("River",),
-                            html.H3("Institute for",),
-                            html.H3("Aquatic &",),
-                            html.H3("Groundwater",),
-                            html.H3("Ecology",),
+                            html.H4('Texas'),
+                            html.H4("River",),
+                            html.H4("Institute for",),
+                            html.H4("Aquatic &",),
+                            html.H4("Groundwater",),
+                            html.H4("Ecology",),
                             ],),
                         dbc.Col([
-                            dbc.Row([html.H4("SPACE SAVED FOR LOGO"),],className='logo-col'),
+                            dbc.Row([html.H5("SPACE SAVED FOR LOGO"),],className='logo-col'),
                             html.Div([
                             dbc.CardImg(src="/assets/orb.jpg", bottom=True)], className='orb-image'),
                            
@@ -80,10 +80,9 @@ title = html.Div([
                     # html.H3(["Texas River Institute for Aquatic & Groundwater Ecology"],className='title-style'),  
                     ],),
                     html.Br(),
-                    html.Br(),
                         dbc.Row([
                             html.Div([
-                                html.H4("One sentence describing what TRIAGE does"),
+                                html.H5("One sentence describing what TRIAGE does"),
                             ],className="motto-header")
                         ]),
             
