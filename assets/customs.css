@@ -8,19 +8,18 @@
     overflow-y: inherit;
   }
 
-.dd-style {
+.dd-container{
+    justify-content: center;
+}
+
+.dd-row { 
     display:flex; 
-    position:fixed;
-    height:auto;
+    position:absolute;
     width:100%;
     position:absolute;
-    /* height:max-content; */
+    height:max-content; 
     background-color:#f8f9fa;
-    color: black;
-    font-size: 20pt;
     justify-content: center;
-
-    
 }
 .card-container {
     /* margin-top: 12rem; */
@@ -29,7 +28,7 @@
     padding: 2rem 2rem;
     display: flex;
     align-items: left;
-    justify-content: left; 
+    justify-content: center; 
     /* height:100%; */
     margin-bottom: 10rem;
     height: 60rem;
@@ -51,18 +50,22 @@
 .logo-col {
     font-size: 20pt;
     color:black;
-    text-align:center; 
-
-      
+    text-align:center;       
 }
 h3::first-letter {
     font-size: 125%;
     color: black;
-    font-style:bold;
+    font-weight:bolder;
   }
 
+.orb-image {
+    align-items:inherit;
+    width:200px;
+    height: 100px;
+}
+
 .motto_header{
-    font-size: 25pt;
+    font-size: 70pt;
     width:100%;
     text-align: center;
     color: black;
@@ -82,7 +85,8 @@ h3::first-letter {
     opacity: 85%;
     width:max-content;
 }
-  
+
+
 .img-style {
     background-image: url("/assets/background.jpg");
     background-position: center center;

@@ -31,13 +31,13 @@ item2 = [
 
 nav_row = html.Div([
     dbc.Row([
-        dbc.DropdownMenu(item1, label="ABOUT US", color="", className="dd-1", bs_size="lg"),
-                dbc.DropdownMenu(item2, label="MEET THE TEAMS", color="", className="dd-2", bs_size="lg",),
-                dbc.DropdownMenu(label="PROJECTS", color="", className="dd-3", bs_size="lg",),
-                dbc.DropdownMenu(label="PUBLICATIONS", color="", className="dd-4", bs_size="lg",),
-                dbc.DropdownMenu(label="EVENTS", color="", className="dd-5", bs_size="lg",),
-    ],)
-],className='dd-style')
+        dbc.DropdownMenu(item1, label="ABOUT US", color="", style={'font-size':'20pt'}),
+        dbc.DropdownMenu(item2, label="MEET THE TEAMS", color="",style={'font-size': '20pt'}),
+        dbc.DropdownMenu(label="PROJECTS", color="",style={'font-size':'20pt'}),
+        dbc.DropdownMenu(label="PUBLICATIONS", color="",style={'font-size':'20pt'}),
+        dbc.DropdownMenu(label="EVENTS", color="",style={'font-size':'20pt'}),
+    ],className='dd-row'),
+    ])
 
 # navbar= html.Div([
 #         dbc.Nav([
@@ -71,7 +71,7 @@ title = html.Div([
                             html.H3("Ecology",),
                             ],),
                         dbc.Col([
-                            dbc.Row([html.H3("SPACE SAVED FOR LOGO"),],className='logo-col'),
+                            dbc.Row([html.H4("SPACE SAVED FOR LOGO"),],className='logo-col'),
                             html.Div([
                             dbc.CardImg(src="/assets/orb.jpg", bottom=True)], className='orb-image'),
                            
@@ -81,11 +81,12 @@ title = html.Div([
                     ],),
                     html.Br(),
                     html.Br(),
-                html.Div([
-                    dbc.Row([
-                         html.H4("One sentence describing what TRIAGE does")
-                         ],className="motto-header")
-                    ])  
+                        dbc.Row([
+                            html.Div([
+                                html.H4("One sentence describing what TRIAGE does"),
+                            ],className="motto-header")
+                        ]),
+            
             ]),
         ],className='card-style'),
     ], className='card-container', fluid=True,)
