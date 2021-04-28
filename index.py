@@ -54,11 +54,11 @@ nav_row = html.Div([
 title = html.Div([
     dbc.Container([
         dbc.Card([
-                dbc.CardHeader([
+                dbc.Row([
                 html.Div([
                     html.P(["Welcome to TRIAGE"],),
-                    ],)
-                ],className='card-header'),
+                    ],className='card-header')
+                ],),
                 dbc.CardBody([
                 html.Div([
                     dbc.Row([
