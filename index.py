@@ -64,7 +64,7 @@ title = html.Div([
                     dbc.Row([
                         dbc.Col([
                             html.H4('Texas'),
-                            html.H4("River",),
+                            html.H4("Research",), #5/4/21 USACE meeting Research vs River was mentioned
                             html.H4("Institute for",),
                             html.H4("Aquatic &",),
                             html.H4("Groundwater",),
