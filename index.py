@@ -15,26 +15,26 @@ from datetime import datetime
 
 content = html.Div(html.Br(), id="page-content", className='content-style')
 
-item1 = [
-    dbc.DropdownMenuItem("Misson"),
-    dbc.DropdownMenuItem("Goal"),
+# item1 = [
+#     dbc.DropdownMenuItem("Misson"),
+#     dbc.DropdownMenuItem("Goal"),
     
-]
-item2 = [
-    dbc.DropdownMenuItem("Lab 1"),
-    dbc.DropdownMenuItem("Lab 2"),
-    dbc.DropdownMenuItem("Lab 3"),
-    dbc.DropdownMenuItem("....."),
+# ]
+# item2 = [
+#     dbc.DropdownMenuItem("Lab 1"),
+#     dbc.DropdownMenuItem("Lab 2"),
+#     dbc.DropdownMenuItem("Lab 3"),
+#     dbc.DropdownMenuItem("....."),
 
     
-]
+#]
 
 nav_row = html.Div([
     dbc.Row([
-        dbc.DropdownMenu(item1, label="ABOUT US", color="", bs_size='lg'),
-        dbc.DropdownMenu(item2, label="MEET THE TEAMS", color="", bs_size='lg'),
+        dbc.DropdownMenu(label="ABOUT US", color="", bs_size='lg'),
+        dbc.DropdownMenu(label="MEET THE TEAMS", color="", bs_size='lg'),
         dbc.DropdownMenu(label="PROJECTS", color="", bs_size='lg'),
-        dbc.DropdownMenu(label="PUBLICATIONS", color="", bs_size='lg'),
+        # dbc.DropdownMenu(label="PUBLICATIONS", color="", bs_size='lg'),
         dbc.DropdownMenu(label="EVENTS", color="", bs_size='lg'),
     ]),
     ],className='dd-row')
