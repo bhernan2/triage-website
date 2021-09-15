@@ -82,7 +82,7 @@ title = html.Div([
                     html.Br(),
                         dbc.Row([
                             html.Div([
-                                html.H5("One sentence describing what TRIAGE does"),
+                                html.H5("We are a cooperative research group centered at Texas State University that examines basic and applied ecological questions in aquatic and groundwater systems."),
                             ],className="motto-header")
                         ]),
             
