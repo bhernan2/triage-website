@@ -60,13 +60,56 @@ h4::first-letter {
     color: black;
     font-weight:bolder;
   }
-
-.orb-image {
-    align-items:center;
-    width:150px;
-    height: 100px;
+.welcome-col {
+    margin:0 auto 1em;
+    padding: 0 1em;
+    max-width: 42rem;
+    line-height: 1.2;
+    transform: skewY(var(--angle));
+    font-size: 3em;
+    text-transform: uppercase;
+    font-weight: 900;
 }
 
+.welcome-col2 {
+    margin:0 auto 1em;
+    padding: 0 1em;
+    max-width: 42rem;
+    line-height: 1.2;
+    transform: skewY(var(--angle));
+    font-size: 3em;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+.logo {
+    align-items:center;
+    width:200px;
+    height: 200px;
+    /* margin:0 auto 1em; */
+    /* padding: 0 1em; */
+    max-width: 42rem;
+    line-height: 1.2;
+    transform: skewY(var(--angle));
+    font-size: 3em;
+    text-transform: uppercase;
+    font-weight: 900;
+    padding: 0.1em;
+
+}
+.welcome-col3 {
+    font-size: 1.25em;
+    transform: skewY(var(--angle));
+    margin: 0em auto 0em;
+    text-align: center;
+    /* background: #fff; */
+    color: black;
+    font-weight: 900;
+    padding: 0.5em;
+    text-transform: uppercase;
+    /* border-style: solid;
+    border-width: thin; */
+    
+}
 .motto_header{
     font-size: 70pt;
     width:100%;
@@ -74,7 +117,7 @@ h4::first-letter {
     color: black;
 }
 .card-title-style{
-    font-weight: bolder
+    font-weight: bolder;
     color: black;
     justify-content: center;
     font-size: 18pt;

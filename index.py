@@ -69,21 +69,24 @@ title = html.Div([
                             html.H4("Aquatic &",),
                             html.H4("Groundwater",),
                             html.H4("Ecology",),
-                            ],),
+                            ], className='welcome-col'),
                         dbc.Col([
-                            dbc.Row([html.H5("SPACE SAVED FOR LOGO"),],className='logo-col'),
+                            html.Br(),
+                            # dbc.Row([html.H5(""),],className='logo-col'),
                             html.Div([
-                            dbc.CardImg(src="/assets/orb.jpg", bottom=True)], className='orb-image'),
+                            dbc.CardImg(src="/assets/orb.jpg", bottom=True)], className='logo'),
                            
-                            ]),
+                            ],'welcome-col2'),
                         ])
                     # html.H3(["Texas River Institute for Aquatic & Groundwater Ecology"],className='title-style'),  
                     ],),
-                    html.Br(),
                         dbc.Row([
-                            html.Div([
+                            dbc.Col([
+                                html.Div([
                                 html.H5("We are a cooperative research group centered at Texas State University that examines basic and applied ecological questions in aquatic and groundwater systems."),
                             ],className="motto-header")
+                            ], className='welcome-col3')
+                          
                         ]),
             
             ]),
