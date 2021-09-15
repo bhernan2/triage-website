@@ -37,8 +37,10 @@
 }
 .card-header {
     color: black;
-    font-size: 20pt;
+    font-size: 30pt;
     font-style: bold;
+    width: 800px;
+    text-align: center;
 }
     
 .title-style {
@@ -83,8 +85,8 @@ h4::first-letter {
     margin-left: 2rem;
     margin-right: 2rem;
     padding: 2rem 2rem;
-    height: 450px;
-    width: 400px;
+    /* height: 450px;
+    width: 400px; */
     opacity: 85%;
     width:800px;
     height:600px
