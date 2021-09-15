@@ -93,7 +93,7 @@ title = html.Div([
         ],className='card-style'),
     ], className='card-container', fluid=True,),
     dbc.Row([
-        html.P(["Misson"])
+        html.P(["Mission"])
     ], className='mission-row')
 ], className='img-style')
 def _title():
