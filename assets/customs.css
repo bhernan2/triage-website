@@ -8,36 +8,23 @@
     overflow-y: inherit;
   }
 
+.dd-container{
+    justify-content: center;
+}
 
 .dd-row { 
     display:flex; 
     position:absolute;
     width:100%;
     height:max-content; 
-    font-size: 22pt;
     background-color:#f8f9fa;
     justify-content: center;
-    
-}
-.nav-buttons {
-    line-height: 50px;
-    height: 100%;
-    font-size: 15px;
-    display: inline-block;
-    position: relative;
-    z-index: 1;
-    text-decoration: none;
-    text-transform: uppercase;
-    text-align: center;
-    color: white;
-    cursor: pointer
-
 }
 .card-container {
     /* margin-top: 12rem; */
     margin-left:auto;
-    font-size: 22pt;
-    font-weight: bold;
+    font-size: 20pt;
+    /* font-weight: bold; */
     margin-right: auto;
     padding: 2rem 2rem;                             
     display: flex;
@@ -45,7 +32,7 @@
     justify-content: center; 
     /* height:100%; */
     margin-bottom: 10rem;
-    height: 60rem;
+    height: fit-content;
     background-image: url("/assets/background.jpg");
     background-position: center center;
     background-repeat: no-repeat;
@@ -53,10 +40,12 @@
     background-size: cover;
     
 }
+
+
 .card-header {
     color: black;
-    font-size: 30pt;
-    font-style: bold;
+    font-size: 45pt;
+    font-weight: bold;
     width: 800px;
     text-align: center;
 }
@@ -71,11 +60,10 @@
 .logo-col {
     font-size: 20pt;
     color:black;
-    text-align:center;
-           
+    text-align:center;       
 }
 h4::first-letter {
-    font-size: 125%;
+    font-size: 150%;
     color: black;
     font-weight:bolder;
   }
@@ -85,11 +73,9 @@ h4::first-letter {
     max-width: 42rem;
     line-height: 1.2;
     transform: skewY(var(--angle));
-    font-size: 1em;
+    font-size: 3em;
     text-transform: uppercase;
-    font-weight: 100;
-    color:black;
-
+    font-weight: 900;
 }
 
 .welcome-col2 {
@@ -99,13 +85,7 @@ h4::first-letter {
     line-height: 1.2;
     transform: skewY(var(--angle));
     font-size: 3em;
-    /* text-transform: uppercase; */
-    font-weight: 900;
-    color:black;
-    border-style: solid;
-    border-width: thin;
-    
-    
+    text-transform: uppercase;
 }
 .logo {
     align-items:center;
@@ -127,12 +107,11 @@ h4::first-letter {
     transform: skewY(var(--angle));
     margin: 0em auto 0em;
     text-align: center;
-    font-size: 30pt;
     /* background: #fff; */
     color: black;
     font-weight: 900;
-    padding: 0.5em;
-    /* text-transform: uppercase; */ */
+    /* padding: 0.5em; */
+    /* text-transform: uppercase; */
     /* border-style: solid;
     border-width: thin; */
     
@@ -171,4 +150,14 @@ h4::first-letter {
     background-size: cover;
 } */
 
+.mission-row {
+    width:100%;
+    margin: 0em auto 1em;
+    text-align: center;
+    font-size: 30pt;
+    color: black;
+    font-weight: 900;
+    padding: 0.5em;
+    justify-content: center
+}
 
