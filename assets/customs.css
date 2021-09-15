@@ -16,9 +16,16 @@
     display:flex; 
     position:absolute;
     width:100%;
-    height:max-content; 
-    background-color:#f8f9fa;
+    /* height:max-content;  */
+    background-color:white;
     justify-content: center;
+    color:black;
+    background-color: white;
+    font-size: 20pt;
+}
+.tab {
+    font-size: 18pt;
+    background-color: white;
 }
 .card-container {
     /* margin-top: 12rem; */
@@ -40,7 +47,6 @@
     background-size: cover;
     
 }
-
 
 .card-header {
     color: black;

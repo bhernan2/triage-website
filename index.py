@@ -30,14 +30,15 @@ content = html.Div(html.Br(), id="page-content", className='content-style')
 #]
 
 nav_row = html.Div([
-    dbc.Row([
-        dbc.DropdownMenu(label="ABOUT US", color="", bs_size='lg'),
-        dbc.DropdownMenu(label="MEET THE TEAMS", color="", bs_size='lg'),
-        dbc.DropdownMenu(label="PROJECTS", color="", bs_size='lg'),
+    dbc.Tabs([
+        dbc.Tab(label="HOME", id="tab-1",className="tab"),
+        dbc.Tab(label="ABOUT US", id="tab-2"),
+        dbc.Tab(label="MEET THE TEAMS",  id="tab-3"),
+        dbc.Tab(label="PROJECTS", id="tab-4"),
         # dbc.DropdownMenu(label="PUBLICATIONS", color="", bs_size='lg'),
-        dbc.DropdownMenu(label="EVENTS", color="", bs_size='lg'),
-    ]),
-    ],className='dd-row')
+        dbc.Tab(label="EVENTS", id="tab-5"),
+    ],className='dd-row'),
+    ],)
 
 # navbar= html.Div([
 #         dbc.Nav([
