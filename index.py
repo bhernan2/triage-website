@@ -31,12 +31,12 @@ content = html.Div(html.Br(), id="page-content", className='content-style')
 
 nav_row = html.Div([
     dbc.Tabs([
-        dbc.Tab(label="HOME", id="tab-1",className="tab"),
-        dbc.Tab(label="ABOUT US", id="tab-2"),
-        dbc.Tab(label="MEET THE TEAMS",  id="tab-3"),
-        dbc.Tab(label="PROJECTS", id="tab-4"),
+        dbc.Tab(label="HOME", id="tab-1",label_style={"color": "black", "font-size": 22, "margin-top": "2rem", "background":"white"}),
+        dbc.Tab(label="ABOUT US", id="tab-2", label_style={"color": "black", "font-size": 22, "margin-top": "2rem", "background":"white"}),
+        dbc.Tab(label="MEET THE TEAMS",  id="tab-3", label_style={"color": "black", "font-size": 22, "margin-top": "2rem", "background":"white"}),
+        dbc.Tab(label="PROJECTS", id="tab-4", label_style={"color": "black", "font-size": 22, "margin-top": "2rem", "background":"white"}),
         # dbc.DropdownMenu(label="PUBLICATIONS", color="", bs_size='lg'),
-        dbc.Tab(label="EVENTS", id="tab-5"),
+        dbc.Tab(label="EVENTS", id="tab-5", label_style={"color": "black", "font-size": 22,"margin-top": "2rem", "background":"white"}),
     ],className='dd-row'),
     ],)
 
@@ -95,8 +95,21 @@ title = html.Div([
     ], className='card-container', fluid=True,),
     dbc.Row([
         html.P(["Mission"])
-    ], className='mission-row')
+    ], className='mission-row'),
 ], className='img-style')
+
+# carousel=dbc.Row([
+#         html.P(["Meet the Teams"]),
+#         dbc.(
+#             items=[
+#                 {"key": "1", "src": "/assets/orb.jpg"},
+#                 {"key": "2", "src": "/assets/orb.jpg"},
+#                 {"key": "3", "src": "/assets/orb.jpg"},
+#             ],
+#     controls=True,
+#     indicators=True,
+#         ),
+#     ])
 def _title():
     heading= title
     return heading

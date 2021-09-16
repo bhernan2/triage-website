@@ -22,13 +22,14 @@
     color:black;
     background-color: white;
     font-size: 20pt;
+    /* padding: 2rem 2rem; */
 }
 .tab {
     font-size: 18pt;
     background-color: white;
 }
 .card-container {
-    /* margin-top: 12rem; */
+    margin-top: 12rem;
     margin-left:auto;
     font-size: 20pt;
     /* font-weight: bold; */
@@ -86,7 +87,6 @@ h4::first-letter {
 
 .welcome-col2 {
     margin:0 auto 1em;
-    padding: 0 1em;
     max-width: 42rem;
     line-height: 1.2;
     transform: skewY(var(--angle));
