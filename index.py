@@ -31,13 +31,13 @@ content = html.Div(html.Br(), id="page-content", className='content-style')
 
 nav_row = html.Div([
     dbc.Tabs([
-        dbc.Tab(label="HOME", id="tab-1", label_style={"color": "black", "font-size": 22, "margin-top": "2rem", "background":"white",}),
-        dbc.Tab(label="ABOUT US", id="tab-2", label_style={"color": "black", "font-size": 22, "margin-top": "2rem", "background":"white"}),
-        dbc.Tab(label="MEET THE TEAMS",  id="tab-3", label_style={"color": "black", "font-size": 22, "margin-top": "2rem", "background":"white"}),
-        dbc.Tab(label="PROJECTS", id="tab-4", label_style={"color": "black", "font-size": 22, "margin-top": "2rem", "background":"white"}),
+        dbc.Tab(label="HOME", id="tab-1", label_style={"color": "black", "font-size": 22, "margin-top": "2rem", "background":"white","cursor":"pointer"}),
+        dbc.Tab(label="ABOUT US", id="tab-2", label_style={"color": "black", "font-size": 22, "margin-top": "2rem", "background":"white","cursor":"pointer"}),
+        dbc.Tab(label="MEET THE TEAMS",  id="tab-3", label_style={"color": "black", "font-size": 22, "margin-top": "2rem", "background":"white","cursor":"pointer"}),
+        dbc.Tab(label="PROJECTS", id="tab-4", label_style={"color": "black", "font-size": 22, "margin-top": "2rem", "background":"white","cursor":"pointer"}),
         # dbc.DropdownMenu(label="PUBLICATIONS", color="", bs_size='lg'),
-        dbc.Tab(label="EVENTS", id="tab-5", label_style={"color": "black", "font-size": 22,"margin-top": "2rem", "background":"white"}),
-    ],className='dd-row'),
+        dbc.Tab(label="EVENTS", id="tab-5", label_style={"color": "black", "font-size": 22,"margin-top": "2rem", "background":"white","cursor":"pointer"}),
+    ],className='tab-row'),
     ],)
 
 # navbar= html.Div([
