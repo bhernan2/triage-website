@@ -30,72 +30,72 @@ content = html.Div(html.Br(), id="page-content", className='content-style')
     
 #]
 
-insect_row=html.Div([
-    dbc.Container([
-        dbc.Row([
-        dbc.Card([
-        dbc.CardBody([
-            dbc.CardImg(src="/assets/mayfly.gif")
-        ])
-        ], className="insect-1"),
-        dbc.Card([
-        dbc.CardBody([
-            dbc.CardImg(src="/assets/mayfly.gif")
-        ]),
-        ], className="insect-2"),
-        dbc.Card([
-        dbc.CardBody([
-            dbc.CardImg(src="/assets/mayfly.gif")
-        ]),
-        ], className="insect-3"),
-        dbc.Card([
-        dbc.CardBody([
-            dbc.CardImg(src="/assets/mayfly.gif")
-        ]),
-        ], className="insect-4"),
-        dbc.Card([
-        dbc.CardBody([
-            dbc.CardImg(src="/assets/mayfly.gif")
-        ]),
-        ], className="insect-5"),
-        dbc.Card([
-        dbc.CardBody([
-            dbc.CardImg(src="/assets/mayfly.gif")
-        ]),
-        ], className="insect-6"),
-        # dbc.Card([
-        # dbc.CardBody([
-        #     dbc.CardImg(src="/assets/mayfly.gif")
-        # ]),
-        # ], className="insect-7"),
-        # dbc.Card([
-        # dbc.CardBody([
-        #     dbc.CardImg(src="/assets/mayfly.gif")
-        # ]),
-        # ], className="insect-8"),
-        # dbc.Card([
-        # dbc.CardBody([
-        #     dbc.CardImg(src="/assets/mayfly.gif")
-        # ]),
-        # ], className="insect-9"),
-        # dbc.Card([
-        # dbc.CardBody([
-        #     dbc.CardImg(src="/assets/mayfly.gif")
-        # ]),
-        # ], className="insect-10"),
-        # dbc.Card([
-        # dbc.CardBody([
-        #     dbc.CardImg(src="/assets/mayfly.gif")
-        # ]),
-        # ], className="insect-11"),
-        # dbc.Card([
-        # dbc.CardBody([
-        #     dbc.CardImg(src="/assets/mayfly.gif")
-        # ]),
-        # ], className="insect-12"),
-    ],className="insects-row")
-    ],className="insects-containter"),   
-])
+# insect_row=html.Div([
+#     dbc.Container([
+#         dbc.Row([
+#         dbc.Card([
+#         dbc.CardBody([
+#             dbc.CardImg(src="/assets/mayfly.gif")
+#         ])
+#         ], className="insect-1"),
+#         dbc.Card([
+#         dbc.CardBody([
+#             dbc.CardImg(src="/assets/mayfly.gif")
+#         ]),
+#         ], className="insect-2"),
+#         dbc.Card([
+#         dbc.CardBody([
+#             dbc.CardImg(src="/assets/mayfly.gif")
+#         ]),
+#         ], className="insect-3"),
+#         dbc.Card([
+#         dbc.CardBody([
+#             dbc.CardImg(src="/assets/mayfly.gif")
+#         ]),
+#         ], className="insect-4"),
+#         dbc.Card([
+#         dbc.CardBody([
+#             dbc.CardImg(src="/assets/mayfly.gif")
+#         ]),
+#         ], className="insect-5"),
+#         dbc.Card([
+#         dbc.CardBody([
+#             dbc.CardImg(src="/assets/mayfly.gif")
+#         ]),
+#         ], className="insect-6"),
+#         # dbc.Card([
+#         # dbc.CardBody([
+#         #     dbc.CardImg(src="/assets/mayfly.gif")
+#         # ]),
+#         # ], className="insect-7"),
+#         # dbc.Card([
+#         # dbc.CardBody([
+#         #     dbc.CardImg(src="/assets/mayfly.gif")
+#         # ]),
+#         # ], className="insect-8"),
+#         # dbc.Card([
+#         # dbc.CardBody([
+#         #     dbc.CardImg(src="/assets/mayfly.gif")
+#         # ]),
+#         # ], className="insect-9"),
+#         # dbc.Card([
+#         # dbc.CardBody([
+#         #     dbc.CardImg(src="/assets/mayfly.gif")
+#         # ]),
+#         # ], className="insect-10"),
+#         # dbc.Card([
+#         # dbc.CardBody([
+#         #     dbc.CardImg(src="/assets/mayfly.gif")
+#         # ]),
+#         # ], className="insect-11"),
+#         # dbc.Card([
+#         # dbc.CardBody([
+#         #     dbc.CardImg(src="/assets/mayfly.gif")
+#         # ]),
+#         # ], className="insect-12"),
+#     ],className="insects-row")
+#     ],className="insects-containter"),   
+# ])
 nav_row = html.Div([
     dbc.Tabs([
         dbc.Tab(label="HOME", id="tab-1", label_style={"color": "black", "font-size": 22, "margin-top": "2rem", "background":"white","cursor":"pointer"}),
@@ -150,9 +150,7 @@ title = html.Div([
                     ],),
                         dbc.Row([
                             dbc.Col([
-                                html.Div([
-                                html.H5("We are a cooperative research group centered at Texas State University that examines basic and applied ecological questions in aquatic and groundwater systems."),
-                            ],className="motto-header")
+                                html.P("We are a cooperative research group centered at Texas State University that examines basic and applied ecological questions in aquatic and groundwater systems.",),
                             ], className='welcome-col3')
                           
                         ]),
@@ -188,13 +186,13 @@ def _content():
 def ddowns():
     heading = items
     return heading 
-def _insect_row():
-    heading = insect_row
-    return heading 
+# def _insect_row():
+#     heading = insect_row
+#     return heading 
 
-def nav():
-    heading = navbar
-    return heading
+# def nav():
+#     heading = nav_row
+#     return heading
 def n_row():
     heading=nav_row
     return heading 
