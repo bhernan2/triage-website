@@ -1,3 +1,4 @@
+from typing import Container
 import dash
 import dash_bootstrap_components as dbc
 import dash_core_components as dcc
@@ -29,6 +30,72 @@ content = html.Div(html.Br(), id="page-content", className='content-style')
     
 #]
 
+insect_row=html.Div([
+    dbc.Container([
+        dbc.Row([
+        dbc.Card([
+        dbc.CardBody([
+            dbc.CardImg(src="/assets/mayfly.gif")
+        ])
+        ], className="insect-1"),
+        dbc.Card([
+        dbc.CardBody([
+            dbc.CardImg(src="/assets/mayfly.gif")
+        ]),
+        ], className="insect-2"),
+        dbc.Card([
+        dbc.CardBody([
+            dbc.CardImg(src="/assets/mayfly.gif")
+        ]),
+        ], className="insect-3"),
+        dbc.Card([
+        dbc.CardBody([
+            dbc.CardImg(src="/assets/mayfly.gif")
+        ]),
+        ], className="insect-4"),
+        dbc.Card([
+        dbc.CardBody([
+            dbc.CardImg(src="/assets/mayfly.gif")
+        ]),
+        ], className="insect-5"),
+        dbc.Card([
+        dbc.CardBody([
+            dbc.CardImg(src="/assets/mayfly.gif")
+        ]),
+        ], className="insect-6"),
+        # dbc.Card([
+        # dbc.CardBody([
+        #     dbc.CardImg(src="/assets/mayfly.gif")
+        # ]),
+        # ], className="insect-7"),
+        # dbc.Card([
+        # dbc.CardBody([
+        #     dbc.CardImg(src="/assets/mayfly.gif")
+        # ]),
+        # ], className="insect-8"),
+        # dbc.Card([
+        # dbc.CardBody([
+        #     dbc.CardImg(src="/assets/mayfly.gif")
+        # ]),
+        # ], className="insect-9"),
+        # dbc.Card([
+        # dbc.CardBody([
+        #     dbc.CardImg(src="/assets/mayfly.gif")
+        # ]),
+        # ], className="insect-10"),
+        # dbc.Card([
+        # dbc.CardBody([
+        #     dbc.CardImg(src="/assets/mayfly.gif")
+        # ]),
+        # ], className="insect-11"),
+        # dbc.Card([
+        # dbc.CardBody([
+        #     dbc.CardImg(src="/assets/mayfly.gif")
+        # ]),
+        # ], className="insect-12"),
+    ],className="insects-row")
+    ],className="insects-containter"),   
+])
 nav_row = html.Div([
     dbc.Tabs([
         dbc.Tab(label="HOME", id="tab-1", label_style={"color": "black", "font-size": 22, "margin-top": "2rem", "background":"white","cursor":"pointer"}),
@@ -120,6 +187,9 @@ def _content():
 
 def ddowns():
     heading = items
+    return heading 
+def _insect_row():
+    heading = insect_row
     return heading 
 
 def nav():

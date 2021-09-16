@@ -13,15 +13,17 @@ import numpy as np
 
 from datetime import datetime
 
-from index import _content, nav, ddowns, _title, n_row
+from index import _content, nav, ddowns, _title, n_row, _insect_row
 
 # _navbar = nav()
+insects=_insect_row()
 nav_row=n_row()
 content = _content()
 title = _title()
 def Dashboard():
     layout= html.Div([
     dcc.Location(id="url"), 
+    insects,
     content,
     nav_row,
     title 
