@@ -29,7 +29,8 @@
     background-color: white;
 }
 .card-container {
-    margin-top: 8rem;
+    margin-top: 10rem;
+    margin-top: 10rem;
     margin-left:auto;
     font-size: 20pt;
     /* font-weight: bold; */
@@ -70,7 +71,7 @@
     text-align:center;       
 }
 h4::first-letter {
-    font-size: 150%;
+    font-size: 200%;
     color: black;
     font-weight:bolder;
   }
@@ -137,14 +138,15 @@ h4::first-letter {
 }
 .card-style{
     margin-top: 10rem;
+    margin-bottom: 10rem;
     margin-left: 2rem;
     margin-right: 2rem;
     padding: 2rem 2rem;
     /* height: 450px;
     width: 400px; */
-    opacity: 85%;
+    opacity: 70%;
     width:800px;
-    height:600px
+    height:700px
 }
 
 
