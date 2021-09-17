@@ -8,16 +8,10 @@
     overflow-y: inherit;
   } */
   .card-container {
-    /* margin-top: 10rem; */
     margin-left:auto;
-    font-size: 22pt;
-    /* font-weight: bold; */
     margin-right: auto;
-    /* padding: 2rem 2rem;                              */
     display: flex;
-    /* align-items: left; */
     justify-content: center; 
-    /* height:100%; */
     margin-bottom: 10rem;
     height: fit-content;
     background-image: url("/assets/background.jpg");
@@ -27,19 +21,43 @@
     background-size: cover;
     
 }
-.tab-row { 
-    display:flex; 
+/* .mission-container {
+    margin-top: 10rem; 
+    margin-left:auto; 
+    font-size: 22pt;
+    font-weight: bold;
+    margin-right: auto;
+    padding: 2rem 2rem;                             
+    display: flex;
+    align-items: left; 
+    justify-content: center; 
+    height:100%;
+    margin-bottom: 10rem;
+} */
+
+.button-container{
+    display: flex;
+    margin-left:auto;
+    margin-right:auto;
+    
+    
+}
+.buttons {
     position:absolute;
-    width:100%;
-    height:max-content; 
+    margin-top: 7.8rem;
+    justify-content: center;
+}
+.tab-row { 
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom:5rem;
     background-color:white;
     justify-content: center;
-    color:black;
+    align-items: center;
+    /* color:black;
     background-color: white;
-    font-size: 20pt;
+    font-size: 25pt; */
     
-
-    /* padding: 2rem 2rem; */
 }
 .tab {
     font-size: 18pt;
@@ -164,16 +182,19 @@
     background-attachment: fixed;
     background-size: cover;
 } */
-
+.mission-container {
+    display: flex;
+    margin-left:auto;
+    margin-right:auto;
+}
 .mission-row {
-    width:100%;
-    margin: 0em auto 1em;
-    text-align: center;
-    font-size: 30pt;
+    
+    height: fit-content;
+    font-size: 45pt;
+    font-weight: bold;
     color: black;
-    font-weight: 900;
-    padding: 0.5em;
-    justify-content: center
+    text-align: center;
+    width: 100%;
 }
 
 .mission-col {
@@ -182,7 +203,8 @@
     font-weight: bold;
     color: black;
     text-align: center;
-    width: 1300;
+    width: 100%;
+    
 }
 .mission-content{
     height: fit-content;
@@ -211,3 +233,68 @@
     width: 100%;
 
 }
+
+#button {
+    display: inline-block;
+    background-color: #FF9800;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 4px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    transition: background-color .3s, 
+      opacity .5s, visibility .5s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+  }
+  #button::after {
+    content: "\f077";
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 2em;
+    line-height: 50px;
+    color: #fff;
+  }
+  #button:hover {
+    cursor: pointer;
+    background-color: #333;
+  }
+  #button:active {
+    background-color: #555;
+  }
+  #button.show {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  /* Styles for the content section */
+  
+  .content {
+    width: 77%;
+    margin: 50px auto;
+    font-family: 'Merriweather', serif;
+    font-size: 17px;
+    color: #6c767a;
+    line-height: 1.9;
+  }
+  @media (min-width: 500px) {
+    .content {
+      width: 43%;
+    }
+    #button {
+      margin: 30px;
+    }
+  }
+  .content h1 {
+    margin-bottom: -10px;
+    color: #03a9f4;
+    line-height: 1.5;
+  }
+  .content h3 {
+    font-style: italic;
+    color: #96a2a7;
+  }

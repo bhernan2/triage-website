@@ -16,19 +16,20 @@ from datetime import datetime
 
 content = html.Div(html.Br(), id="page-content", className='content-style')
 
-nav_row = html.Div([
-    dbc.Tabs([
-        dbc.Tab(label="HOME", id="tab-1", label_style={"color": "black", "font-size": 22, "margin-top": "2rem", "background":"whitesmoke","cursor":"pointer"}),
-        dbc.Tab(label="ABOUT US", id="tab-2", label_style={"color": "black", "font-size": 22, "margin-top": "2rem", "background":"whitesmoke","cursor":"pointer"}),
-        dbc.Tab(label="MEET THE TEAMS",  id="tab-3", label_style={"color": "black", "font-size": 22, "margin-top": "2rem", "background":"whitesmoke","cursor":"pointer"}),
-        dbc.Tab(label="PROJECTS", id="tab-4", label_style={"color": "black", "font-size": 22, "margin-top": "2rem", "background":"whitesmoke","cursor":"pointer"}),
-        # dbc.DropdownMenu(label="PUBLICATIONS", color="", bs_size='lg'),
-        dbc.Tab(label="EVENTS", id="tab-5", label_style={"color": "black", "font-size": 22,"margin-top": "2rem", "background":"whitesmoke","cursor":"pointer"}),
-    ],className='tab-row', id="card-tabs", card=False, active_tab="tab-1"),
-    ],)
-
-title = html.Div([
+home = html.Div([
     dbc.Container([
+        dbc.Row([
+        dbc.ButtonGroup([
+            dbc.Button("HOME", id="tab-1", style={"color": "black", "border-style":"none", "margin":"10px", "font-size": 20, "background":"white","cursor":"pointer"}, n_clicks=0),
+            dbc.Button("ABOUT", id="tab-2", style={"color": "black", "border-style":"none", "margin":"10px","font-size": 20, "background":"white","cursor":"pointer"}),
+            dbc.Button("TEAMS",  id="tab-3", style={"color": "black", "border-style":"none", "margin":"10px","font-size": 20, "background":"white","cursor":"pointer"}),
+            dbc.Button("PROJECTS", id="tab-4", style={"color": "black", "border-style":"none", "margin":"10px","font-size": 20, "background":"white","cursor":"pointer"}),
+            dbc.Button("PUBLICATIONS", id="tab-5", style={"color": "black", "border-style":"none", "margin":"10px", "font-size": 20, "background":"white","cursor":"pointer"}),
+            dbc.Button("EVENTS", id="tab-6", style={"color": "black", "border-style":"none", "margin":"10px", "font-size": 20, "background":"white","cursor":"pointer"}),
+        ],className="buttons", id="buttons"),
+    ],className='tab-row'),
+    ], className="button-container"),
+   dbc.Container([
         dbc.Card([
                 dbc.Row([
                 html.Div([
@@ -49,19 +50,12 @@ title = html.Div([
                             dbc.Row([html.P('A',style={"color": "black", "font-size": 50, "font-weight":"bolder","margin-top": "0rem"}),html.P('quatic &', style={"color": "black", "font-size": 30, "font-weight":"normal","margin-top": "1.1rem"} ),]),
                             dbc.Row([html.P('G',style={"color": "black", "font-size": 50, "font-weight":"bolder","margin-top": "0rem"}),html.P('roundwater', style={"color": "black", "font-size": 30, "font-weight":"normal","margin-top": "1rem"} ),]),
                             dbc.Row([html.P('E',style={"color": "black", "font-size": 50, "font-weight":"bolder","margin-top": "0rem"}),html.P('cology', style={"color": "black", "font-size": 30, "font-weight":"normal","margin-top": "1.2rem"} ),]),
-                            # html.P("Research",style={"color": "black", "font-size": 30,}), #5/4/21 USACE meeting Research vs River was mentioned
-                            # html.P("Institute for",style={"color": "black", "font-size": 30,}),
-                            # html.P("Aquatic &",style={"color": "black", "font-size": 30,}),
-                            # html.P("Groundwater",style={"color": "black", "font-size": 30,}),
-                            # html.P("Ecology",style={"color": "black", "font-size": 30, "margin-bottom": "2rem",}),
                             ], className='welcome-col'),
                         dbc.Col([
-                            # dbc.Row([html.H5(""),],className='logo-col'),
                             dbc.Row([
                                     dbc.CardImg(src="/assets/mayfly.gif")], className='logo'),
                             ],className='welcome-col4'),
                         ], className="welcome-row")
-                    # html.H3(["Texas River Institute for Aquatic & Groundwater Ecology"],className='title-style'),  
                     ],),
                         dbc.Row([
                             dbc.Col([
@@ -73,44 +67,42 @@ title = html.Div([
             ]),
         ],className='card-style'),
     ], className='card-container', fluid=True,),
-], className='img-style')
-
+], id="home")
 mission= html.Div([
     dbc.Container([
-        dbc.Row([
-            dbc.Col([ html.P(["Mission"], className="mission-title")
-            ],),
-        ], className="mission-col"),
+       dbc.Row([ 
+           dbc.Col([html.P(["Mission"]),
+           ]),
+        ], className="mission-row"),
         dbc.Row([
             dbc.Col([html.P("Space for a mission statement. What words come to mind when you think of TRIAGE?")
         ],)  
         ], className="mission-content")    
-    ])
-])
+    ], className="mission-contaioner")
+], id="mission")
 
 teams = html.Div([
     dbc.Container([
         dbc.Row([
-            dbc.Col([ html.P(["Meet the Teams"], className="mission-title")
+            dbc.Col([ html.P(["Meet the Teams"])
             ],),
         ], className="teams-col"),
+        html.Br(),
         dbc.Row([
-            dbc.Col([html.P("Space for a carousel component. This component creates a slideshow that cycles through a series of content. The content can highlight collaborators' labs and could include photos and links to personal websites...or whatever...")
+            dbc.Col([html.P("Space for a carousel component. This component creates a slideshow that cycles through a series of content. The content can highlight collaborators' labs and could include photos and links to lab websites...or whatever...")
         ],)  
         ], className="teams-content")    
     ])
-])
+], id="teams")
 
 
 
-def _title():
-    heading= title
-    return heading
+
 def _content():
     heading = content
     return heading
-def n_row():
-    heading=nav_row
+def _home():
+    heading=home
     return heading 
 def _mission():
     heading=mission
