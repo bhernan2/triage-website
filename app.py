@@ -13,26 +13,31 @@ import numpy as np
 
 from datetime import datetime
 
-from index import _content, ddowns, _title, n_row 
+from index import _content, ddowns, _title, n_row, _mission 
 
 # _navbar = nav()
 # insects=_insect_row()
 nav_row=n_row()
 content = _content()
 title = _title()
+mission_row = _mission()
+
 def Dashboard():
     layout= html.Div([
     dcc.Location(id="url"), 
     # insects,
     content,
     nav_row,
-    title 
+    title,
+    mission_row 
     ])
     return layout
 
 app = dash.Dash(__name__, suppress_callback_exceptions=True, external_stylesheets=[dbc.themes.SANDSTONE])
 server = app.server
 app.layout = Dashboard()
+
+
 
 if __name__ == "__main__":
     app.run_server(debug=True)

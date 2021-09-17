@@ -166,7 +166,7 @@ h4::first-letter {
 
 }
 .welcome-col3 {
-    font-size: 20pt;
+    font-size: 25pt;
     /* margin: 0em auto 0em; */
     text-align: justify;
     padding-top: 1em;
@@ -203,9 +203,10 @@ h4::first-letter {
     padding: 2rem 2rem;
     /* height: 450px;
     width: 400px; */
-    opacity: 70%;
+    opacity: 75%;
     width:800px;
-    height:800px
+    height:800px;
+    background-color: white;
 }
 
 
@@ -227,9 +228,21 @@ h4::first-letter {
     padding: 0.5em;
     justify-content: center
 }
-@media screen and (max-width: 600px) {
-    .card {
-       width: 100%;
-    }
- }
 
+.mission-col {
+    height: fit-content;
+    width: 100%;
+    font-size: 45pt;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+}
+.mission-content{
+    height: fit-content;
+    width: 100%;
+    font-size: 30pt;
+    color: black;
+    font-weight: normal;
+    text-align: justify;
+
+}
