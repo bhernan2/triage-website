@@ -131,6 +131,7 @@ h4::first-letter {
   }
 .welcome-col {
     /* margin:0 auto 1em; */
+    font-size: 20pt;
     padding: 0 1em;
     max-width: 42rem;
     line-height: 1.2;
@@ -162,7 +163,7 @@ h4::first-letter {
     text-transform: uppercase;
     font-weight: 900;
     padding: 0.1em;
-    font-size: 22pt;
+    font-size: 10pt;
 
 }
 .welcome-col3 {
@@ -205,7 +206,7 @@ h4::first-letter {
     width: 400px; */
     opacity: 75%;
     width:800px;
-    height:800px;
+    height:900px;
     background-color: white;
 }
 
