@@ -131,12 +131,12 @@ title = html.Div([
                 html.Div([
                     dbc.Row([
                         dbc.Col([
-                            dbc.Row([html.P('T',style={"color": "black", "font-size": 40, "font-weight":"bolder", "margin-top": "0rem"}),html.P('exas', style={"color": "black", "font-size": 25, "font-weight":"normal", "margin-top": "1rem",} ),]),
-                            dbc.Row([html.P('R',style={"color": "black", "font-size": 40, "font-weight":"bolder","margin-top": "0rem"}),html.P('esearch', style={"color": "black", "font-size": 25, "font-weight":"normal","margin-top": "1rem"} ),]),
-                            dbc.Row([html.P('I',style={"color": "black", "font-size": 40, "font-weight":"bolder","margin-top": "0rem"}),html.P('nstitute for', style={"color": "black", "font-size": 25, "font-weight":"normal","margin-top": "1rem"} ),]),
-                            dbc.Row([html.P('A',style={"color": "black", "font-size": 40, "font-weight":"bolder","margin-top": "0rem"}),html.P('quatic &', style={"color": "black", "font-size": 25, "font-weight":"normal","margin-top": "1rem"} ),]),
-                            dbc.Row([html.P('G',style={"color": "black", "font-size": 40, "font-weight":"bolder","margin-top": "0rem"}),html.P('roundwater', style={"color": "black", "font-size": 25, "font-weight":"normal","margin-top": "1rem"} ),]),
-                            dbc.Row([html.P('E',style={"color": "black", "font-size": 40, "font-weight":"bolder","margin-top": "0rem"}),html.P('cology', style={"color": "black", "font-size": 25, "font-weight":"normal","margin-top": "1rem"} ),]),
+                            dbc.Row([html.P('T',style={"color": "black", "font-size": 50, "font-weight":"bolder", "margin-top": "0rem"}),html.P('exas', style={"color": "black", "font-size": 30, "font-weight":"normal", "margin-top": "1rem",} ),]),
+                            dbc.Row([html.P('R',style={"color": "black", "font-size": 50, "font-weight":"bolder","margin-top": "0rem"}),html.P('esearch', style={"color": "black", "font-size": 30, "font-weight":"normal","margin-top": "1rem"} ),]),
+                            dbc.Row([html.P('I',style={"color": "black", "font-size": 50, "font-weight":"bolder","margin-top": "0rem"}),html.P('nstitute for', style={"color": "black", "font-size": 30, "font-weight":"normal","margin-top": "1.1rem"} ),]),
+                            dbc.Row([html.P('A',style={"color": "black", "font-size": 50, "font-weight":"bolder","margin-top": "0rem"}),html.P('quatic &', style={"color": "black", "font-size": 30, "font-weight":"normal","margin-top": "1rem"} ),]),
+                            dbc.Row([html.P('G',style={"color": "black", "font-size": 50, "font-weight":"bolder","margin-top": "0rem"}),html.P('roundwater', style={"color": "black", "font-size": 30, "font-weight":"normal","margin-top": "1rem"} ),]),
+                            dbc.Row([html.P('E',style={"color": "black", "font-size": 50, "font-weight":"bolder","margin-top": "0rem"}),html.P('cology', style={"color": "black", "font-size": 30, "font-weight":"normal","margin-top": "1.2rem"} ),]),
                             # html.P("Research",style={"color": "black", "font-size": 30,}), #5/4/21 USACE meeting Research vs River was mentioned
                             # html.P("Institute for",style={"color": "black", "font-size": 30,}),
                             # html.P("Aquatic &",style={"color": "black", "font-size": 30,}),
