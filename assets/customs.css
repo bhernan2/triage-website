@@ -1,43 +1,22 @@
-.content-style {
-    margin-top: 40rem;
+/* .content-style {
+    margin-top: 50rem;
     margin-left: 2rem;
     margin-right: 2rem;
     padding: 2rem 1rem;
     position:absolute;
     overflow-x: inherit;
     overflow-y: inherit;
-  }
-
-.dd-container{
-    justify-content: center;
-}
-
-.tab-row { 
-    display:flex; 
-    position:absolute;
-    width:100%;
-    height:max-content; 
-    background-color:white;
-    justify-content: center;
-    color:black;
-    background-color: white;
-    font-size: 20pt;
-
-    /* padding: 2rem 2rem; */
-}
-.tab {
-    font-size: 18pt;
-    background-color: white;
-}
-.card-container {
+  } */
+  .card-container {
     /* margin-top: 10rem; */
+    margin-top: 10rem;
     margin-left:auto;
     font-size: 22pt;
     /* font-weight: bold; */
     margin-right: auto;
-    padding: 2rem 2rem;                             
+    /* padding: 2rem 2rem;                              */
     display: flex;
-    align-items: left;
+    /* align-items: left; */
     justify-content: center; 
     /* height:100%; */
     margin-bottom: 10rem;
@@ -49,58 +28,26 @@
     background-size: cover;
     
 }
-.insect-1 {
-    margin-top: 1rem;
-    width:100px;
-    height:150px;
-    border-style: none;
-
-}
-.insect-2{
-    margin-top: 1rem;
-    width:100px;
-    height:150px;
-    border-style:none;
-    }
-.insect-3{
-    margin-top: 1rem;
-    width:100px;
-    height:150px;
-    border-style: none;
-    }
-.insect-4{
-    margin-top: 1rem;
-    width:100px;
-    height:150px;
-    border-style: none;
-    }
-.insect-5{
-    margin-top: 1rem;
-    width:100px;
-    height:150px;
-    border-style: none;
-    }
-.insect-6{
-    margin-top: 1rem;
-    width:100px;
-    height:150px;
-    border-style: none;
-    }           
-.insects-container {
-    /* display:flex;  */
-    /* position:absolute; */
-    justify-items:center;
+.tab-row { 
+    display:flex; 
+    position:absolute;
     width:100%;
-    /* height:max-content;  */
+    height:max-content; 
     background-color:white;
-    /* justify-content: left;
+    justify-content: center;
     color:black;
     background-color: white;
-    font-size: 20pt; */
+    font-size: 20pt;
+    
+
+    /* padding: 2rem 2rem; */
 }
-.insects-row {
-    justify-content: center;
+.tab {
+    font-size: 18pt;
+    background-color: white;
 }
+
+
 .card-header {
     color: black;
     font-size: 45pt;
@@ -232,18 +179,36 @@
 
 .mission-col {
     height: fit-content;
-    width: 100%;
     font-size: 45pt;
     font-weight: bold;
     color: black;
     text-align: center;
+    width: 1300;
 }
 .mission-content{
     height: fit-content;
-    width: 100%;
     font-size: 30pt;
     color: black;
     font-weight: normal;
     text-align: justify;
+    width: 1300;
+
+}
+.teams-col {
+    margin-top:5em;
+    height: fit-content;
+    font-size: 45pt;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+    width: 100%;
+}
+.teams-content{
+    height: fit-content;
+    font-size: 30pt;
+    color: black;
+    font-weight: normal;
+    text-align: justify;
+    width: 100%;
 
 }

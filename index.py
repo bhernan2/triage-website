@@ -16,86 +16,6 @@ from datetime import datetime
 
 content = html.Div(html.Br(), id="page-content", className='content-style')
 
-# item1 = [
-#     dbc.DropdownMenuItem("Misson"),
-#     dbc.DropdownMenuItem("Goal"),
-    
-# ]
-# item2 = [
-#     dbc.DropdownMenuItem("Lab 1"),
-#     dbc.DropdownMenuItem("Lab 2"),
-#     dbc.DropdownMenuItem("Lab 3"),
-#     dbc.DropdownMenuItem("....."),
-
-    
-#]
-
-# insect_row=html.Div([
-#     dbc.Container([
-#         dbc.Row([
-#         dbc.Card([
-#         dbc.CardBody([
-#             dbc.CardImg(src="/assets/mayfly.gif")
-#         ])
-#         ], className="insect-1"),
-#         dbc.Card([
-#         dbc.CardBody([
-#             dbc.CardImg(src="/assets/mayfly.gif")
-#         ]),
-#         ], className="insect-2"),
-#         dbc.Card([
-#         dbc.CardBody([
-#             dbc.CardImg(src="/assets/mayfly.gif")
-#         ]),
-#         ], className="insect-3"),
-#         dbc.Card([
-#         dbc.CardBody([
-#             dbc.CardImg(src="/assets/mayfly.gif")
-#         ]),
-#         ], className="insect-4"),
-#         dbc.Card([
-#         dbc.CardBody([
-#             dbc.CardImg(src="/assets/mayfly.gif")
-#         ]),
-#         ], className="insect-5"),
-#         dbc.Card([
-#         dbc.CardBody([
-#             dbc.CardImg(src="/assets/mayfly.gif")
-#         ]),
-#         ], className="insect-6"),
-#         # dbc.Card([
-#         # dbc.CardBody([
-#         #     dbc.CardImg(src="/assets/mayfly.gif")
-#         # ]),
-#         # ], className="insect-7"),
-#         # dbc.Card([
-#         # dbc.CardBody([
-#         #     dbc.CardImg(src="/assets/mayfly.gif")
-#         # ]),
-#         # ], className="insect-8"),
-#         # dbc.Card([
-#         # dbc.CardBody([
-#         #     dbc.CardImg(src="/assets/mayfly.gif")
-#         # ]),
-#         # ], className="insect-9"),
-#         # dbc.Card([
-#         # dbc.CardBody([
-#         #     dbc.CardImg(src="/assets/mayfly.gif")
-#         # ]),
-#         # ], className="insect-10"),
-#         # dbc.Card([
-#         # dbc.CardBody([
-#         #     dbc.CardImg(src="/assets/mayfly.gif")
-#         # ]),
-#         # ], className="insect-11"),
-#         # dbc.Card([
-#         # dbc.CardBody([
-#         #     dbc.CardImg(src="/assets/mayfly.gif")
-#         # ]),
-#         # ], className="insect-12"),
-#     ],className="insects-row")
-#     ],className="insects-containter"),   
-# ])
 nav_row = html.Div([
     dbc.Tabs([
         dbc.Tab(label="HOME", id="tab-1", label_style={"color": "black", "font-size": 22, "margin-top": "2rem", "background":"whitesmoke","cursor":"pointer"}),
@@ -106,18 +26,6 @@ nav_row = html.Div([
         dbc.Tab(label="EVENTS", id="tab-5", label_style={"color": "black", "font-size": 22,"margin-top": "2rem", "background":"whitesmoke","cursor":"pointer"}),
     ],className='tab-row', id="card-tabs", card=False, active_tab="tab-1"),
     ],)
-
-# navbar= html.Div([
-#         dbc.Nav([
-#             html.Div([
-#                 dbc.DropdownMenu(item1, label="ABOUT US", color="", className="dd-1", bs_size="lg"),
-#                 dbc.DropdownMenu(item2, label="MEET THE TEAMS", color="", className="dd-2", bs_size="lg",),
-#                 dbc.DropdownMenu(label="PROJECTS", color="", className="dd-3", bs_size="lg",),
-#                 dbc.DropdownMenu(label="PUBLICATIONS", color="", className="dd-4", bs_size="lg",),
-#                 dbc.DropdownMenu(label="EVENTS", color="", className="dd-5", bs_size="lg",),
-#             ],className='dd-style' )
-#         ],)
-#     ])
 
 title = html.Div([
     dbc.Container([
@@ -169,51 +77,45 @@ title = html.Div([
 
 mission= html.Div([
     dbc.Container([
-        dbc.Col([ html.P(["Mission"], className="mission-title"),
-        dbc.Col([html.P("Space for a mission statement. What words come to mind when you think of TRIAGE?")
-            # dbc.Row([
-            #     html.H3("Space for a mission statement. What words come to mind when you think of TRIAGE?")
-            # ],),
-        ],className="mission-content")    
-            
-        ], className="mission-col")
-    ], )    
-], className='img-style')
+        dbc.Row([
+            dbc.Col([ html.P(["Mission"], className="mission-title")
+            ],),
+        ], className="mission-col"),
+        dbc.Row([
+            dbc.Col([html.P("Space for a mission statement. What words come to mind when you think of TRIAGE?")
+        ],)  
+        ], className="mission-content")    
+    ])
+])
 
-# carousel=dbc.Row([
-#         html.P(["Meet the Teams"]),
-#         dbc.(
-#             items=[
-#                 {"key": "1", "src": "/assets/orb.jpg"},
-#                 {"key": "2", "src": "/assets/orb.jpg"},
-#                 {"key": "3", "src": "/assets/orb.jpg"},
-#             ],
-#     controls=True,
-#     indicators=True,
-#         ),
-#     ])
+teams = html.Div([
+    dbc.Container([
+        dbc.Row([
+            dbc.Col([ html.P(["Meet the Teams"], className="mission-title")
+            ],),
+        ], className="teams-col"),
+        dbc.Row([
+            dbc.Col([html.P("Space for a carousel component. This component creates a slideshow that cycles through a series of content. The content can highlight collaborators' labs and could include photos and links to personal websites...or whatever...")
+        ],)  
+        ], className="teams-content")    
+    ])
+])
+
+
+
 def _title():
     heading= title
     return heading
-
 def _content():
     heading = content
     return heading
-
-def ddowns():
-    heading = items
-    return heading 
-# def _insect_row():
-#     heading = insect_row
-#     return heading 
-
-# def nav():
-#     heading = nav_row
-#     return heading
 def n_row():
     heading=nav_row
     return heading 
-
 def _mission():
     heading=mission
     return heading 
+def _teams():
+    heading=teams
+    return heading 
+
