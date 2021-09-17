@@ -131,6 +131,10 @@ title = html.Div([
                 html.Div([
                     dbc.Row([
                         dbc.Col([
+                            dbc.Row([
+                                    dbc.CardImg(src="/assets/mayfly.gif")], className='logo'),
+                        ],className='welcome-col2'),
+                        dbc.Col([
                             dbc.Row([html.P('T',style={"color": "black", "font-size": 50, "font-weight":"bolder", "margin-top": "0rem"}),html.P('exas', style={"color": "black", "font-size": 30, "font-weight":"normal", "margin-top": "1.1rem",} ),]),
                             dbc.Row([html.P('R',style={"color": "black", "font-size": 50, "font-weight":"bolder","margin-top": "0rem"}),html.P('esearch', style={"color": "black", "font-size": 30, "font-weight":"normal","margin-top": "1.1rem"} ),]),
                             dbc.Row([html.P('I',style={"color": "black", "font-size": 50, "font-weight":"bolder","margin-top": "0rem"}),html.P('nstitute for', style={"color": "black", "font-size": 30, "font-weight":"normal","margin-top": "1.1rem"} ),]),
@@ -144,13 +148,11 @@ title = html.Div([
                             # html.P("Ecology",style={"color": "black", "font-size": 30, "margin-bottom": "2rem",}),
                             ], className='welcome-col'),
                         dbc.Col([
-                            html.Br(),
                             # dbc.Row([html.H5(""),],className='logo-col'),
-                            html.Div([
-                            dbc.CardImg(src="/assets/orb.jpg", bottom=True)], className='logo'),
-                           
-                            ],'welcome-col2'),
-                        ])
+                            dbc.Row([
+                                    dbc.CardImg(src="/assets/mayfly.gif")], className='logo'),
+                            ],className='welcome-col4'),
+                        ], className="welcome-row")
                     # html.H3(["Texas River Institute for Aquatic & Groundwater Ecology"],className='title-style'),  
                     ],),
                         dbc.Row([

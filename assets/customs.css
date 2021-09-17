@@ -105,7 +105,7 @@
     color: black;
     font-size: 45pt;
     font-weight: bold;
-    width: 1000px;
+    width: 1300px;
     text-align: center;
     /* font-style: italic; */
 }
@@ -123,12 +123,7 @@
     text-align:center;
     /* font-style: italic;        */
 }
-h4::first-letter {
-    font-size: 200%;
-    color: black;
-    font-weight:bolder;
-    /* font-style: italic; */
-  }
+
 .welcome-col {
     /* margin:0 auto 1em; */
     font-size: 20pt;
@@ -142,13 +137,17 @@ h4::first-letter {
     font-weight: 900;
 }
 
+.welcome-row{
+    justify-content: center;
+    text-align: center;
+}
 .welcome-col2 {
-    margin:0 auto 1em;
-    max-width: 42rem;
-    line-height: 1.2;
-    transform: skewY(var(--angle));
-    font-size: 3em;
-    text-transform: uppercase;
+    margin-left: 6em;
+    margin-top:3em;
+}
+.welcome-col4 {
+    margin-right: 6em;
+    margin-top:3em;
 }
 .logo {
     align-items:center;
@@ -171,6 +170,7 @@ h4::first-letter {
     /* margin: 0em auto 0em; */
     text-align: justify;
     padding-top: 1em;
+    width:100%;
     /* background: #fff; */
     color: black;
     
@@ -205,7 +205,7 @@ h4::first-letter {
     /* height: 450px;
     width: 400px; */
     opacity: 75%;
-    width:1000px;
+    width:1300px;
     height:900px;
     background-color: white;
 }
