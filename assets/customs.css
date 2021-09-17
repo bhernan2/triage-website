@@ -105,7 +105,7 @@
     color: black;
     font-size: 45pt;
     font-weight: bold;
-    width: 800px;
+    width: 1000px;
     text-align: center;
     /* font-style: italic; */
 }
@@ -205,7 +205,7 @@ h4::first-letter {
     /* height: 450px;
     width: 400px; */
     opacity: 75%;
-    width:800px;
+    width:1000px;
     height:900px;
     background-color: white;
 }
