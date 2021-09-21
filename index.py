@@ -291,49 +291,55 @@ footer = dbc.Row([
         ], className="social-col")
     ], className="footer-row")
 
+def _content():
+    heading=content
+    return heading
+def _mission():
+    heading=mission
+    return heading 
+def _teams():
+    heading=teams
+    return heading
+def _projects():
+    heading=projects
+    return heading 
+def _publications():
+    heading=publications
+    return heading
+def _events():
+    heading = events
+    return heading 
+def _footer():
+    heading=footer
+    return heading
 
-# def _content():
-#     heading = content
-#     return heading
-# # def _home():
-# #     heading=home
-# #     return heading 
-# def _mission():
-#     heading=mission
-#     return heading 
-# def _teams():
-#     heading=teams
-#     return heading 
-# def _footer():
-#     heading=footer
-#     return heading
 
-def Dashboard():
-    layout= html.Div([
-    dcc.Location(id="url"), 
-    content, 
-    footer
-    ])
-    return layout
+# def Dashboard():
+#     layout= html.Div([
+#     dcc.Location(id="url"), 
+#     content, 
+#     footer
+#     ])
+#     return layout
 
-app = dash.Dash(__name__, suppress_callback_exceptions=True, external_stylesheets=[dbc.themes.SANDSTONE])
-server = app.server
-app.layout = Dashboard()
+# app = dash.Dash(__name__, suppress_callback_exceptions=True, external_stylesheets=[dbc.themes.SANDSTONE])
+# server = app.server
+# app.layout = Dashboard()
 
-@app.callback(Output("page-content", "children"), [Input("url", "pathname")])
-def render_page_content(pathname):
-    if pathname == "/":
-        return content
-    elif pathname == "/page-1":
-        return mission
-    elif pathname == "/page-2":
-        return teams
-    elif pathname == "/page-3":
-        return projects
-    elif pathname == "/page-4":
-        return publications
-    elif pathname == "/page-5":
-        return events
+# @app.callback(Output("page-content", "children"), [Input("url", "pathname")])
+# def render_page_content(pathname):
+#     if pathname == "/":
+#         return content
+#     elif pathname == "/page-1":
+#         return mission
+#     elif pathname == "/page-2":
+#         return teams
+#     elif pathname == "/page-3":
+#         return projects
+#     elif pathname == "/page-4":
+#         return publications
+#     elif pathname == "/page-5":
+#         return events
 
-if __name__ == "__main__":
-    app.run_server(debug=True)
+# if __name__ == "__main__":
+#     app.run_server(debug=True)

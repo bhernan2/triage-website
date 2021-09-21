@@ -1,17 +1,3 @@
-# # -*- coding: utf-8 -*-
-# import dash
-# import dash_bootstrap_components as dbc
-# import dash_core_components as dcc
-# import dash_html_components as html
-# from dash.dependencies import Input, Output, State
-
-# import plotly
-# import plotly.graph_objects as go
-# import plotly.express as px
-
-# import pandas as pd
-# import numpy as np
-
 # -*- coding: utf-8 -*-
 
 from typing import Container
@@ -305,22 +291,28 @@ footer = dbc.Row([
         ], className="social-col")
     ], className="footer-row")
 
+def _content():
+    heading=content
+    return heading
+def _mission():
+    heading=mission
+    return heading 
+def _teams():
+    heading=teams
+    return heading
+def _projects():
+    heading=projects
+    return heading 
+def _publications():
+    heading=publications
+    return heading
+def _events():
+    heading = events
+    return heading 
+def _footer():
+    heading=footer
+    return heading
 
-# def _content():
-#     heading = content
-#     return heading
-# # def _home():
-# #     heading=home
-# #     return heading 
-# def _mission():
-#     heading=mission
-#     return heading 
-# def _teams():
-#     heading=teams
-#     return heading 
-# def _footer():
-#     heading=footer
-#     return heading
 
 def Dashboard():
     layout= html.Div([
