@@ -62,7 +62,16 @@ content = html.Div([
             ], className="homepage-content"),
         ],className='card-style'),
     ], className='card-container', fluid=True,),
-    
+    dbc.Row([
+        dbc.Col([
+            html.P("© 2021 TRIAGE")
+        ],className="copyright-col"),
+        dbc.Col([
+            html.Img(src="https://img.icons8.com/material-rounded/48/000000/facebook-new.png",className="facebook-icon"),
+            html.Img(src="https://img.icons8.com/material-rounded/48/000000/instagram-new.png",className="instagram-icon")
+
+        ], className="social-col")
+    ], className="footer-row")
 ], id="page-content", className='content-style')
 
 # home = html.Div([
@@ -96,6 +105,16 @@ mission= html.Div([
             ]),
         ],className='card-style-teams'),
     ], className='card-container', fluid=True,),
+    dbc.Row([
+        dbc.Col([
+            html.P("© 2021 TRIAGE")
+        ],className="copyright-col"),
+        dbc.Col([
+            html.Img(src="https://img.icons8.com/material-rounded/48/000000/facebook-new.png",className="facebook-icon"),
+            html.Img(src="https://img.icons8.com/material-rounded/48/000000/instagram-new.png",className="instagram-icon")
+
+        ], className="social-col")
+    ], className="footer-row")
 ], id="page-content", className='content-style')
 
 teams=html.Div([
@@ -126,6 +145,16 @@ teams=html.Div([
             ]),
         ],className='card-style-teams'),
     ], className='card-container', fluid=True,),
+    dbc.Row([
+        dbc.Col([
+            html.P("© 2021 TRIAGE")
+        ],className="copyright-col"),
+        dbc.Col([
+            html.Img(src="https://img.icons8.com/material-rounded/48/000000/facebook-new.png",className="facebook-icon"),
+            html.Img(src="https://img.icons8.com/material-rounded/48/000000/instagram-new.png",className="instagram-icon")
+
+        ], className="social-col")
+    ], className="footer-row")
 ], id="page-content", className='content-style')
 
 projects= html.Div([
@@ -156,6 +185,16 @@ projects= html.Div([
             ]),
         ],className='card-style'),
     ], className='card-container', fluid=True,),
+    dbc.Row([
+        dbc.Col([
+            html.P("© 2021 TRIAGE")
+        ],className="copyright-col"),
+        dbc.Col([
+            html.Img(src="https://img.icons8.com/material-rounded/48/000000/facebook-new.png",className="facebook-icon"),
+            html.Img(src="https://img.icons8.com/material-rounded/48/000000/instagram-new.png",className="instagram-icon")
+
+        ], className="social-col")
+    ], className="footer-row")
 ], id="page-content", className='content-style')
 
 publications=html.Div([
@@ -186,6 +225,16 @@ publications=html.Div([
             ]),
         ],className='card-style'),
     ], className='card-container', fluid=True,),
+    dbc.Row([
+        dbc.Col([
+            html.P("© 2021 TRIAGE")
+        ],className="copyright-col"),
+        dbc.Col([
+            html.Img(src="https://img.icons8.com/material-rounded/48/000000/facebook-new.png",className="facebook-icon"),
+            html.Img(src="https://img.icons8.com/material-rounded/48/000000/instagram-new.png",className="instagram-icon")
+
+        ], className="social-col")
+    ], className="footer-row")
 ], id="page-content", className='content-style')
 
 events=html.Div([
@@ -216,17 +265,17 @@ events=html.Div([
             ]),
         ],className='card-style'),
     ], className='card-container', fluid=True,),
-], id="page-content", className='content-style')
-footer = dbc.Row([
+    dbc.Row([
         dbc.Col([
             html.P("© 2021 TRIAGE")
         ],className="copyright-col"),
         dbc.Col([
-            html.Img(src="https://img.icons8.com/material-rounded/24/000000/facebook-new.png",className="facebook-icon"),
-            html.Img(src="https://img.icons8.com/material-rounded/24/000000/instagram-new.png",className="instagram-icon")
+            html.Img(src="https://img.icons8.com/material-rounded/48/000000/facebook-new.png",className="facebook-icon"),
+            html.Img(src="https://img.icons8.com/material-rounded/48/000000/instagram-new.png",className="instagram-icon")
 
         ], className="social-col")
     ], className="footer-row")
+], id="page-content", className='content-style')
 
 def _content():
     heading=content
@@ -246,16 +295,12 @@ def _publications():
 def _events():
     heading = events
     return heading 
-def _footer():
-    heading=footer
-    return heading
 
 
 def Dashboard():
     layout= html.Div([
     dcc.Location(id="url"), 
     content, 
-    footer
     ])
     return layout
 
