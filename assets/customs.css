@@ -11,7 +11,6 @@
     margin-left:auto;
     margin-right: auto;
     display: flex;
-    height: fit-content;
     justify-content: center; 
     margin-bottom: 10rem;
     height: fit-content;
@@ -106,40 +105,24 @@
 
 .triage-col {
     /* margin:0 auto 1em; */
-    font-size: 20pt;
-    padding: 0 1em;
-    margin-right: 2rem;
-    max-width: 42rem;
-    line-height: 1.2;
+    font-size: 18pt;
+    padding-top: 4em;
+    /* margin-right: 2rem; */
+    /* max-width: 42rem; */
+    line-height: 1;
     margin-left: 6em;
-    transform: skewY(var(--angle));
+    /* transform: skewY(var(--angle)); */
     text-transform: uppercase;
-    font-weight: 900;
+    /* font-weight: 900; */
+    text-align: right;
 }
 
-.left-fly-col {
-    margin-top: 3rem;
-    margin-left: 18rem;
+.mayfly-col {
     width:200px;
     height: 300px;
-    
-    
-    /* justify-content: center;
-    max-width: 100%; 
-    line-height: 1.2;
-    transform: skewY(var(--angle));
-    font-size: 3em;
-    text-transform: uppercase;
-    font-weight: 900;
-    padding: 0.1em;
-    font-size: 10pt; */
-
-}
-.right-fly-col {
-    width:200px;
-    height: 300px;
-    margin-top: 3rem;
-    margin-right: 18rem;
+    margin-top: 8rem;
+    /* margin-right: 18rem; */
+    text-align: center;
     /* justify-content: center;
     max-width: 100%; 
     line-height: 1.2;
@@ -152,9 +135,9 @@
 
 }
 .welcome-col3 {
-    font-size: 30pt;
+    font-size: 28pt;
     /* margin: 0em auto 0em; */
-    text-align: justify;
+    text-align: left;
     padding-top: 1em;
     width:100%;
     /* background: #fff; */
@@ -167,6 +150,15 @@
     /* border-style: solid;
     border-width: thin; */
     
+}
+
+.mission-col{
+    font-size: 25pt;
+    text-align: left;
+    padding-top: 2em;
+    width:100%;
+    /* background: #fff; */
+    color: black;
 }
 .motto_header{
     font-size: 20pt;
@@ -196,6 +188,19 @@
     background-color: white;
 }
 
+.card-style-teams{
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    padding: 2rem 2rem;
+    /* height: 450px;
+    width: 400px; */
+    opacity: 75%;
+    width:1500px;
+    height:750pxt;
+    background-color: white;
+}
 
 /* .img-style {
     background-image: url("/assets/background.jpg");
@@ -234,8 +239,10 @@
     color: black;
     font-weight: normal;
     text-align: justify;
-    width: 1300;
-    margin-bottom: 8px;
+    margin-bottom: 26rem;
+    width: 100%;
+
+
 }
 .teams-col {
     margin-top:5em;
@@ -252,6 +259,47 @@
     color: black;
     font-weight: normal;
     text-align: justify;
+    margin-bottom: 22.3rem;
+    width: 100%;
+
+}
+.hoempage-content{
+    height: fit-content;
+    font-size: 30pt;
+    color: black;
+    font-weight: normal;
+    text-align: justify;
+    width: 100%;
+
+}
+
+.projects-content{
+    height: fit-content;
+    font-size: 30pt;
+    color: black;
+    font-weight: normal;
+    text-align: justify;
+    margin-bottom: 29.8rem;
+    width: 100%;
+
+}
+.publications-content{
+    height: fit-content;
+    font-size: 30pt;
+    color: black;
+    font-weight: normal;
+    text-align: justify;
+    margin-bottom: 29.8rem;
+    width: 100%;
+
+}
+.events-content{
+    height: fit-content;
+    font-size: 30pt;
+    color: black;
+    font-weight: normal;
+    text-align: justify;
+    margin-bottom: 29.8rem;
     width: 100%;
 
 }
@@ -262,6 +310,7 @@
     margin-top:5rem;
     background-color:white;
     /* justify-content: center; */
+    height:15rem;
     position: fixed;
     bottom: 0;
     left: 0;

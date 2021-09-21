@@ -26,14 +26,6 @@ content = html.Div([
             dbc.NavLink("PROJECTS", href="/page-3", active="exact", style={"color": "black", "border-style":"none", "margin":"10px", "font-size": 20, "background":"white","cursor":"pointer"}),
             dbc.NavLink("PUBLICATIONS", href="/page-4", active="exact", style={"color": "black", "border-style":"none", "margin":"10px", "font-size": 20, "background":"white","cursor":"pointer"}),
             dbc.NavLink("EVENTS", href="/page-5", active="exact", style={"color": "black", "border-style":"none", "margin":"10px", "font-size": 20, "background":"white","cursor":"pointer"}),
-        # dbc.ButtonGroup([
-        #     dbc.Button("HOME", id="tab-1", style={"color": "black", "border-style":"none", "margin":"10px", "font-size": 20, "background":"white","cursor":"pointer"},),
-        #     dbc.Button("ABOUT", id="tab-2", style={"color": "black", "border-style":"none", "margin":"10px","font-size": 20, "background":"white","cursor":"pointer"}),
-        #     dbc.Button("TEAMS",  id="tab-3", style={"color": "black", "border-style":"none", "margin":"10px","font-size": 20, "background":"white","cursor":"pointer"}),
-        #     dbc.Button("PROJECTS", id="tab-4", style={"color": "black", "border-style":"none", "margin":"10px","font-size": 20, "background":"white","cursor":"pointer"}),
-        #     dbc.Button("PUBLICATIONS", id="tab-5", style={"color": "black", "border-style":"none", "margin":"10px", "font-size": 20, "background":"white","cursor":"pointer"}),
-        #     dbc.Button("EVENTS", id="tab-6", style={"color": "black", "border-style":"none", "margin":"10px", "font-size": 20, "background":"white","cursor":"pointer"}),
-        # ],className="buttons", id="tabs"),
     ],className='tab-row'),
     ], className="button-container"),
    dbc.Container([
@@ -47,34 +39,27 @@ content = html.Div([
                 html.Div([
                     dbc.Row([
                         dbc.Col([
-                            dbc.Row([
-                                    dbc.CardImg(src="/assets/mayfly.gif",className='left-fly-col'),
-                                    ]),
-                        ]),
-                        dbc.Col([
-                            dbc.Row([html.P('T',style={"color": "black", "font-size": 50, "font-weight":"bolder", "margin-top": "0rem"}),html.P('exas', style={"color": "black", "font-size": 30, "font-weight":"normal", "margin-top": "1.1rem",} ),]),
-                            dbc.Row([html.P('R',style={"color": "black", "font-size": 50, "font-weight":"bolder","margin-top": "0rem"}),html.P('esearch', style={"color": "black", "font-size": 30, "font-weight":"normal","margin-top": "1.1rem"} ),]),
-                            dbc.Row([html.P('I',style={"color": "black", "font-size": 50, "font-weight":"bolder","margin-top": "0rem"}),html.P('nstitute for', style={"color": "black", "font-size": 30, "font-weight":"normal","margin-top": "1.1rem"} ),]),
-                            dbc.Row([html.P('A',style={"color": "black", "font-size": 50, "font-weight":"bolder","margin-top": "0rem"}),html.P('quatic &', style={"color": "black", "font-size": 30, "font-weight":"normal","margin-top": "1.1rem"} ),]),
+                            dbc.Row([html.P('T',style={"color": "black", "font-size": 50, "font-weight":"bolder", "margin-top": "0rem"}),html.P('exas', style={"color": "black", "font-size": 30, "font-weight":"normal", "margin-top": "1rem",} ),]),
+                            dbc.Row([html.P('R',style={"color": "black", "font-size": 50, "font-weight":"bolder","margin-top": "0rem"}),html.P('esearch', style={"color": "black", "font-size": 30, "font-weight":"normal","margin-top": "1rem"} ),]),
+                            dbc.Row([html.P('I',style={"color": "black", "font-size": 50, "font-weight":"bolder","margin-top": "0rem"}),html.P('nstitute for', style={"color": "black", "font-size": 30, "font-weight":"normal","margin-top": "1rem"} ),]),
+                            dbc.Row([html.P('A',style={"color": "black", "font-size": 50, "font-weight":"bolder","margin-top": "0rem"}),html.P('quatic &', style={"color": "black", "font-size": 30, "font-weight":"normal","margin-top": "1rem"} ),]),
                             dbc.Row([html.P('G',style={"color": "black", "font-size": 50, "font-weight":"bolder","margin-top": "0rem"}),html.P('roundwater', style={"color": "black", "font-size": 30, "font-weight":"normal","margin-top": "1rem"} ),]),
-                            dbc.Row([html.P('E',style={"color": "black", "font-size": 50, "font-weight":"bolder","margin-top": "0rem"}),html.P('cology', style={"color": "black", "font-size": 30, "font-weight":"normal","margin-top": "1.2rem"} ),]),
+                            dbc.Row([html.P('E',style={"color": "black", "font-size": 50, "font-weight":"bolder","margin-top": "0rem"}),html.P('cology', style={"color": "black", "font-size": 30, "font-weight":"normal","margin-top": "1rem"} ),]),
+                            
                             ], className='triage-col'),
                         dbc.Col([
-                            dbc.Row([
-                                    dbc.CardImg(src="/assets/mayfly.gif",className="right-fly-col" )
-                                    ]),
-                            ],),
-                        ],)
-                    ],),
-                        dbc.Row([
-                            dbc.Col([
-                                html.P("We are a cooperative research group centered at Texas State University that examines basic and applied ecological questions in aquatic and groundwater systems.",),
-                                
-                            ], className='welcome-col3')
-                          
+                            dbc.CardImg(src="/assets/mayfly.gif",className="mayfly-col" )
                         ]),
+                        dbc.Col([
+                                html.P("We are a cooperative research group centered at Texas State University that examines basic and applied ecological questions in aquatic and groundwater systems.",),
+                            ], className='welcome-col3')
+                        ])
+                    ],),
+                       
+                            
+                       
             
-            ], className="teams-content"),
+            ], className="homepage-content"),
         ],className='card-style'),
     ], className='card-container', fluid=True,),
     
@@ -106,20 +91,10 @@ mission= html.Div([
                     dbc.Row([
                         dbc.Col([
                             html.P("Space for a mission statement. What words come to mind when you think of TRIAGE?"),
-                            html.Br(),
-                            html.Br(),
-                            html.Br(),
-                            html.Br(),
-                            html.Br(),
-                            html.Br(),
-                            html.Br(),
-                            html.Br(),
-                            html.Br()
-                            
                         ]),
-                        ],className="teams-content")  
+                        ], className="mission-content")  
             ]),
-        ],className='card-style'),
+        ],className='card-style-teams'),
     ], className='card-container', fluid=True,),
 ], id="page-content", className='content-style')
 
@@ -146,18 +121,10 @@ teams=html.Div([
                     dbc.Row([
                         dbc.Col([
                             html.P("Space for a carousel component. This component creates a slideshow that cycles through a series of content. The content can highlight collaborators' labs and could include photos and links to lab websites...or whatever..."),
-                            html.Br(),
-                            html.Br(),
-                            html.Br(),
-                            html.Br(),
-                            html.Br(),
-                            html.Br(),
-                            html.Br(),
-                            html.Br()
                         ]),
                         ],className="teams-content")  
             ]),
-        ],className='card-style'),
+        ],className='card-style-teams'),
     ], className='card-container', fluid=True,),
 ], id="page-content", className='content-style')
 
@@ -184,18 +151,8 @@ projects= html.Div([
                     dbc.Row([
                         dbc.Col([
                             html.P("Space to highlight projects..."),
-                            html.Br(),
-                            html.Br(),
-                            html.Br(),
-                            html.Br(),
-                            html.Br(),
-                            html.Br(),
-                            html.Br(),
-                            html.Br(),
-                            html.Br(),
-                            html.Br()
                         ]),
-                        ],className="teams-content")  
+                        ],className="projects-content")  
             ]),
         ],className='card-style'),
     ], className='card-container', fluid=True,),
@@ -224,18 +181,8 @@ publications=html.Div([
                     dbc.Row([
                         dbc.Col([
                             html.P("Space to highlight publications..."),
-                            html.Br(),
-                            html.Br(),
-                            html.Br(),
-                            html.Br(),
-                            html.Br(),
-                            html.Br(),
-                            html.Br(),
-                            html.Br(),
-                            html.Br(),
-                            html.Br()
                         ]),
-                        ],className="teams-content")  
+                        ],className="publications-content")  
             ]),
         ],className='card-style'),
     ], className='card-container', fluid=True,),
@@ -264,18 +211,8 @@ events=html.Div([
                     dbc.Row([
                         dbc.Col([
                             html.P("Space to highlight events..."),
-                            html.Br(),
-                            html.Br(),
-                            html.Br(),
-                            html.Br(),
-                            html.Br(),
-                            html.Br(),
-                            html.Br(),
-                            html.Br(),
-                            html.Br(),
-                            html.Br()
                         ]),
-                        ],className="teams-content")  
+                        ],className="events-content")  
             ]),
         ],className='card-style'),
     ], className='card-container', fluid=True,),
@@ -285,8 +222,8 @@ footer = dbc.Row([
             html.P("© 2021 TRIAGE")
         ],className="copyright-col"),
         dbc.Col([
-            html.Img(src="https://img.icons8.com/material-rounded/48/000000/facebook-new.png",className="facebook-icon"),
-            html.Img(src="https://img.icons8.com/material-rounded/48/000000/instagram-new.png",className="instagram-icon")
+            html.Img(src="https://img.icons8.com/material-rounded/24/000000/facebook-new.png",className="facebook-icon"),
+            html.Img(src="https://img.icons8.com/material-rounded/24/000000/instagram-new.png",className="instagram-icon")
 
         ], className="social-col")
     ], className="footer-row")
