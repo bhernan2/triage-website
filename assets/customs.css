@@ -5,17 +5,28 @@
   .card-container {
     margin-left:auto;
     margin-right: auto;
-    display: flex;
-    vertical-align:middle;
-    justify-content: center; 
+    display: grid;
+    justify-items: center;
     height:1000px;
     background-image: url("/assets/background.jpg");
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    
+    grid-template-columns: repeat(autofit, minmax(1700px, 1fr));
+    grid-template-columns: repeat(autofit, minmax(1600px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(1200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(900px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); 
+    grid-template-rows: repeat(auto-fit, minmax(300px, 1fr)); 
 }
+
+@media (min-width: 1630px) {
+    .card-container {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
 
 .mission-container{
     margin-left:auto;
