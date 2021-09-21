@@ -292,21 +292,21 @@ footer = dbc.Row([
     ], className="footer-row")
 
 
-def _content():
-    heading = content
-    return heading
-# def _home():
-#     heading=home
+# def _content():
+#     heading = content
+#     return heading
+# # def _home():
+# #     heading=home
+# #     return heading 
+# def _mission():
+#     heading=mission
 #     return heading 
-def _mission():
-    heading=mission
-    return heading 
-def _teams():
-    heading=teams
-    return heading 
-def _footer():
-    heading=footer
-    return heading
+# def _teams():
+#     heading=teams
+#     return heading 
+# def _footer():
+#     heading=footer
+#     return heading
 
 def Dashboard():
     layout= html.Div([
