@@ -170,7 +170,7 @@
     height:2rem;
 }
 .card-style{
-    margin-top:8rem;
+    margin-top:6rem;
     margin-left: 2rem;
     margin-right: 2rem;
     padding: 1rem 1rem;
@@ -181,8 +181,7 @@
 }
 
 .card-style-teams{
-    margin-top: 16rem;
-    margin-bottom: 16rem;
+    margin-top:6rem;
     margin-left: 2rem;
     margin-right: 2rem;
     padding: 1rem 1rem;
