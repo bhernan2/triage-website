@@ -293,6 +293,7 @@
 }
   
   .footer-row {
+    /* margin-top: 1rem; */
     margin-left:auto;
     margin-right:auto;
     margin-bottom: 1rem;
@@ -309,6 +310,7 @@
   .copyright-col{
     text-align: left;
     margin-right: 3rem;
+    margin-top: 1rem;
 
 }
   .social-col{
