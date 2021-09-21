@@ -22,52 +22,12 @@
     grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); 
     grid-template-rows: repeat(auto-fit, minmax(300px, 1fr)); 
-}
-
-@media (min-width: auto-fit) {
-    .card-container {
-      grid-template-columns: repeat(1, 1fr);
+  }
+  @media (min-width: 1630px) {
+    .cards {
+      grid-template-columns: repeat(3, 1fr);
     }
   }
-
-  @media only screen 
-  and (min-device-width: 320px) 
-  and (max-device-width: 480px)
-  and (-webkit-min-device-pixel-ratio: 2) {
-
-}
-
-@media only screen 
-  and (min-device-width: 320px) 
-  and (max-device-width: 568px)
-  and (-webkit-min-device-pixel-ratio: 2) {
-
-}
-@media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 667px) 
-  and (-webkit-min-device-pixel-ratio: 2) { 
-
-}
-
-@media only screen 
-  and (min-device-width: 414px) 
-  and (max-device-width: 736px) 
-  and (-webkit-min-device-pixel-ratio: 3) { 
-
-}
-@media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 812px) 
-  and (-webkit-min-device-pixel-ratio: 3) { 
-
-}
-
-@media only screen 
-    and (device-width: 390px) 
-    and (device-height: 844px) 
-    and (-webkit-device-pixel-ratio: 3) { }
-
 
 .mission-container{
     margin-left:auto;
@@ -223,6 +183,7 @@
 }
 .card-style{
     margin-top:6rem;
+    display: grid;
     margin-left: 2rem;
     margin-right: 2rem;
     padding: 1rem 1rem;
@@ -232,6 +193,11 @@
     background-color: white;
 }
 
+@media (min-width: 1630px) {
+    .card-style {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
 .card-style-teams{
     margin-top:6rem;
     margin-left: 2rem;
