@@ -1,15 +1,11 @@
 .content-style {
     display: grid;
-    /* width:100%; */
-    align-content: center;
-    margin-top: 0rem;
-    margin-bottom: 0rem;
+    margin:auto;
   }
   .card-container {
-    /* margin-left:auto;
-    margin-right: auto; */
+    margin-left:auto;
+    margin-right: auto;
     display: grid;
-    justify-content: center;
     height:auto;
     width:auto;
     margin-left: 1rem;
