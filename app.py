@@ -21,7 +21,8 @@ content = html.Div([
     dbc.Container([
         dbc.Row([
             dbc.Col([
-                dbc.NavLink("HOME", href="/", active="exact", style={"color": "black", "border-style":"none", "margin":"10px", "font-size": 20, "background":"white","cursor":"pointer"})]),
+                dbc.NavLink("HOME", href="/", active="exact", style={"color": "black", "border-style":"none", "margin":"10px", "font-size": 20, "background":"white","cursor":"pointer", })
+                ],className="home-link"),
             dbc.Col([
                 dbc.NavLink("ABOUT", href="/page-1", active="exact", style={"color": "black", "border-style":"none", "margin":"10px", "font-size": 20, "background":"white","cursor":"pointer"})]),
             dbc.Col([
@@ -37,7 +38,7 @@ content = html.Div([
                     ],className="small-logo"),
     ],className='tab-row'),
 
-    ], className="link-container"),
+    ], fluid=True, className="link-container"),
    dbc.Container([
        dbc.Row([
            dbc.CardHeader([

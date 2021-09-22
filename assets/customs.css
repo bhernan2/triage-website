@@ -14,26 +14,24 @@
     background-attachment: fixed;
     background-size: cover;
   }
-.link-container {
-    display: grid;
-    gap: 10px;
-    margin-left: 3.5rem;
-    
-   
-}
 .tab-row {
     position: absolute;
-    width:max-content;
-    align-content: center;
+    width:1180px;
     background-color:white;
     color:black;
-    background-color: white;
     font-size: 25pt;
+    column-gap: 5px;
     font-weight: bold;
+    column-gap: 5px;
+}
+
+.home-link {
+    margin-left: 2rem;
 }
 
 .small-logo {
     margin-top:8px;
+    text-align: right;
 }
 
 .card-header {
