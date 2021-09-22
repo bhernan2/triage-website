@@ -20,14 +20,24 @@ content = html.Div([
     html.Br(),
     dbc.Container([
         dbc.Row([
-            dbc.NavLink("HOME", href="/", active="exact", style={"color": "black", "border-style":"none", "margin":"10px", "font-size": 20, "background":"white","cursor":"pointer"}),
-            dbc.NavLink("ABOUT", href="/page-1", active="exact", style={"color": "black", "border-style":"none", "margin":"10px", "font-size": 20, "background":"white","cursor":"pointer"}),
-            dbc.NavLink("TEAMS", href="/page-2", active="exact", style={"color": "black", "border-style":"none", "margin":"10px", "font-size": 20, "background":"white","cursor":"pointer"}),
-            dbc.NavLink("PROJECTS", href="/page-3", active="exact", style={"color": "black", "border-style":"none", "margin":"10px", "font-size": 20, "background":"white","cursor":"pointer"}),
-            dbc.NavLink("PUBLICATIONS", href="/page-4", active="exact", style={"color": "black", "border-style":"none", "margin":"10px", "font-size": 20, "background":"white","cursor":"pointer"}),
-            dbc.NavLink("EVENTS", href="/page-5", active="exact", style={"color": "black", "border-style":"none", "margin":"10px", "font-size": 20, "background":"white","cursor":"pointer"}),
+            dbc.Col([
+                dbc.NavLink("HOME", href="/", active="exact", style={"color": "black", "border-style":"none", "margin":"10px", "font-size": 20, "background":"white","cursor":"pointer"})]),
+            dbc.Col([
+                dbc.NavLink("ABOUT", href="/page-1", active="exact", style={"color": "black", "border-style":"none", "margin":"10px", "font-size": 20, "background":"white","cursor":"pointer"})]),
+            dbc.Col([
+                dbc.NavLink("TEAMS", href="/page-2", active="exact", style={"color": "black", "border-style":"none", "margin":"10px", "font-size": 20, "background":"white","cursor":"pointer"})]),
+            dbc.Col([
+                dbc.NavLink("PROJECTS", href="/page-3", active="exact", style={"color": "black", "border-style":"none", "margin":"10px", "font-size": 20, "background":"white","cursor":"pointer"})]),
+            dbc.Col([
+                dbc.NavLink("PUBLICATIONS", href="/page-4", active="exact", style={"color": "black", "border-style":"none", "margin":"10px", "font-size": 20, "background":"white","cursor":"pointer"})]),
+            dbc.Col([
+                dbc.NavLink("EVENTS", href="/page-5", active="exact", style={"color": "black", "border-style":"none", "margin":"10px", "font-size": 20, "background":"white","cursor":"pointer"})]),
+            dbc.Col([
+                 html.P("T", style={"color":"white", "background-color":"black", "font-size":"22px", "font-weight":"bold", "border-radius":"100%", "width":"44px", "height":"44px", "text-align":"center", "border":"8px solid #000"})
+                    ],className="small-logo"),
     ],className='tab-row'),
-    ]),
+
+    ], className="link-container"),
    dbc.Container([
        dbc.Row([
            dbc.CardHeader([
@@ -46,7 +56,7 @@ content = html.Div([
                             
                             ],className='triage-col'),
                         dbc.Col([
-                            dbc.CardImg(src="/assets/mayfly.gif",className="mayfly-col" )
+                            html.P("T", style={"color":"white", "background-color":"black", "font-size":"200px", "border-radius":"100%", "padding":"0rem", "width":"280px", "height":"280px", "border":"10px solid #000","text-align":"center"})
                         ],className="mayfly-col"),
                         dbc.Col([
                                 html.P("We are a cooperative research group centered at Texas State University that examines basic and applied ecological questions in aquatic and groundwater systems.",),
@@ -270,14 +280,14 @@ events=html.Div([
     html.Br(),
     dbc.Container([
         dbc.Row([
-            dbc.NavLink("HOME", href="/", active="exact", style={"color": "black", "border-style":"none", "margin":"10px", "font-size": 20, "background":"white","cursor":"pointer"}),
-            dbc.NavLink("ABOUT", href="/page-1", active="exact", style={"color": "black", "border-style":"none", "margin":"10px", "font-size": 20, "background":"white","cursor":"pointer"}),
-            dbc.NavLink("TEAMS", href="/page-2", active="exact", style={"color": "black", "border-style":"none", "margin":"10px", "font-size": 20, "background":"white","cursor":"pointer"}),
-            dbc.NavLink("PROJECTS", href="/page-3", active="exact", style={"color": "black", "border-style":"none", "margin":"10px", "font-size": 20, "background":"white","cursor":"pointer"}),
-            dbc.NavLink("PUBLICATIONS", href="/page-4", active="exact", style={"color": "black", "border-style":"none", "margin":"10px", "font-size": 20, "background":"white","cursor":"pointer"}),
-            dbc.NavLink("EVENTS", href="/page-5", active="exact", style={"color": "black", "border-style":"none", "margin":"10px", "font-size": 20, "background":"white","cursor":"pointer"}),
+            dbc.NavLink("HOME", href="/", active="exact", style={"color": "black", "border-style":"none", "font-size": 20, "background":"white","cursor":"pointer"}),
+            dbc.NavLink("ABOUT", href="/page-1", active="exact", style={"color": "black", "border-style":"none", "font-size": 20, "background":"white","cursor":"pointer"}),
+            dbc.NavLink("TEAMS", href="/page-2", active="exact", style={"color": "black", "border-style":"none", "font-size": 20, "background":"white","cursor":"pointer"}),
+            dbc.NavLink("PROJECTS", href="/page-3", active="exact", style={"color": "black", "border-style":"none", "font-size": 20, "background":"white","cursor":"pointer"}),
+            dbc.NavLink("PUBLICATIONS", href="/page-4", active="exact", style={"color": "black", "border-style":"none", "font-size": 20, "background":"white","cursor":"pointer"}),
+            dbc.NavLink("EVENTS", href="/page-5", active="exact", style={"color": "black", "border-style":"none", "font-size": 20, "background":"white","cursor":"pointer"}),
     ],className='tab-row'),
-    ], className="button-container"),
+    ], className="link-container"),
    dbc.Container([
        dbc.Row([
            dbc.CardHeader([
