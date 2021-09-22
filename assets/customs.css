@@ -16,8 +16,9 @@
   }
 .link-container {
     display: grid;
-    margin-left: 1rem;
-    margin-right: 1rem;
+    gap: 10px;
+    margin-left: 3.5rem;
+    
    
 }
 .tab-row {
@@ -29,7 +30,6 @@
     background-color: white;
     font-size: 25pt;
     font-weight: bold;
-    column-gap: 10px;
 }
 
 .small-logo {
