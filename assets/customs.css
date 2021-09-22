@@ -16,19 +16,20 @@
   }
 .link-container {
     display: grid;
-    margin-left: 3.5rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
    
 }
 .tab-row {
     position: absolute;
     width:max-content;
-    align-content: center
-    justify-content: center;
+    align-content: center;
     background-color:white;
     color:black;
     background-color: white;
     font-size: 25pt;
     font-weight: bold;
+    column-gap: 10px;
 }
 
 .small-logo {

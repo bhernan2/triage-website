@@ -31,7 +31,7 @@ content = html.Div([
             dbc.Col([
                 dbc.NavLink("PUBLICATIONS", href="/page-4", active="exact", style={"color": "black", "border-style":"none", "margin":"10px", "font-size": 20, "background":"white","cursor":"pointer"})]),
             dbc.Col([
-                dbc.NavLink("EVENTS", href="/page-5", active="exact", style={"color": "black", "border-style":"none", "margin":"10px", "font-size": 20, "background":"white","cursor":"pointer","text-align":"right"})]),
+                dbc.NavLink("EVENTS", href="/page-5", active="exact", style={"color": "black", "border-style":"none", "margin":"10px", "font-size": 20, "background":"white","cursor":"pointer",})]),
             dbc.Col([
                  html.P("T", style={"color":"white", "background-color":"black", "font-size":"22px", "font-weight":"bold", "border-radius":"100%", "width":"44px", "height":"44px", "text-align":"center", "border":"7px solid #000"})
                     ],className="small-logo"),
