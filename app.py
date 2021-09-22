@@ -90,7 +90,7 @@ mission= html.Div([
        dbc.Row([
            dbc.CardHeader([
                 html.Div([
-                    html.P(["Mission"],),
+                    html.P(["Mission & Goals"],),
                     ],className='card-header'),
                 dbc.CardBody([
                     dbc.Row([

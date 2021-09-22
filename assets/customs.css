@@ -307,12 +307,12 @@
     background-color: white;
     color: black;
     font-size: 18px;
-    column-count: 2;
+    column-count: 3;
+    column-gap: 1pxpx;
   }
 
   .copyright-col{
-    text-align: left;
-    margin-left: 4rem;
+    text-align: right;
     margin-top: 2rem;
 
 }
@@ -326,5 +326,4 @@
       text-align: right;
       color: black;
       margin-top: 2rem;
-      margin-left: 140rem;
   }
