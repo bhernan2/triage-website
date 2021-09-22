@@ -29,43 +29,40 @@ content = html.Div([
     ],className='tab-row'),
     ], className="button-container"),
    dbc.Container([
-        dbc.Card([
-                dbc.Row([
+       dbc.Row([
+           dbc.CardHeader([
                 html.Div([
                     html.P(["Welcome to TRIAGE"],),
-                    ],className='card-header')
-                ],),
+                    ],className='card-header'),
                 dbc.CardBody([
-                html.Div([
                     dbc.Row([
                         dbc.Col([
-                            dbc.Row([html.P('T',style={"color": "black", "font-size": 50, "font-weight":"bolder", "margin-top": "0rem"}),html.P('exas', style={"color": "black", "font-size": 30, "font-weight":"normal", "margin-top": "1rem",} ),]),
-                            dbc.Row([html.P('R',style={"color": "black", "font-size": 50, "font-weight":"bolder","margin-top": "0rem"}),html.P('esearch', style={"color": "black", "font-size": 30, "font-weight":"normal","margin-top": "1rem"} ),]),
-                            dbc.Row([html.P('I',style={"color": "black", "font-size": 50, "font-weight":"bolder","margin-top": "0rem"}),html.P('nstitute for', style={"color": "black", "font-size": 30, "font-weight":"normal","margin-top": "1rem"} ),]),
-                            dbc.Row([html.P('A',style={"color": "black", "font-size": 50, "font-weight":"bolder","margin-top": "0rem"}),html.P('quatic &', style={"color": "black", "font-size": 30, "font-weight":"normal","margin-top": "1rem"} ),]),
-                            dbc.Row([html.P('G',style={"color": "black", "font-size": 50, "font-weight":"bolder","margin-top": "0rem"}),html.P('roundwater', style={"color": "black", "font-size": 30, "font-weight":"normal","margin-top": "1rem"} ),]),
-                            dbc.Row([html.P('E',style={"color": "black", "font-size": 50, "font-weight":"bolder","margin-top": "0rem"}),html.P('cology', style={"color": "black", "font-size": 30, "font-weight":"normal","margin-top": "1rem"} ),]),
+                            dbc.Row([html.P('T',style={"color": "black", "font-size": 50, "font-weight":"bolder", "margin-top": "0rem","margin-left":"5rem"}),html.P('exas', style={"color": "black", "font-size": 30, "font-weight":"normal", "margin-top": "1rem","text-align":"right"} ),]),
+                            dbc.Row([html.P('R',style={"color": "black", "font-size": 50, "font-weight":"bolder","margin-top": "0rem","margin-left":"5rem"}),html.P('esearch', style={"color": "black", "font-size": 30, "font-weight":"normal","margin-top": "1rem","text-align":"right"} ),]),
+                            dbc.Row([html.P('I',style={"color": "black", "font-size": 50, "font-weight":"bolder","margin-top": "0rem","margin-left":"5rem" }),html.P('nstitute for', style={"color": "black", "font-size": 30, "font-weight":"normal","margin-top": "1rem", "text-align":"right"} ),]),
+                            dbc.Row([html.P('A',style={"color": "black", "font-size": 50, "font-weight":"bolder","margin-top": "0rem","margin-left":"5rem" }),html.P('quatic &', style={"color": "black", "font-size": 30, "font-weight":"normal","margin-top": "1rem", "text-align":"right"} ),]),
+                            dbc.Row([html.P('G',style={"color": "black", "font-size": 50, "font-weight":"bolder","margin-top": "0rem","margin-left":"5rem" }),html.P('roundwater', style={"color": "black", "font-size": 30, "font-weight":"normal","margin-top": "1rem", "text-align":"right"} ),]),
+                            dbc.Row([html.P('E',style={"color": "black", "font-size": 50, "font-weight":"bolder","margin-top": "0rem","margin-left":"5rem" }),html.P('cology', style={"color": "black", "font-size": 30, "font-weight":"normal","margin-top": "1rem", "text-align":"right"} ),]),
                             
-                            ], className='triage-col'),
+                            ],className='triage-col'),
                         dbc.Col([
                             dbc.CardImg(src="/assets/mayfly.gif",className="mayfly-col" )
-                        ]),
+                        ],className="mayfly-col"),
                         dbc.Col([
                                 html.P("We are a cooperative research group centered at Texas State University that examines basic and applied ecological questions in aquatic and groundwater systems.",),
-                            ], className='welcome-col3')
-                        ])
-                    ],),
-                       
-                            
-                       
-            
-            ], className="homepage-content"),
+                            ],className='welcome-col3'),
+                        ],className="welcome-box"),
+            ]),
         ],className='card-style'),
-    ], className='card-container', fluid=True,),
+       ],className="triage-row"),
+    ], className='card-container', fluid=True),
     dbc.Row([
         dbc.Col([
             html.P("© 2021 TRIAGE")
         ],className="copyright-col"),
+        dbc.Col([
+            html.P("Follow us on:"),
+        ], className="follow-us"),
         dbc.Col([
             html.Img(src="https://img.icons8.com/material-rounded/48/000000/facebook-new.png",className="facebook-icon"),
             html.Img(src="https://img.icons8.com/material-rounded/48/000000/instagram-new.png",className="instagram-icon")
@@ -90,25 +87,28 @@ mission= html.Div([
     ],className='tab-row'),
     ], className="button-container"),
    dbc.Container([
-        dbc.Card([
-                dbc.Row([
+       dbc.Row([
+           dbc.CardHeader([
                 html.Div([
                     html.P(["Mission"],),
-                    ],className='card-header')
-                ],),
+                    ],className='card-header'),
                 dbc.CardBody([
                     dbc.Row([
                         dbc.Col([
-                            html.P("Space for a mission statement. What words come to mind when you think of TRIAGE?"),
-                        ]),
-                        ], className="mission-content")  
+                            html.P("Space for a mission statement. What words come to mind when you think of TRIAGE?")
+                        ])
+                        ],className="mission-content"),
             ]),
-        ],className='card-style-teams'),
-    ], className='card-container', fluid=True,),
+        ],className='card-style'),
+       ],className="triage-row"),
+    ], className='card-container', fluid=True),
     dbc.Row([
         dbc.Col([
             html.P("© 2021 TRIAGE")
         ],className="copyright-col"),
+        dbc.Col([
+            html.P("Follow us on: "),
+        ], className="follow-us"),
         dbc.Col([
             html.Img(src="https://img.icons8.com/material-rounded/48/000000/facebook-new.png",className="facebook-icon"),
             html.Img(src="https://img.icons8.com/material-rounded/48/000000/instagram-new.png",className="instagram-icon")
@@ -116,6 +116,7 @@ mission= html.Div([
         ], className="social-col")
     ], className="footer-row")
 ], id="page-content", className='content-style')
+
 
 teams=html.Div([
     html.Br(),
@@ -130,25 +131,28 @@ teams=html.Div([
     ],className='tab-row'),
     ], className="button-container"),
    dbc.Container([
-        dbc.Card([
-                dbc.Row([
+       dbc.Row([
+           dbc.CardHeader([
                 html.Div([
-                    html.P(["Teams"],),
-                    ],className='card-header')
-                ],),
+                    html.P(["Meet the Teams"],),
+                    ],className='card-header'),
                 dbc.CardBody([
                     dbc.Row([
                         dbc.Col([
-                            html.P("Space for a carousel component. This component creates a slideshow that cycles through a series of content. The content can highlight collaborators' labs and could include photos and links to lab websites...or whatever..."),
-                        ]),
-                        ],className="teams-content")  
+                            html.P("Space for a carousel component. This component creates a slideshow that cycles through a series of content. The content can highlight collaborators' labs and could include photos and links to lab websites...or whatever...")
+                        ])
+                        ],className="teams-content"),
             ]),
-        ],className='card-style-teams'),
-    ], className='card-container', fluid=True,),
+        ],className='card-style'),
+       ],className="triage-row"),
+    ], className='card-container', fluid=True),
     dbc.Row([
         dbc.Col([
             html.P("© 2021 TRIAGE")
         ],className="copyright-col"),
+        dbc.Col([
+            html.P("Follow us on: "),
+        ], className="follow-us"),
         dbc.Col([
             html.Img(src="https://img.icons8.com/material-rounded/48/000000/facebook-new.png",className="facebook-icon"),
             html.Img(src="https://img.icons8.com/material-rounded/48/000000/instagram-new.png",className="instagram-icon")
@@ -170,25 +174,28 @@ projects= html.Div([
     ],className='tab-row'),
     ], className="button-container"),
    dbc.Container([
-        dbc.Card([
-                dbc.Row([
+       dbc.Row([
+           dbc.CardHeader([
                 html.Div([
                     html.P(["Projects"],),
-                    ],className='card-header')
-                ],),
+                    ],className='card-header'),
                 dbc.CardBody([
                     dbc.Row([
                         dbc.Col([
-                            html.P("Space to highlight projects..."),
-                        ]),
-                        ],className="projects-content")  
+                            html.P("Space to highlight projects...")
+                        ])
+                        ],className="projects-content"),
             ]),
         ],className='card-style'),
-    ], className='card-container', fluid=True,),
+       ],className="triage-row"),
+    ], className='card-container', fluid=True),
     dbc.Row([
         dbc.Col([
             html.P("© 2021 TRIAGE")
         ],className="copyright-col"),
+        dbc.Col([
+            html.P("Follow us on: "),
+        ], className="follow-us"),
         dbc.Col([
             html.Img(src="https://img.icons8.com/material-rounded/48/000000/facebook-new.png",className="facebook-icon"),
             html.Img(src="https://img.icons8.com/material-rounded/48/000000/instagram-new.png",className="instagram-icon")
@@ -196,7 +203,6 @@ projects= html.Div([
         ], className="social-col")
     ], className="footer-row")
 ], id="page-content", className='content-style')
-
 publications=html.Div([
     html.Br(),
     dbc.Container([
@@ -210,25 +216,28 @@ publications=html.Div([
     ],className='tab-row'),
     ], className="button-container"),
    dbc.Container([
-        dbc.Card([
-                dbc.Row([
+       dbc.Row([
+           dbc.CardHeader([
                 html.Div([
                     html.P(["Publications"],),
-                    ],className='card-header')
-                ],),
+                    ],className='card-header'),
                 dbc.CardBody([
                     dbc.Row([
                         dbc.Col([
-                            html.P("Space to highlight publications..."),
-                        ]),
-                        ],className="publications-content")  
+                            html.P("Space to highlight publications...")
+                        ])
+                        ],className="publications-content"),
             ]),
         ],className='card-style'),
-    ], className='card-container', fluid=True,),
+       ],className="triage-row"),
+    ], className='card-container', fluid=True),
     dbc.Row([
         dbc.Col([
             html.P("© 2021 TRIAGE")
         ],className="copyright-col"),
+        dbc.Col([
+            html.P("Follow us on: "),
+        ], className="follow-us"),
         dbc.Col([
             html.Img(src="https://img.icons8.com/material-rounded/48/000000/facebook-new.png",className="facebook-icon"),
             html.Img(src="https://img.icons8.com/material-rounded/48/000000/instagram-new.png",className="instagram-icon")
@@ -250,25 +259,28 @@ events=html.Div([
     ],className='tab-row'),
     ], className="button-container"),
    dbc.Container([
-        dbc.Card([
-                dbc.Row([
+       dbc.Row([
+           dbc.CardHeader([
                 html.Div([
                     html.P(["Events"],),
-                    ],className='card-header')
-                ],),
+                    ],className='card-header'),
                 dbc.CardBody([
                     dbc.Row([
                         dbc.Col([
-                            html.P("Space to highlight events..."),
-                        ]),
-                        ],className="events-content")  
+                            html.P("Space to highlight events...")
+                        ])
+                        ],className="events-content"),
             ]),
         ],className='card-style'),
-    ], className='card-container', fluid=True,),
+       ],className="triage-row"),
+    ], className='card-container', fluid=True),
     dbc.Row([
         dbc.Col([
             html.P("© 2021 TRIAGE")
         ],className="copyright-col"),
+        dbc.Col([
+            html.P("Follow us on: "),
+        ], className="follow-us"),
         dbc.Col([
             html.Img(src="https://img.icons8.com/material-rounded/48/000000/facebook-new.png",className="facebook-icon"),
             html.Img(src="https://img.icons8.com/material-rounded/48/000000/instagram-new.png",className="instagram-icon")
