@@ -20,13 +20,12 @@
     background-color:white;
     color:black;
     font-size: 25pt;
-    column-gap: 5px;
     font-weight: bold;
     column-gap: 5px;
 }
 
 .home-link {
-    margin-left: 2rem;
+    margin-left: 36px;
 }
 
 .small-logo {
