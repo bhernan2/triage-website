@@ -21,7 +21,7 @@
 }
 .tab-row {
     position: absolute;
-    width:1080px;
+    width:max-content;
     align-content: center
     justify-content: center;
     background-color:white;
