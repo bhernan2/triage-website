@@ -64,7 +64,10 @@ content = html.Div([
             html.P("Follow us on:"),
         ], className="follow-us"),
         dbc.Col([
-            html.Img(src="https://img.icons8.com/material-rounded/48/000000/facebook-new.png",className="facebook-icon"),
+            html.A(href="https://www.facebook.com/Texas-Research-Institute-for-Aquatic-and-Groundwater-Ecology-104627268475583",
+            children=[
+                html.Img(src="https://img.icons8.com/material-rounded/48/000000/facebook-new.png",className="facebook-icon")]
+            ),
             html.Img(src="https://img.icons8.com/material-rounded/48/000000/instagram-new.png",className="instagram-icon")
 
         ], className="social-col")
