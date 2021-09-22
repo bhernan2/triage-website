@@ -27,7 +27,7 @@ content = html.Div([
             dbc.NavLink("PUBLICATIONS", href="/page-4", active="exact", style={"color": "black", "border-style":"none", "margin":"10px", "font-size": 20, "background":"white","cursor":"pointer"}),
             dbc.NavLink("EVENTS", href="/page-5", active="exact", style={"color": "black", "border-style":"none", "margin":"10px", "font-size": 20, "background":"white","cursor":"pointer"}),
     ],className='tab-row'),
-    ], className="button-container"),
+    ]),
    dbc.Container([
        dbc.Row([
            dbc.CardHeader([

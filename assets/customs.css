@@ -1,14 +1,12 @@
 .content-style {
     display: grid;
-    margin:auto;
+    margin: auto;
   }
   .card-container {
-    margin-left:auto;
-    margin-right: auto;
     display: grid;
     height:auto;
     width:auto;
-    margin-left: 1rem;
+    margin-left:1rem;
     background-image: url("/assets/background.jpg");
     background-position: center center;
     background-repeat: no-repeat;
@@ -16,54 +14,15 @@
     background-size: cover;
   }
 
-
-
-.mission-card-style{
-    margin-top: 10rem;
-    margin-bottom: 10rem;
-    margin-left: 2rem;
-    margin-right: 2rem;
-    padding: 2rem 2rem;
-    opacity: 0%;
-    width:1500px;
-    height:750pxt;
-}
-/* @media screen and (max-width: 600px) {
-    .card {
-       width: 100%;
-    }
- } */
-
-.button-container{
-    display: flex;
-    margin-left:auto;
-    margin-right:auto;
-    
-    
-}
-
 .tab-row { 
     margin-left:auto;
     margin-right:auto;
     background-color:white;
     justify-content: center;
-    align-items: center;
     color:black;
     background-color: white;
     font-size: 25pt;
     font-weight: bold; 
-}
-
-
-.buttons {
-    position:absolute;
-    margin-top: 7.8rem;
-    justify-content: center;
-}
-
-.tab {
-    font-size: 18pt;
-    background-color: white;
 }
 
 .card-header {
@@ -73,71 +32,28 @@
     width:auto;
     text-align: center;
     align-content: center;
-    margin-bottom: 4rem;
-    /* font-style: italic; */
+    margin-bottom: 2rem;
 }
 
-  
-  
-.logo-col {
-    font-size: 20pt;
-    color:black;
-    text-align:center;
-    /* font-style: italic;        */
-}
 .triage-row {
-    /* justify-content: center;
-    margin-left: 1 rem; */
+    justify-content: center;
+    margin-left: 1 rem;
 }
 .triage-col {
-    /* margin:0 auto 1em; */
-    /* margin-left: 4rem; */
-    /* max-width: 42rem; */
     line-height: 1;
-    /* transform: skewY(var(--angle)); */
     text-transform: uppercase;
-    /* font-weight: 900; */
-    /* text-align: right;
-    justify-content: right; */
 }
 
 .mayfly-col {
-    /* width:200px;
-    height: 300px; */
-    /* margin-right: 18rem; */
-    /* align-items: center; */
-    /* justify-content: center;
-    max-width: 100%; 
-    line-height: 1.2;
-    transform: skewY(var(--angle));
-    font-size: 3em;
-    text-transform: uppercase;
-    font-weight: 900;
-    padding: 0.1em;
-    font-size: 10pt; */
-    margin-bottom: 10rem;
-
+    align-content: center;
 } 
 .welcome-col3 {
     font-size: 22pt;
-    /* margin: 0em auto 0em; */
     text-align: left;
     width:100%;
-    /* margin-right: 4rem; */
-    /* margin-right: 2em; */
     font-weight: normal;
     justify-content: left;
-    /* background: #fff; */
     color: black;
-    
-    
-    /* font-weight: 900; */
-
-    /* padding: 0.5em; */
-    /* text-transform: uppercase; */
-    /* border-style: solid;
-    border-width: thin; */
-    
 }
 
 .welcome-box{
@@ -150,28 +66,6 @@
     
 }
 
-.mission-col{
-    font-size: 25pt;
-    text-align: left;
-    padding-top: 2em;
-    width:100%;
-    /* background: #fff; */
-    color: black;
-}
-.motto_header{
-    font-size: 20pt;
-    width:100%;
-    text-align:justify;
-    color: black;
-    margin-bottom: 10rem;
-}
-.card-title-style{
-    font-weight: bolder;
-    color: black;
-    justify-content: center;
-    font-size: 18pt;
-    height:2rem;
-}
 .card-style{
     margin-top:2rem;
     display: grid;
@@ -196,39 +90,7 @@
     background-color: white;
 }
 
-/* .img-style {
-    background-image: url("/assets/background.jpg");
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-} */
-.mission-container {
-    display: flex;
-    margin-left:auto;
-    margin-right:auto;
-}
-.mission-row {
-    
-    color: black;
-    font-size: 45pt;
-    font-weight: bold;
-    width:auto;
-    text-align: center;
-    align-content: center;
-    margin-bottom: 2rem;
-}
 
-.mission-col {
-    margin-top:5em;
-    height: fit-content;
-    font-size: 45pt;
-    font-weight: bold;
-    color: black;
-    text-align: center;
-    width: 100%;
-    
-}
 .mission-content{
     height: fit-content;
     font-size: 30pt;
@@ -240,15 +102,6 @@
 
 
 }
-.teams-col {
-    margin-top:5em;
-    height: fit-content;
-    font-size: 45pt;
-    font-weight: bold;
-    color: black;
-    text-align: center;
-    width: 100%;
-}
 .teams-content{
     height: fit-content;
     font-size: 30pt;
@@ -256,15 +109,6 @@
     font-weight: normal;
     text-align: justify;
     margin-bottom: 29.8rem;
-    width: 100%;
-
-}
-.hoempage-content{
-    height: fit-content;
-    font-size: 30pt;
-    color: black;
-    font-weight: normal;
-    text-align: justify;
     width: 100%;
 
 }
@@ -300,11 +144,8 @@
 
 }
   
-   
   .footer-row {
-    /* margin-top: 1rem; */
-    padding: .75rem;
-    font-size: .75rem;
+    align-content: center;
     background-color: white;
     color: black;
     font-size: 18px;
