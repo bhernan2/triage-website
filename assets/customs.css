@@ -17,6 +17,7 @@
 .link-container {
     display: grid;
     margin-left: 3rem;
+    margin-right: 3rem;
 }
 .tab-row {
     position: absolute;
