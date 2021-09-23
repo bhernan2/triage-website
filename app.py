@@ -19,25 +19,21 @@ from datetime import datetime
 content = html.Div([
     html.Br(),
     dbc.Container([
-        dbc.Row([
-            dbc.Col([
-                dbc.NavLink("HOME", href="/", active="exact", style={"color": "black", "border-style":"none", "margin":"10px", "font-size": 20, "background":"white","cursor":"pointer", })
-                ],className="home-link"),
-            dbc.Col([
-                dbc.NavLink("ABOUT", href="/page-1", active="exact", style={"color": "black", "border-style":"none", "margin":"10px", "font-size": 20, "background":"white","cursor":"pointer"})]),
-            dbc.Col([
-                dbc.NavLink("TEAMS", href="/page-2", active="exact", style={"color": "black", "border-style":"none", "margin":"10px", "font-size": 20, "background":"white","cursor":"pointer"})]),
-            dbc.Col([
-                dbc.NavLink("PROJECTS", href="/page-3", active="exact", style={"color": "black", "border-style":"none", "margin":"10px", "font-size": 20, "background":"white","cursor":"pointer"})]),
-            dbc.Col([
-                dbc.NavLink("PUBLICATIONS", href="/page-4", active="exact", style={"color": "black", "border-style":"none", "margin":"10px", "font-size": 20, "background":"white","cursor":"pointer"})]),
-            dbc.Col([
-                dbc.NavLink("EVENTS", href="/page-5", active="exact", style={"color": "black", "border-style":"none", "margin":"10px", "font-size": 20, "background":"white","cursor":"pointer", "text-align":"right"})]),
-            dbc.Col([
-                 html.P("T", style={"color":"white", "background-color":"black", "font-size":"22px", "font-weight":"bolder", "border-radius":"100%", "width":"44px", "height":"44px", "text-align":"center", "border":"7px solid #000"})
-                    ],className="small-logo"),
-    ],className='tab-row'),
-
+      
+            dbc.Row([
+                dbc.Col([html.P("T", style={"color":"white", "background-color":"black", "font-size":"22px", "font-weight":"bolder", "border-radius":"100%", "width":"44px", "height":"44px", "text-align":"center", "border":"7px solid #000", "margin-left":"25px"}),], className="small-logo"),
+            html.Ul([
+                html.Li([
+                dbc.NavLink("HOME", href="/", active="exact", style={"color": "black", "border-style":"none", "margin":"10px", "font-size": 20, "background":"white","cursor":"pointer", }),
+                dbc.NavLink("ABOUT", href="/page-1", active="exact", style={"color": "black", "border-style":"none", "margin":"10px", "font-size": 20, "background":"white","cursor":"pointer"}),
+                dbc.NavLink("TEAMS", href="/page-2", active="exact", style={"color": "black", "border-style":"none", "margin":"10px", "font-size": 20, "background":"white","cursor":"pointer"}),
+                dbc.NavLink("PROJECTS", href="/page-3", active="exact", style={"color": "black", "border-style":"none", "margin":"10px", "font-size": 20, "background":"white","cursor":"pointer"}),
+                dbc.NavLink("PUBLICATIONS", href="/page-4", active="exact", style={"color": "black", "border-style":"none", "margin":"10px", "font-size": 20, "background":"white","cursor":"pointer"}),
+                dbc.NavLink("EVENTS", href="/page-5", active="exact", style={"color": "black", "border-style":"none", "margin":"10px", "font-size": 20, "background":"white","cursor":"pointer", "text-align":"right"}),
+            ], className="nav-li"),  
+            ], className="nav-ul"),
+        ],className='tab-row'),
+      
     ], fluid=True, className="link-container"),
    dbc.Container([
        dbc.Row([
