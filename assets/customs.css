@@ -31,7 +31,6 @@
     align-items: center;
     position: absolute;
     width:1180px;
-    background-color:white;
     color:black;
     font-size: 25pt;
     font-weight: bold;
@@ -44,7 +43,7 @@
 
 .small-logo {
     margin-top:8px;
-    text-align: right;
+    margin-right:25px;
 }
 
 .card-header {
@@ -173,13 +172,16 @@
     background-color: white;
     color: black;
     font-size: 18px;
-    column-count: 3;
-    column-gap: 1pxpx;
+    margin-left: 38rem;
+    
+    /* padding: 2rem; */
   }
 
   .copyright-col{
     text-align: right;
     margin-top: 2rem;
+    
+
 
 }
   .social-col{
