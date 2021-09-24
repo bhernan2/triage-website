@@ -17,7 +17,6 @@ import numpy as np
 from datetime import datetime
 
 content = html.Div([
-    html.Br(),
     dbc.Container([
             dbc.Row([
                 dbc.Col([html.P("T", style={"color":"white", "background-color":"black", "font-size":"22px", "font-weight":"bolder", "border-radius":"100%", "width":"44px", "height":"44px", "text-align":"center", "border":"7px solid #000", "margin-left":"25px"}),], className="small-logo"),
@@ -84,7 +83,6 @@ content = html.Div([
     
 # ], id="home")
 mission= html.Div([
-    html.Br(),
     dbc.Container([
             dbc.Row([
                 dbc.Col([html.P("T", style={"color":"white", "background-color":"black", "font-size":"22px", "font-weight":"bolder", "border-radius":"100%", "width":"44px", "height":"44px", "text-align":"center", "border":"7px solid #000", "margin-left":"25px"}),], className="small-logo"),
@@ -137,7 +135,6 @@ mission= html.Div([
 
 
 teams=html.Div([
-    html.Br(),
     dbc.Container([
             dbc.Row([
                 dbc.Col([html.P("T", style={"color":"white", "background-color":"black", "font-size":"22px", "font-weight":"bolder", "border-radius":"100%", "width":"44px", "height":"44px", "text-align":"center", "border":"7px solid #000", "margin-left":"25px"}),], className="small-logo"),
@@ -189,7 +186,6 @@ teams=html.Div([
 ], id="page-content", className='content-style')
 
 projects= html.Div([
-    html.Br(),
     dbc.Container([
             dbc.Row([
                 dbc.Col([html.P("T", style={"color":"white", "background-color":"black", "font-size":"22px", "font-weight":"bolder", "border-radius":"100%", "width":"44px", "height":"44px", "text-align":"center", "border":"7px solid #000", "margin-left":"25px"}),], className="small-logo"),
@@ -240,7 +236,6 @@ projects= html.Div([
     ], className="footer-row")
 ], id="page-content", className='content-style')
 publications=html.Div([
-    html.Br(),
     dbc.Container([
             dbc.Row([
                 dbc.Col([html.P("T", style={"color":"white", "background-color":"black", "font-size":"22px", "font-weight":"bolder", "border-radius":"100%", "width":"44px", "height":"44px", "text-align":"center", "border":"7px solid #000", "margin-left":"25px"}),], className="small-logo"),
@@ -292,7 +287,6 @@ publications=html.Div([
 ], id="page-content", className='content-style')
 
 events=html.Div([
-    html.Br(),
     dbc.Container([
             dbc.Row([
                 dbc.Col([html.P("T", style={"color":"white", "background-color":"black", "font-size":"22px", "font-weight":"bolder", "border-radius":"100%", "width":"44px", "height":"44px", "text-align":"center", "border":"7px solid #000", "margin-left":"25px"}),], className="small-logo"),
