@@ -172,7 +172,7 @@
     background-color: white;
     color: black;
     font-size: 18px;
-    margin-left: 38rem;
+    margin-left: 37rem;
     
     /* padding: 2rem; */
   }
@@ -194,4 +194,9 @@
       text-align: right;
       color: black;
       margin-top: 2rem;
+  }
+
+  .signature{
+      text-align: left;
+      margin-top: 1rem;
   }
