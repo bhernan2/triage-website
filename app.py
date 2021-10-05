@@ -175,7 +175,7 @@ teams=html.Div([
                             ]),
                             dbc.Col([
                                  dbc.Card([
-                                    # dbc.CardImg(src="/assets/orb.jpg", style={"width":"110pt","height":"90pt", "justify-content":"center"}), 
+                                    dbc.CardImg(src="/assets/ephemeoptera.svg", className = 'align-self-center', style={"width":"110pt","height":"90pt",}), 
                                     dbc.CardBody([
                                         html.A("Nowlin Aquatic Ecology Lab", href="https://nowlinaquatecollab.wp.txstate.edu/nowlin-lab-folks/", style={"color":"black"}),
                                     ]), 
