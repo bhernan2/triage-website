@@ -206,13 +206,12 @@
   .teams-cards{
     color: black;
     display: flex;
-    align-items: center;
-    padding-left: 0.5rem;
+    vertical-align: bottom;
     padding: 0.5rem;
-    font-size: 25pt;
+    font-size: 18pt;
     background-color: transparent;
-    -ms-flex-direction: row;
-    flex-direction: row;
+    /* -ms-flex-direction: row;
+    flex-direction: row; */
     position: relative;
     perspective: 1000px;
   }

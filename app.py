@@ -4,6 +4,8 @@
 from typing import Container
 import dash
 import dash_bootstrap_components as dbc
+from dash_bootstrap_components._components.CardBody import CardBody
+from dash_bootstrap_components._components.CardImg import CardImg
 import dash_core_components as dcc
 import dash_html_components as html
 from dash.dependencies import Input, Output, State
@@ -133,7 +135,15 @@ mission= html.Div([
         ], className="social-col"),
     ], className="footer-row"),
 ], id="page-content", className='content-style')
-
+# carousel = dbc.Carousel(
+#     items=[
+#         {"key": "1", "src":""},
+#         {"key": "2", "src":""},
+#         {"key": "3", "src":""},
+#     ],
+#     controls=True,
+#     indicators=True,
+# )
 teams=html.Div([
     dbc.Container([
             dbc.Row([
@@ -159,26 +169,57 @@ teams=html.Div([
                 dbc.CardBody([
                     html.Div([
                         dbc.Row([
-                            dbc.Col(
-                                dbc.Card(html.A("Schwalb Stream Ecology Lab", href="https://streamecology.wp.txstate.edu/current-students/", style={"color":"black"}), style={"width":"200pt", "height":"180pt"})
-                                ),
-                            dbc.Col(
-                                dbc.Card(html.P("Another lab"),style={"width":"200pt", "height":"180pt"})
-                                ),
-                            dbc.Col(
-                                dbc.Card(html.P("Another lab"),style={"width":"200pt", "height":"180pt", "text-align":"center"})
-                                ),
+                            dbc.Col([
+                                dbc.Card([
+                                    # dbc.CardImg(src="/assets/orb.jpg", style={"width":"110pt","height":"90pt", "justify-content":"center"}), 
+                                    dbc.CardBody([
+                                        html.A("Schwalb Stream Ecology Lab", href="https://streamecology.wp.txstate.edu/current-students/", style={"color":"black"}),
+                                    ]), 
+                                ],style={"width":"220pt", "height":"180pt"})
+                            ]),
+                            dbc.Col([
+                                 dbc.Card([
+                                    # dbc.CardImg(src="/assets/orb.jpg", style={"width":"110pt","height":"90pt", "justify-content":"center"}), 
+                                    dbc.CardBody([
+                                        html.A("Another lab", href="", style={"color":"black"}),
+                                    ]), 
+                                ],style={"width":"220pt", "height":"180pt"})
+                            ]),
+                            dbc.Col([
+                                 dbc.Card([
+                                    # dbc.CardImg(src="/assets/orb.jpg", style={"width":"110pt","height":"90pt", "justify-content":"center"}), 
+                                    dbc.CardBody([
+                                        html.A("Another Lab", href="", style={"color":"black"}),
+                                    ]), 
+                                ],style={"width":"220pt", "height":"180pt"})
+                                
+                            ]),
                             ],className="teams-cards",),
                         dbc.Row([
-                            dbc.Col(
-                                dbc.Card(html.P("Another lab",),style={"width":"200pt", "height":"180pt", "text-align":"center"}),
-                                ),
-                            dbc.Col(
-                                dbc.Card(html.P("Another Lab"),style={"width":"200pt", "height":"180pt", "text-align":"center"})
-                                ),
-                            dbc.Col(
-                                dbc.Card(html.P("Another lab"),style={"width":"200pt", "height":"180pt", "text-align":"center"})
-                                ),
+                            dbc.Col([
+                               dbc.Card([
+                                    # dbc.CardImg(src="/assets/orb.jpg", style={"width":"110pt","height":"90pt", "justify-content":"center"}), 
+                                    dbc.CardBody([
+                                        html.A("Another Lab", href="", style={"color":"black"}),
+                                    ]), 
+                                ],style={"width":"220pt", "height":"180pt"}) 
+                            ]),
+                            dbc.Col([
+                                dbc.Card([
+                                    # dbc.CardImg(src="/assets/orb.jpg", style={"width":"110pt","height":"90pt", "justify-content":"center"}), 
+                                    dbc.CardBody([
+                                        html.A("Another Lab", href="", style={"color":"black"}),
+                                    ]), 
+                                ],style={"width":"220pt", "height":"180pt"})
+                            ]),
+                            dbc.Col([
+                                dbc.Card([
+                                    # dbc.CardImg(src="/assets/orb.jpg", style={"width":"110pt","height":"90pt", "justify-content":"center"}), 
+                                    dbc.CardBody([
+                                        html.A("Another Lab", href="", style={"color":"black"}),
+                                    ]), 
+                                ],style={"width":"220pt", "height":"180pt"})
+                            ]),
                             ],className="teams-cards",),
                     ], className="teams-div")
             ], className="cards-styles"),
