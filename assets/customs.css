@@ -202,3 +202,19 @@
       text-align: left;
       margin-top: 1rem;
   }
+
+  .teams-cards{
+    display: flex;
+    align-items: center;
+    padding-left: 0.5rem;
+    padding: 0.5rem;
+    font-size: 25pt;
+    background-color: transparent;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    position: relative;
+    perspective: 1000px;
+  }
+  
+ 
+

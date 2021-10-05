@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 
+
 from typing import Container
 import dash
 import dash_bootstrap_components as dbc
@@ -133,7 +134,6 @@ mission= html.Div([
     ], className="footer-row"),
 ], id="page-content", className='content-style')
 
-
 teams=html.Div([
     dbc.Container([
             dbc.Row([
@@ -157,12 +157,31 @@ teams=html.Div([
                     html.P(["Meet the Teams"],),
                     ],className='card-header'),
                 dbc.CardBody([
-                    dbc.Row([
-                        dbc.Col([
-                            html.P("Space for a carousel component. This component creates a slideshow that cycles through a series of content. The content can highlight collaborators' labs and could include photos and links to lab websites...or whatever...")
-                        ])
-                        ],className="teams-content"),
-            ]),
+                    html.Div([
+                        dbc.Row([
+                            dbc.Col(
+                                dbc.Card(html.P("Schwalb Stream Ecology Lab"), style={"width":"200pt", "height":"180pt", "text-align":"center"})
+                                ),
+                            dbc.Col(
+                                dbc.Card(html.P("Another lab"),style={"width":"200pt", "height":"180pt"})
+                                ),
+                            dbc.Col(
+                                dbc.Card(html.P("Another lab"),style={"width":"200pt", "height":"180pt", "text-align":"center"})
+                                ),
+                            ],className="teams-cards",),
+                        dbc.Row([
+                            dbc.Col(
+                                dbc.Card(html.P("Another lab",),style={"width":"200pt", "height":"180pt", "text-align":"center"}),
+                                ),
+                            dbc.Col(
+                                dbc.Card(html.P("Another Lab"),style={"width":"200pt", "height":"180pt", "text-align":"center"})
+                                ),
+                            dbc.Col(
+                                dbc.Card(html.P("Another lab"),style={"width":"200pt", "height":"180pt", "text-align":"center"})
+                                ),
+                            ],className="teams-cards",),
+                    ], className="teams-div")
+            ], className="cards-styles"),
         ],className='card-style'),
        ],className="triage-row"),
     ], className='card-container', fluid=True),
