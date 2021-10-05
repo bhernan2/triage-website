@@ -1,11 +1,7 @@
 # -*- coding: utf-8 -*-
 
-
-from typing import Container
 import dash
 import dash_bootstrap_components as dbc
-from dash_bootstrap_components._components.CardBody import CardBody
-from dash_bootstrap_components._components.CardImg import CardImg
 import dash_core_components as dcc
 import dash_html_components as html
 from dash.dependencies import Input, Output, State
@@ -171,7 +167,7 @@ teams=html.Div([
                         dbc.Row([
                             dbc.Col([
                                 dbc.Card([
-                                    # dbc.CardImg(src="/assets/orb.jpg", style={"width":"110pt","height":"90pt", "justify-content":"center"}), 
+                                    dbc.CardImg(src="/assets/fatmucket.svg", className = 'align-self-center', style={"width":"110pt","height":"90pt",}), 
                                     dbc.CardBody([
                                         html.A("Schwalb Stream Ecology Lab", href="https://streamecology.wp.txstate.edu/current-students/", style={"color":"black"}),
                                     ]), 
@@ -181,7 +177,7 @@ teams=html.Div([
                                  dbc.Card([
                                     # dbc.CardImg(src="/assets/orb.jpg", style={"width":"110pt","height":"90pt", "justify-content":"center"}), 
                                     dbc.CardBody([
-                                        html.A("Another lab", href="", style={"color":"black"}),
+                                        html.A("Nowlin Aquatic Ecology Lab", href="https://nowlinaquatecollab.wp.txstate.edu/nowlin-lab-folks/", style={"color":"black"}),
                                     ]), 
                                 ],style={"width":"220pt", "height":"180pt"})
                             ]),

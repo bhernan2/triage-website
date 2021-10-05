@@ -206,7 +206,6 @@
   .teams-cards{
     color: black;
     display: flex;
-    vertical-align: bottom;
     padding: 0.5rem;
     font-size: 18pt;
     background-color: transparent;
