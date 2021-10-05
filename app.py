@@ -108,7 +108,7 @@ mission= html.Div([
                 dbc.CardBody([
                     dbc.Row([
                         dbc.Col([
-                            html.P("Space for a mission statement. What words come to mind when you think of TRIAGE?")
+                            html.P("The climate crisis is affecting and threatening aquatic ecosystems and the benefits and services these systems provide. Our collaborative research aims to better understand and predict the impacts of climatic changes on aquatic communities. A central focus of research is determining the factors underlying the distribution of aquatic organisms and how increased frequency and intensity of hydrological disturbances will affect the ecology of aquatic ecosystems. The key mission of TRIAGE is to contribute to an increase in diversity (visible and invisible) in aquatic sciences by building and maintaining a divers and inclusive research team, educating and training students from diverse backgrounds, and promoting broader engagement through outreach to the public.")
                         ])
                         ],className="mission-content"),
             ]),
@@ -160,7 +160,7 @@ teams=html.Div([
                     html.Div([
                         dbc.Row([
                             dbc.Col(
-                                dbc.Card(html.P("Schwalb Stream Ecology Lab"), style={"width":"200pt", "height":"180pt", "text-align":"center"})
+                                dbc.Card(html.A("Schwalb Stream Ecology Lab", href="https://streamecology.wp.txstate.edu/current-students/", style={"color":"black"}), style={"width":"200pt", "height":"180pt"})
                                 ),
                             dbc.Col(
                                 dbc.Card(html.P("Another lab"),style={"width":"200pt", "height":"180pt"})
