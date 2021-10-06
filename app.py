@@ -210,7 +210,7 @@ teams=html.Div([
                             ]),
                             dbc.Col([
                                 dbc.Card([
-                                    # dbc.CardImg(src="/assets/orb.jpg", style={"width":"110pt","height":"90pt", "justify-content":"center"}), 
+                                    dbc.CardImg(src="/assets/copopod.svg", className = 'align-self-center', style={"width":"110pt","height":"90pt",}), 
                                     dbc.CardBody([
                                         html.A("Another Lab", href="", style={"color":"black"}),
                                     ]), 

@@ -2,41 +2,53 @@
     display: grid;
     margin: auto;
   }
+  .link-container {
+      margin-right: 1080px;
+  }
   .card-container {
     display: grid;
-    height:auto;
-    width:auto;
+    /* min-height: 65%; */
+    /* min-width: 1080px; */
+  /* Set up proportionate scaling */
+    width: 98.5%;
+  /* Set up positioning */
+    position:fixed;
+    top: 0;
+    left: 0;
     margin-left:1rem;
+    margin-right: 1rem;
     margin-top: 5rem;
-    background-image: url("/assets/background.jpg");
+    margin-bottom: 5rem;
+    background-image: url("/assets/background.jpeg");
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-size: cover;
+    background-size:98.5%;
   }
+
 .nav-ul{
     display:inline-flex;
     align-items: center;
     list-style: none;
+    /* padding-left: 12px; */
     padding: .7em;
     margin: 0;
 }
 .nav-li {
     display: inline-flex;
     margin-left: auto;
-    margin-right: 25px;
+    /* margin-right: 50px; */
     
 }
 .tab-row {
     display: flex;
     align-items: center;
-    position: absolute;
-    width:1180px;
+    position: fixed;
+    width:1080px;
     color:black;
     font-size: 25pt;
     font-weight: bold;
-    
-    /* padding-top: 1rem; */
+
 }
 
 .home-link {
@@ -87,13 +99,14 @@
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 100px;
     column-gap: 40px;
-    margin-bottom: 12rem;
+    margin-bottom: 7rem;
     
 }
 
 .card-style{
-    margin-top:2rem;
     display: grid;
+    flex-direction: column;
+    margin-top:2rem;
     margin-left: 2rem;
     margin-right: 2rem;
     padding: 1rem 1rem;
@@ -102,10 +115,14 @@
     height: 750px;
     background-color: white;
 }
+
+
+
 
 .card-style-teams{
     margin-top:2rem;
     display: grid;
+
     margin-left: 2rem;
     margin-right: 2rem;
     padding: 1rem 1rem;
@@ -114,7 +131,6 @@
     height: 750px;
     background-color: white;
 }
-
 
 .mission-content{
     height: fit-content;
@@ -172,11 +188,13 @@
   .footer-row {
     align-content: center;
     background-color: white;
+    width: 1080px;
     color: black;
     font-size: 18px;
-    margin-left: 37rem;
-    
-    /* padding: 2rem; */
+
+    position:fixed;
+    bottom: auto;
+    margin-top: 56rem;
   }
 
   .copyright-col{
@@ -209,11 +227,9 @@
     padding: 0.5rem;
     font-size: 18pt;
     background-color: transparent;
+  }
     /* -ms-flex-direction: row;
-    flex-direction: row; */
+    flex-direction: row; 
     position: relative;
     perspective: 1000px;
   }
-  
- 
-
