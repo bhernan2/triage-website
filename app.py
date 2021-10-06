@@ -183,7 +183,7 @@ teams=html.Div([
                             ]),
                             dbc.Col([
                                  dbc.Card([
-                                    # dbc.CardImg(src="/assets/orb.jpg", style={"width":"110pt","height":"90pt", "justify-content":"center"}), 
+                                    dbc.CardImg(src="/assets/microbes.svg", className = 'align-self-center', style={"width":"110pt","height":"90pt",}),
                                     dbc.CardBody([
                                         html.A("Another Lab", href="", style={"color":"black"}),
                                     ]), 
@@ -194,7 +194,7 @@ teams=html.Div([
                         dbc.Row([
                             dbc.Col([
                                dbc.Card([
-                                    # dbc.CardImg(src="/assets/orb.jpg", style={"width":"110pt","height":"90pt", "justify-content":"center"}), 
+                                   dbc.CardImg(src="/assets/longnose_dace.svg", className = 'align-self-center', style={"width":"110pt","height":"90pt",}), 
                                     dbc.CardBody([
                                         html.A("Another Lab", href="", style={"color":"black"}),
                                     ]), 
@@ -202,7 +202,7 @@ teams=html.Div([
                             ]),
                             dbc.Col([
                                 dbc.Card([
-                                    # dbc.CardImg(src="/assets/orb.jpg", style={"width":"110pt","height":"90pt", "justify-content":"center"}), 
+                                    dbc.CardImg(src="/assets/blind_salamander.svg", className = 'align-self-center', style={"width":"110pt","height":"90pt",}),  
                                     dbc.CardBody([
                                         html.A("Another Lab", href="", style={"color":"black"}),
                                     ]), 
