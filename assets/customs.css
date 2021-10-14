@@ -14,6 +14,7 @@
     
   /* Set up proportionate scaling */
     width: 98.5%;
+    height: fit-content;
   /* Set up positioning */
     position:absolute;
     top: 0;
