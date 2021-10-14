@@ -33,10 +33,10 @@ content = html.Div([
     ], fluid=True, className="link-container"),
    dbc.Container([
        dbc.Row([
-           dbc.CardHeader([
+           dbc.Card([
                 html.Div([
-                    html.P(["Welcome to TRIAGE"],),
-                    ],className='card-header'),
+                    html.P(["Welcome to TRIAGE"],className='card-header'),
+                    ],),
                 dbc.CardBody([
                     dbc.Row([
                         dbc.Col([
@@ -50,14 +50,14 @@ content = html.Div([
                             ],className='triage-col'),
                         dbc.Col([
                             html.P("T", style={"color":"white", "background-color":"black", "font-size":"200px", "border-radius":"100%", "padding":"0rem", "width":"280px", "height":"280px", "border":"10px solid #000","text-align":"center"})
-                        ],className="mayfly-col"),
+                        ],className="logo-col"),
                         dbc.Col([
                                 html.P("We are a cooperative research group centered at Texas State University that examines basic and applied ecological questions in aquatic and groundwater systems.",),
                             ],className='welcome-col3'),
                         ],className="welcome-box"),
             ]),
-        ],className='card-style'),
-       ],className="triage-row"),
+        ], className='card-style'),
+   ],className="triage-row"),
     ], className='card-container', fluid=True),
     dbc.Row([
         dbc.Col([
@@ -99,16 +99,16 @@ mission= html.Div([
     ], fluid=True, className="link-container"),
    dbc.Container([
        dbc.Row([
-           dbc.CardHeader([
+           dbc.Card([
                 html.Div([
-                    html.P(["Mission & Goals"],),
-                    ],className='card-header'),
+                    html.P(["Mission & Goals"],className='card-header'),
+                    ],),
                 dbc.CardBody([
                     dbc.Row([
                         dbc.Col([
                             html.P("The climate crisis is affecting and threatening aquatic ecosystems and the benefits and services these systems provide. Our collaborative research aims to better understand and predict the impacts of climatic changes on aquatic communities. A central focus of research is determining the factors underlying the distribution of aquatic organisms and how increased frequency and intensity of hydrological disturbances will affect the ecology of aquatic ecosystems. The key mission of TRIAGE is to contribute to an increase in diversity (visible and invisible) in aquatic sciences by building and maintaining a diverse and inclusive research team, educating and training students from diverse backgrounds, and promoting broader engagement through outreach to the public.")
                         ])
-                        ],className="mission-content"),
+                        ],className="mission-content"),          
             ]),
         ],className='card-style'),
        ],className="triage-row"),
@@ -158,67 +158,67 @@ teams=html.Div([
     ], fluid=True, className="link-container"),
    dbc.Container([
        dbc.Row([
-           dbc.CardHeader([
-                html.Div([
-                    html.P(["Meet the Teams"],),
-                    ],className='card-header'),
+           dbc.Card([
+               html.Div([
+                    html.P(["Meet the Labs"],className='card-header'),
+                    ],),
                 dbc.CardBody([
                     html.Div([
                         dbc.Row([
                             dbc.Col([
                                 dbc.Card([
-                                    dbc.CardImg(src="/assets/fatmucket.svg", className = 'align-self-center', style={"width":"110pt","height":"90pt",}), 
+                                    dbc.CardImg(src="/assets/fatmucket.svg", className="mussel",), 
                                     dbc.CardBody([
-                                        html.A("Schwalb Stream Ecology Lab", href="https://streamecology.wp.txstate.edu/current-students/", style={"color":"black"}),
+                                        html.A("Schwalb: Stream Ecology", href="https://streamecology.wp.txstate.edu/current-students/", style={"color":"black"}),
                                     ]), 
-                                ],style={"width":"220pt", "height":"180pt"})
-                            ]),
+                                ],style={"width":"240pt", "height":"200pt"})
+                            ], className="lab-card"),
                             dbc.Col([
                                  dbc.Card([
-                                    dbc.CardImg(src="/assets/ephemeoptera.svg", className = 'align-self-center', style={"width":"110pt","height":"90pt",}), 
+                                    dbc.CardImg(src="/assets/ephemeoptera.svg", className="mayfly"), 
                                     dbc.CardBody([
-                                        html.A("Nowlin Aquatic Ecology Lab", href="https://nowlinaquatecollab.wp.txstate.edu/nowlin-lab-folks/", style={"color":"black"}),
+                                        html.A("Nowlin: Aquatic Ecology", href="https://nowlinaquatecollab.wp.txstate.edu/nowlin-lab-folks/", style={"color":"black"}),
                                     ]), 
-                                ],style={"width":"220pt", "height":"180pt"})
-                            ]),
+                                ],style={"width":"240pt", "height":"200pt"})
+                            ], className="lab-card"),
                             dbc.Col([
                                  dbc.Card([
-                                    dbc.CardImg(src="/assets/microbes.svg", className = 'align-self-center', style={"width":"110pt","height":"90pt",}),
+                                    dbc.CardImg(src="/assets/microbes.svg", className = "microbes"),
                                     dbc.CardBody([
                                         html.A("Another Lab", href="", style={"color":"black"}),
                                     ]), 
-                                ],style={"width":"220pt", "height":"180pt"})
+                                ],style={"width":"240pt", "height":"200pt"})
                                 
-                            ]),
+                            ], className="lab-card"),
                             ],className="teams-cards",),
                         dbc.Row([
                             dbc.Col([
                                dbc.Card([
-                                   dbc.CardImg(src="/assets/longnose_dace.svg", className = 'align-self-center', style={"width":"110pt","height":"90pt",}), 
+                                   dbc.CardImg(src="/assets/longnose_dace.svg", className = "longnose-dace"), 
                                     dbc.CardBody([
                                         html.A("Another Lab", href="", style={"color":"black"}),
                                     ]), 
-                                ],style={"width":"220pt", "height":"180pt"}) 
-                            ]),
+                                ],style={"width":"240pt", "height":"200pt"}) 
+                            ], className="lab-card"),
                             dbc.Col([
                                 dbc.Card([
-                                    dbc.CardImg(src="/assets/blind_salamander.svg", className = 'align-self-center', style={"width":"110pt","height":"90pt",}),  
+                                    dbc.CardImg(src="/assets/blind_salamander.svg", className="blind-salamander",),  
                                     dbc.CardBody([
                                         html.A("Another Lab", href="", style={"color":"black"}),
-                                    ]), 
-                                ],style={"width":"220pt", "height":"180pt"})
-                            ]),
+                                    ], style={"color":"black", "justify-content":"center"}), 
+                                ],style={"width":"240pt", "height":"200pt"})
+                            ], className="lab-card"),
                             dbc.Col([
                                 dbc.Card([
-                                    dbc.CardImg(src="/assets/copopod.svg", className = 'align-self-center', style={"width":"110pt","height":"90pt",}), 
+                                    dbc.CardImg(src="/assets/copopod.svg", className = "copopod"), 
                                     dbc.CardBody([
                                         html.A("Another Lab", href="", style={"color":"black"}),
                                     ]), 
-                                ],style={"width":"220pt", "height":"180pt"})
-                            ]),
+                                ],style={"width":"240pt", "height":"200pt"})
+                            ], className="lab-card"),
                             ],className="teams-cards",),
                     ], className="teams-div")
-            ], className="cards-styles"),
+            ]),
         ],className='card-style'),
        ],className="triage-row"),
     ], className='card-container', fluid=True),
@@ -240,7 +240,6 @@ teams=html.Div([
         ], className="social-col")
     ], className="footer-row")
 ], id="page-content", className='content-style')
-
 projects= html.Div([
     dbc.Container([
             dbc.Row([
@@ -259,16 +258,16 @@ projects= html.Div([
     ], fluid=True, className="link-container"),
    dbc.Container([
        dbc.Row([
-           dbc.CardHeader([
+           dbc.Card([
                 html.Div([
-                    html.P(["Projects"],),
-                    ],className='card-header'),
+                    html.P(["Projects"],className='card-header'),
+                    ],),
                 dbc.CardBody([
                     dbc.Row([
                         dbc.Col([
                             html.P("Space to highlight projects...")
-                        ])
-                        ],className="projects-content"),
+                                                ])
+                        ],className="mission-content"),          
             ]),
         ],className='card-style'),
        ],className="triage-row"),
@@ -288,10 +287,10 @@ projects= html.Div([
             html.Img(src="https://img.icons8.com/material-rounded/48/000000/instagram-new.png",className="instagram-icon"),
             html.Img(src="https://img.icons8.com/material-rounded/48/000000/twitter.png"),
 
-        ], className="social-col")
-    ], className="footer-row")
+        ], className="social-col"),
+    ], className="footer-row"),
 ], id="page-content", className='content-style')
-publications=html.Div([
+publications= html.Div([
     dbc.Container([
             dbc.Row([
                 dbc.Col([html.P("T", style={"color":"white", "background-color":"black", "font-size":"22px", "font-weight":"bolder", "border-radius":"100%", "width":"44px", "height":"44px", "text-align":"center", "border":"7px solid #000", "margin-left":"25px"}),], className="small-logo"),
@@ -309,16 +308,16 @@ publications=html.Div([
     ], fluid=True, className="link-container"),
    dbc.Container([
        dbc.Row([
-           dbc.CardHeader([
+           dbc.Card([
                 html.Div([
-                    html.P(["Publications"],),
-                    ],className='card-header'),
+                    html.P(["Publications"],className='card-header'),
+                    ],),
                 dbc.CardBody([
                     dbc.Row([
                         dbc.Col([
                             html.P("Space to highlight publications...")
-                        ])
-                        ],className="publications-content"),
+                                                ])
+                        ],className="mission-content"),          
             ]),
         ],className='card-style'),
        ],className="triage-row"),
@@ -338,8 +337,8 @@ publications=html.Div([
             html.Img(src="https://img.icons8.com/material-rounded/48/000000/instagram-new.png",className="instagram-icon"),
             html.Img(src="https://img.icons8.com/material-rounded/48/000000/twitter.png"),
 
-        ], className="social-col")
-    ], className="footer-row")
+        ], className="social-col"),
+    ], className="footer-row"),
 ], id="page-content", className='content-style')
 
 events=html.Div([
@@ -360,16 +359,16 @@ events=html.Div([
     ], fluid=True, className="link-container"),
    dbc.Container([
        dbc.Row([
-           dbc.CardHeader([
+           dbc.Card([
                 html.Div([
-                    html.P(["Events"],),
-                    ],className='card-header'),
+                    html.P(["Events"],className='card-header'),
+                    ],),
                 dbc.CardBody([
                     dbc.Row([
                         dbc.Col([
                             html.P("Space to highlight events...")
-                        ])
-                        ],className="events-content"),
+                                                ])
+                        ],className="mission-content"),          
             ]),
         ],className='card-style'),
        ],className="triage-row"),
@@ -389,8 +388,8 @@ events=html.Div([
             html.Img(src="https://img.icons8.com/material-rounded/48/000000/instagram-new.png",className="instagram-icon"),
             html.Img(src="https://img.icons8.com/material-rounded/48/000000/twitter.png"),
 
-        ], className="social-col")
-    ], className="footer-row")
+        ], className="social-col"),
+    ], className="footer-row"),
 ], id="page-content", className='content-style')
 
 # def _content():

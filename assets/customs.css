@@ -5,10 +5,10 @@
   .link-container {
       margin-right: 1080px;
   }
+
   .card-container {
     display: grid;
-    /* min-height: 65%; */
-    /* min-width: 1080px; */
+    
   /* Set up proportionate scaling */
     width: 98.5%;
   /* Set up positioning */
@@ -64,22 +64,24 @@
     color: black;
     font-size: 45pt;
     font-weight: bold;
-    width:auto;
     text-align: center;
     align-content: center;
-    margin-bottom: 2rem;
+    /* margin-bottom: 1rem; */
 }
 
 .triage-row {
     justify-content: center;
     margin-left: 1 rem;
+    margin-right: 1rem;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
 }
 .triage-col {
     line-height: 1;
     text-transform: uppercase;
 }
 
-.mayfly-col {
+.logo-col {
     margin:auto;
     align-content: center;
     margin-top: 4rem;
@@ -95,21 +97,21 @@
 
 .welcome-box{
     display: grid;
-    height: 350px;
+    height: auto;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 100px;
     column-gap: 40px;
-    margin-bottom: 7rem;
+    margin-bottom: 20rem;
     
 }
 
 .card-style{
+    
+}
+
+
+.card{
     display: grid;
-    flex-direction: column;
-    margin-top:2rem;
-    margin-left: 2rem;
-    margin-right: 2rem;
-    padding: 1rem 1rem;
     opacity: 75%;
     width:1080px;
     height: 750px;
@@ -122,7 +124,6 @@
 .card-style-teams{
     margin-top:2rem;
     display: grid;
-
     margin-left: 2rem;
     margin-right: 2rem;
     padding: 1rem 1rem;
@@ -221,15 +222,67 @@
       margin-top: 1rem;
   }
 
+  .teams {
+      color: black;
+      align-content: center;
+  }
+
   .teams-cards{
     color: black;
-    display: flex;
+    font-weight:bolder;
     padding: 0.5rem;
     font-size: 18pt;
-    background-color: transparent;
-  }
-    /* -ms-flex-direction: row;
+    -ms-flex-direction: row;
     flex-direction: row; 
     position: relative;
     perspective: 1000px;
+  }
+
+  .lab-card{
+      justify-items: center;
+      color:black;
+      font-weight: bold;
+  }
+
+  .mussel {
+    color:black;
+    align-items: center;
+    margin-left: 1.5em;
+    width: 180pt;
+    height: 140pt;
+  }
+  .mayfly {
+    color:black;
+    align-items: center;
+    margin-left: 1.5em;
+    width: 180pt;
+    height: 140pt;
+  }
+  .microbes {
+    color:black;
+    align-items: center;
+    margin-left: 1.6em;
+    width: 180pt;
+    height: 140pt;
+  }
+  .longnose-dace {
+    color:black;
+    align-items: center;
+    margin-left: 1.5em;
+    width: 180pt;
+    height: 140pt;
+  }
+  .blind-salamander {
+    color:black;
+    align-items: center;
+    margin-left: 1.5em;
+    width: 180pt;
+    height: 140pt;
+  }
+  .copopod {
+    color:black;
+    align-items: center;
+    margin-left: 1.5em;
+    width: 180pt;
+    height: 140pt;
   }
