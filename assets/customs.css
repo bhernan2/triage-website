@@ -1,6 +1,8 @@
 .content-style {
     display: grid;
     margin: auto;
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+    overflow-y: scroll; /* Add vertical scrollbar */
   }
   .link-container {
       margin-right: 1080px;
