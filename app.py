@@ -56,7 +56,7 @@ IMG_STYLE = {
 sidebar = html.Div([
     dbc.Row([
         dbc.Col([html.P("T", style={"color":"black", "background-color":"white", "font-size":"22px", "font-weight":"bolder", "border-radius":"100%", "width":"44px", "height":"44px", "text-align":"center", "border":"7px solid #000",}),]),
-        dbc.Col([html.H2("TRIAGE", style={"font-size":"25pt", "color":"white", }),], style={"justify-content": "left", "padding-right":"3rem"}),
+        dbc.Col([html.H2("TRIAGE", style={"font-size":"25pt", "color":"white", }),], style={"justify-content": "left", "padding-right":"6rem"}),
         ]),
 
         html.Hr(),
