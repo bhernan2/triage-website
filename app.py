@@ -40,6 +40,14 @@ CONTENT_STYLE = {
     
 }
 
+IMG_STYLE = {
+    "color":"black", 
+    "width":"180pt", 
+    "height":"140", 
+    "margin-left":"0.5rem", "margin-top":"1rem"
+
+}
+
 # the styles for the main content position it to the right of the sidebar and
 # add some padding.
 
@@ -47,7 +55,7 @@ CONTENT_STYLE = {
 sidebar = html.Div([
     dbc.Row([
         dbc.Col([html.P("T", style={"color":"black", "background-color":"white", "font-size":"22px", "font-weight":"bolder", "border-radius":"100%", "width":"44px", "height":"44px", "text-align":"center", "border":"7px solid #000",}),]),
-        dbc.Col([html.H2("TRIAGE", style={"font-size":"25pt", "color":"white", }),], style={"justify-content": "left", "padding-right":"3rem"}),
+        dbc.Col([html.H2("TRIAGE", style={"font-size":"25pt", "color":"white", }),], style={"justify-content": "left", "padding-right":"5rem"}),
         ]),
 
         html.Hr(),
@@ -98,36 +106,58 @@ content = html.Div(
                 html.Hr(),
                 dbc.Row([
                     dbc.Col([
-                                dbc.Card([
-                                    dbc.CardImg(src="/assets/fatmucket.svg", style={"color":"black", "width":"180pt", "height":"140"}), 
+                        dbc.Card([
+                            dbc.CardImg(src="/assets/fatmucket.svg", style=IMG_STYLE), 
                                     # dbc.CardBody([
                                     #     html.A("Schwalb: Stream Ecology", href="https://streamecology.wp.txstate.edu/current-students/", style={"color":"black"}),
                                     # ]), 
                                 ],style={"width":"200pt", "height":"160pt",})
-                            ],),
-# color:black;
-# align-items: center;
-# margin-left: 1.5em;
-# width: 180pt;
-# height: 140pt;
+                            ],style={"text-align":"center"}),
                             dbc.Col([
                                  dbc.Card([
-                                    dbc.CardImg(src="/assets/ephemeoptera.svg",style={"color":"black", "width":"180pt", "height":"140pt"}), 
+                                    dbc.CardImg(src="/assets/ephemeoptera.svg",style=IMG_STYLE), 
                                     # dbc.CardBody([
                                     #     html.A("Nowlin: Aquatic Ecology", href="https://nowlinaquatecollab.wp.txstate.edu/nowlin-lab-folks/", style={"color":"black"}),
                                     # ]), 
-                                ],style={"wwidth":"200pt", "height":"160pt"})
-                            ]),
+                                ],style={"width":"200pt", "height":"160pt", "vertical-align":"middle"})
+                            ],style={"justify-content":"center"}),
                             dbc.Col([
                                  dbc.Card([
-                                    dbc.CardImg(src="/assets/microbes.svg",style={"color":"black", "width":"180pt", "height":"140pt"}),
+                                    dbc.CardImg(src="/assets/microbes.svg",style={"color":"black", "width":"180pt", "height":"140",  "margin-left":"1.5rem", "margin-top":"1rem"}),
                                     # dbc.CardBody([
                                     #     html.A("Another Lab", href="", style={"color":"black"}),
                                     # ]), 
-                                ],style={"width":"200pt", "height":"160pt"})
+                                ],style={"width":"200pt", "height":"160pt", "vertical-align":"middle"})
                                 
-                            ]),
-                    ], style={"align-items":"center"}),
+                            ],style={"justify-content":"center"}),
+                    ], style={"padding-top":"1rem", "padding-left":"2rem"}),
+                dbc.Row([
+                    dbc.Col([
+                        dbc.Card([
+                            dbc.CardImg(src="/assets/longnose_dace.svg", style={"color":"black", "width":"180pt", "height":"140",  "margin-left":"1rem", "margin-top":"3.5rem"}), 
+                                    # dbc.CardBody([
+                                    #     html.A("Schwalb: Stream Ecology", href="https://streamecology.wp.txstate.edu/current-students/", style={"color":"black"}),
+                                    # ]), 
+                                ],style={"width":"200pt", "height":"160pt", "vertical-align":"middle"})
+                            ],style={"justify-content":"center"}),
+                            dbc.Col([
+                                 dbc.Card([
+                                    dbc.CardImg(src="/assets/blind_salamander.svg",style=IMG_STYLE), 
+                                    # dbc.CardBody([
+                                    #     html.A("Nowlin: Aquatic Ecology", href="https://nowlinaquatecollab.wp.txstate.edu/nowlin-lab-folks/", style={"color":"black"}),
+                                    # ]), 
+                                ],style={"width":"200pt", "height":"160pt", "vertical-align":"middle"})
+                            ],style={"justify-content":"center"}),
+                            dbc.Col([
+                                 dbc.Card([
+                                    dbc.CardImg(src="/assets/copopod.svg",style=IMG_STYLE),
+                                    # dbc.CardBody([
+                                    #     html.A("Another Lab", href="", style={"color":"black"}),
+                                    # ]), 
+                                ],style={"width":"200pt", "height":"160pt", "vertical-align":"middle"})
+                                
+                            ],style={"justify-content":"center"}),
+                    ], style={"padding-top":"1rem", "padding-left":"2rem"}),
                 ] +    
                                   [html.Br()]*50 +
                 [html.P("Projects", id="mid3")] +
