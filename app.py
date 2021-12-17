@@ -27,7 +27,7 @@ SIDEBAR_STYLE = {
     "padding": "2rem 1rem",
     "background-color": "black",
     "color":"white",
-    #this sucks
+    #this fucking sucks
 }
 
 CONTENT_STYLE = {
