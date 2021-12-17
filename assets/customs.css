@@ -10,22 +10,21 @@
     /* #this fucking sucks */
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 400px) {
   .SIDEBAR_STYLE {
     width: 100%;
     height: 6rem;
     position: relative;
   }
   .SIDEBAR_STYLE a {float: left;}
-  div.page-content {margin-left: 0;}
 }
-
+/* 
 /* On screens that are less than 400px, display the bar vertically, instead of horizontally */
 @media screen and (max-width: 400px) {
   .SIDEBAR_STYLE {
     float: none;
   }
-}
+} */
 
 
 .card-cols{

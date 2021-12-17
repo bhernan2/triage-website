@@ -17,6 +17,7 @@ from datetime import datetime
 
 app = dash.Dash(external_stylesheets=[dbc.themes.BOOTSTRAP])
 
+# MOVED TO CUSTOMS.CSS
 # the style arguments for the sidebar. We use position:fixed and a fixed width
 # SIDEBAR_STYLE = {
 #     "position": "fixed",
@@ -55,7 +56,7 @@ IMG_STYLE = {
 
 sidebar = html.Div([
     dbc.Row([
-        dbc.Col([html.P("T", style={"color":"black", "background-color":"white", "font-size":"22px", "font-weight":"bolder", "border-radius":"100%", "width":"44px", "height":"44px", "text-align":"center", "border":"7px solid #000",}),]),
+        dbc.Col([html.P("T", style={"color":"black", "background-color":"white", "font-size":"22px", "font-weight":"bolder", "border-radius":"100%", "width":"44px", "height":"44px", "text-align":"center", "border":"7px solid #000", "margin-top":"0rem",}),]),
          ]),
     dbc.Row([
             dbc.Col([html.H2("TRIAGE", style={"font-size":"25pt", "color":"white", }),], style={"justify-content": "left",}),
@@ -86,18 +87,18 @@ content = html.Div(
             html.Div([
                 dbc.Row(id="start", style={"height":"25rem","background-image":"url('assets/background.jpeg')", "background-position":"center center", "border":"black",}),
                 dbc.Row([
-                    html.P("Texas Research Institute for Aquatic & Groundwater Ecology", style={"font-weight":"bold", "font-size":"28pt", "padding": "2rem 1rem",}),
+                    html.P("Texas Research Institute for Aquatic & Groundwater Ecology", style={"font-weight":"bold", "font-size":"28pt", "padding": "1rem",}),
                   ], style={"justify-content":"center",}),
-                html.Hr(),
+                html.Hr([],style={"margin":"0rem"}),
                 dbc.Row([
                     html.P("A cooperative research group centered at Texas State University that examines basic and applied ecological questions in aquatic and groundwater systems.", style={"font-size":"18pt","text-align":"justify", "padding": "2rem 1rem",}),
                     ]),
                 ] +
                 [html.Br()]*50 + 
                 [dbc.Row([
-                    html.P("Mission & Goals", id="mid", style={"font-weight":"bold", "font-size":"28pt", "padding": "2rem 1rem",}),
+                    html.P("Mission & Goals", id="mid", style={"font-weight":"bold", "font-size":"28pt", "padding": "1rem",}),
                   ], style={"justify-content":"center"}),
-                html.Hr(),
+                html.Hr([],style={"margin":"0rem"}),
                 dbc.Row([
                     html.P("The climate crisis is affecting and threatening aquatic ecosystems and the benefits and services these systems provide. Our collaborative research aims to better understand and predict the impacts of climatic changes on aquatic communities. A central focus of research is determining the factors underlying the distribution of aquatic organisms and how increased frequency and intensity of hydrological disturbances will affect the ecology of aquatic ecosystems. The key mission of TRIAGE is to contribute to an increase in diversity (visible and invisible) in aquatic sciences by building and maintaining a diverse and inclusive research team, educating and training students from diverse backgrounds, and promoting broader engagement through outreach to the public.", style={"font-size":"18pt","text-align":"justify", "padding": "2rem 1rem",})
                     ]),
@@ -105,9 +106,9 @@ content = html.Div(
                 [html.Br()]*50 +
 
                 [dbc.Row([
-                    html.P("Teams", id="mid2", style={"font-weight":"bold", "font-size":"28pt", "padding": "2rem 1rem",}),
+                    html.P("Teams", id="mid2", style={"font-weight":"bold", "font-size":"28pt", "padding": "1rem",}),
                   ], style={"justify-content":"center"}),
-                html.Hr(),
+                html.Hr([],style={"margin":"0rem"}),
                 dbc.Row([
                     dbc.Col([
                         dbc.Card([
@@ -165,18 +166,18 @@ content = html.Div(
                 ] + 
                     [html.Br()]*50 +
                 [dbc.Row([
-                    html.P("Projects", id="mid3", style={"font-weight":"bold", "font-size":"28pt", "padding": "2rem 1rem",}),
+                    html.P("Projects", id="mid3", style={"font-weight":"bold", "font-size":"28pt", "padding": "1rem",}),
                   ], className="card-cols"),
-                html.Hr(),
+                html.Hr([],style={"margin":"0rem"}),
                 dbc.Row([
                     html.P("Space to highlight projects", style={"font-size":"18pt","text-align":"justify", "padding": "2rem 1rem",})
                     ]),
                 ] +     
                     [html.Br()]*50 +
                 [dbc.Row([
-                    html.P("Publications", id="end", style={"font-weight":"bold", "font-size":"28pt", "padding": "2rem 1rem", }),
+                    html.P("Publications", id="end", style={"font-weight":"bold", "font-size":"28pt", "padding": "1rem", }),
                   ], style={"justify-content":"center"}),
-                html.Hr(),
+                html.Hr([],style={"margin":"0rem"}),
                 dbc.Row([
                     html.P("Space to highlight publications", style={"font-size":"18pt","text-align":"justify", "padding": "2rem 1rem", "margin-bottom":"50rem" })
                     ]),
