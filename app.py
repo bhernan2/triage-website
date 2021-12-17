@@ -55,7 +55,7 @@ IMG_STYLE = {
 sidebar = html.Div([
     dbc.Row([
         dbc.Col([html.P("T", style={"color":"black", "background-color":"white", "font-size":"22px", "font-weight":"bolder", "border-radius":"100%", "width":"44px", "height":"44px", "text-align":"center", "border":"7px solid #000",}),]),
-        dbc.Col([html.H2("TRIAGE", style={"font-size":"25pt", "color":"white", }),], style={"justify-content": "left", "padding-right":"5rem"}),
+        dbc.Col([html.H2("TRIAGE", style={"font-size":"25pt", "color":"white", }),], style={"justify-content": "left", "padding-right":"3rem"}),
         ]),
 
         html.Hr(),
@@ -123,7 +123,7 @@ content = html.Div(
                             ],style={"justify-content":"center"}),
                             dbc.Col([
                                  dbc.Card([
-                                    dbc.CardImg(src="/assets/microbes.svg",style={"color":"black", "width":"180pt", "height":"140",  "margin-left":"1.5rem", "margin-top":"1rem"}),
+                                    dbc.CardImg(src="/assets/microbes.svg",style={"color":"black", "width":"180pt", "height":"140",  "margin-left":"1rem", "margin-top":"1rem"}),
                                     # dbc.CardBody([
                                     #     html.A("Another Lab", href="", style={"color":"black"}),
                                     # ]), 
