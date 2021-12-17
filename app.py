@@ -108,10 +108,10 @@ content = html.Div(
                     dbc.Col([
                         dbc.Card([
                             dbc.CardImg(src="/assets/fatmucket.svg", style=IMG_STYLE), 
-                                    # dbc.CardBody([
-                                    #     html.A("Schwalb: Stream Ecology", href="https://streamecology.wp.txstate.edu/current-students/", style={"color":"black"}),
-                                    # ]), 
-                                ],style={"width":"200pt", "height":"160pt",})
+                                ],style={"width":"200pt", "height":"160pt",}),
+                            dbc.Row([
+                                        html.A("Schwalb: Stream Ecology", href="https://streamecology.wp.txstate.edu/current-students/", style={"color":"black", "font-size":"18pt", "margin-left":"1rem"}), 
+                            ]),
                             ],style={"text-align":"center"}),
                             dbc.Col([
                                  dbc.Card([
@@ -119,7 +119,10 @@ content = html.Div(
                                     # dbc.CardBody([
                                     #     html.A("Nowlin: Aquatic Ecology", href="https://nowlinaquatecollab.wp.txstate.edu/nowlin-lab-folks/", style={"color":"black"}),
                                     # ]), 
-                                ],style={"width":"200pt", "height":"160pt", "vertical-align":"middle"})
+                                ],style={"width":"200pt", "height":"160pt", "vertical-align":"middle"}),
+                                dbc.Row([
+                                        html.A("Nowlin: Aquatic Ecology", href="https://nowlinaquatecollab.wp.txstate.edu/nowlin-lab-folks/", style={"color":"black", "font-size":"18pt", "margin-left":"1.5rem"}), 
+                            ]),
                             ],style={"justify-content":"center"}),
                             dbc.Col([
                                  dbc.Card([
@@ -158,11 +161,31 @@ content = html.Div(
                                 
                             ],style={"justify-content":"center"}),
                     ], style={"padding-top":"1rem", "padding-left":"2rem"}),
-                ] +    
-                                  [html.Br()]*50 +
-                [html.P("Projects", id="mid3")] +
-                                  [html.Br()]*50 +
-                [html.P("Publications", id="end")]
+                ] + 
+                    [html.Br()]*50 +
+                [dbc.Row([
+                    html.P("Projects", id="mid3", style={"font-weight":"bold", "font-size":"28pt", "padding": "2rem 1rem",}),
+                  ], style={"justify-content":"center"}),
+                html.Hr(),
+                dbc.Row([
+                    html.P("Space to highlight projects", style={"font-size":"18pt","text-align":"justify", "padding": "2rem 1rem",})
+                    ]),
+                ] +     
+                    [html.Br()]*50 +
+                [dbc.Row([
+                    html.P("Publications", id="end", style={"font-weight":"bold", "font-size":"28pt", "padding": "2rem 1rem", }),
+                  ], style={"justify-content":"center"}),
+                html.Hr(),
+                dbc.Row([
+                    html.P("Space to highlight publications", style={"font-size":"18pt","text-align":"justify", "padding": "2rem 1rem", "margin-bottom":"50rem" })
+                    ]),
+                ]      
+                
+                #                   [html.Br()]*50 +
+                
+                # [html.P("Projects", id="mid4")] +
+                #                   [html.Br()]*50 +
+                # [html.P("Publications", id="end")]
                                  ),
     id="page-content", style=CONTENT_STYLE)
 
