@@ -30,6 +30,7 @@ SIDEBAR_STYLE = {
     #this fucking sucks
 }
 
+
 CONTENT_STYLE = {
     "position":"static",
     "margin-left": "18rem",
@@ -75,7 +76,7 @@ sidebar = html.Div([
             pills=True,
         ),
     ],
-    style=SIDEBAR_STYLE,
+    style=SIDEBAR_STYLE, className="SIDEBAR_STYLE"
 )
 
 content = html.Div(
@@ -116,9 +117,6 @@ content = html.Div(
                             dbc.Col([
                                  dbc.Card([
                                     dbc.CardImg(src="/assets/ephemeoptera.svg",style=IMG_STYLE), 
-                                    # dbc.CardBody([
-                                    #     html.A("Nowlin: Aquatic Ecology", href="https://nowlinaquatecollab.wp.txstate.edu/nowlin-lab-folks/", style={"color":"black"}),
-                                    # ]), 
                                 ],style={"width":"200pt", "height":"160pt", "vertical-align":"middle"}),
                                 dbc.Row([
                                         html.A("Nowlin: Aquatic Ecology", href="https://nowlinaquatecollab.wp.txstate.edu/nowlin-lab-folks/", style={"color":"black", "font-size":"18pt", "margin-left":"1.5rem"}), 
@@ -179,13 +177,19 @@ content = html.Div(
                 dbc.Row([
                     html.P("Space to highlight publications", style={"font-size":"18pt","text-align":"justify", "padding": "2rem 1rem", "margin-bottom":"50rem" })
                     ]),
+                dbc.Row([
+                    dbc.Col([
+                        html.P("© 2021 TRIAGE", style={"margin-top":"1rem"})],),
+                        dbc.Col([
+                            html.P("Follow us on:", style={"margin-top":"1rem", "text-align":"right", "margin-left":"5rem"}),]),
+                            html.A(href="https://www.facebook.com/Texas-Research-Institute-for-Aquatic-and-Groundwater-Ecology-104627268475583",
+                                children=[
+                                    html.Img(src="https://img.icons8.com/material-rounded/48/000000/facebook-new.png",)]
+                                    ),
+                                    html.Img(src="https://img.icons8.com/material-rounded/48/000000/instagram-new.png",),
+                                    html.Img(src="https://img.icons8.com/material-rounded/48/000000/twitter.png"),
+                ])
                 ]      
-                
-                #                   [html.Br()]*50 +
-                
-                # [html.P("Projects", id="mid4")] +
-                #                   [html.Br()]*50 +
-                # [html.P("Publications", id="end")]
                                  ),
     id="page-content", style=CONTENT_STYLE)
 
