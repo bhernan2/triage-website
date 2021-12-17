@@ -1,292 +1,41 @@
-.content-style {
-    display: grid;
-    margin: auto;
-    overflow-x: hidden; /* Hide horizontal scrollbar */
-    overflow-y: scroll; /* Add vertical scrollbar */
-    height: fit-content;
-  }
-  .link-container {
-      margin-right: 1080px;
-  }
-
-  .card-container {
-    display: grid;
-    
-  /* Set up proportionate scaling */
-    width: 98.5%;
-    height: fit-content;
-  /* Set up positioning */
-    position:absolute;
+.SIDEBAR_STYLE {
+    position: fixed;
     top: 0;
     left: 0;
-    margin-left:1rem;
-    margin-right: 1rem;
-    margin-top: 5rem;
-    margin-bottom: 5rem;
-    background-image: url("/assets/background.jpeg");
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size:98.5%;
-  }
-
-.nav-ul{
-    display:inline-flex;
-    align-items: center;
-    list-style: none;
-    /* padding-left: 12px; */
-    padding: .7em;
-    margin: 0;
-}
-.nav-li {
-    display: inline-flex;
-    margin-left: auto;
-    /* margin-right: 50px; */
-    
-}
-.tab-row {
-    display: flex;
-    align-items: center;
-    position: fixed;
-    width:1080px;
-    color:black;
-    font-size: 25pt;
-    font-weight: bold;
-
+    bottom: 0;
+    width: 12rem;
+    padding: 2rem 1rem;
+    background-color:black;
+    color:white;
+    /* #this fucking sucks */
 }
 
-.home-link {
-    margin-left: 36px;
-}
-
-.small-logo {
-    /* margin-top:8px; */
-    margin-right:25px;
-}
-
-.card-header {
-    color: black;
-    font-size: 45pt;
-    font-weight: bold;
-    text-align: center;
-    align-content: center;
-    /* margin-bottom: 1rem; */
-}
-
-.triage-row {
-    justify-content: center;
-    margin-left: 1 rem;
-    margin-right: 1rem;
-    margin-bottom: 2rem;
-    margin-top: 2rem;
-}
-.triage-col {
-    line-height: 1;
-    text-transform: uppercase;
-}
-
-.logo-col {
-    margin:auto;
-    align-content: center;
-    margin-top: 4rem;
-} 
-.welcome-col3 {
-    font-size: 22pt;
-    text-align: left;
-    width:100%;
-    font-weight: normal;
-    justify-content: left;
-    color: black;
-}
-
-.welcome-box{
-    display: grid;
-    height: auto;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 100px;
-    column-gap: 40px;
-    margin-bottom: 20rem;
-    
-}
-
-.card-style{
-    
-}
-
-
-.card{
-    display: grid;
-    opacity: 75%;
-    width:1080px;
-    height: 750px;
-    background-color: white;
-}
-
-
-
-
-.card-style-teams{
-    margin-top:2rem;
-    display: grid;
-    margin-left: 2rem;
-    margin-right: 2rem;
-    padding: 1rem 1rem;
-    opacity: 75%;
-    width:1080px;
-    height: 750px;
-    background-color: white;
-}
-
-.mission-content{
-    height: fit-content;
-    font-size: 22pt;
-    color: black;
-    font-weight: normal;
-    text-align: justify;
-    margin-bottom: 29.8rem;
+@media screen and (max-width: 700px) {
+  .SIDEBAR_STYLE {
     width: 100%;
-
-
-}
-.teams-content{
-    height: fit-content;
-    font-size: 30pt;
-    color: black;
-    font-weight: normal;
-    text-align: justify;
-    margin-bottom: 29.8rem;
-    width: 100%;
-
-}
-
-.projects-content{
-    height: fit-content;
-    font-size: 30pt;
-    color: black;
-    font-weight: normal;
-    text-align: justify;
-    margin-bottom: 29.8rem;
-    width: 100%;
-
-}
-.publications-content{
-    height: fit-content;
-    font-size: 30pt;
-    color: black;
-    font-weight: normal;
-    text-align: justify;
-    margin-bottom: 29.8rem;
-    width: 100%;
-
-}
-.events-content{
-    height: fit-content;
-    font-size: 30pt;
-    color: black;
-    font-weight: normal;
-    text-align: justify;
-    margin-bottom: 29.8rem;
-    width: 100%;
-
-}
-  
-  .footer-row {
-    align-content: center;
-    background-color: white;
-    width: 1080px;
-    color: black;
-    font-size: 18px;
-
-    position:fixed;
-    bottom: auto;
-    margin-top: 56rem;
-  }
-
-  .copyright-col{
-    text-align: right;
-    margin-top: 2rem;
-    
-
-
-}
-  .social-col{
-    text-align: left;
-    margin-top: 1rem;
-    color:black;
-  }
-
-  .follow-us{
-      text-align: right;
-      color: black;
-      margin-top: 2rem;
-  }
-
-  .signature{
-      text-align: left;
-      margin-top: 1rem;
-  }
-
-  .teams {
-      color: black;
-      align-content: center;
-  }
-
-  .teams-cards{
-    color: black;
-    font-weight:bolder;
-    padding: 0.5rem;
-    font-size: 18pt;
-    -ms-flex-direction: row;
-    flex-direction: row; 
+    height: 6rem;
     position: relative;
-    perspective: 1000px;
   }
+  .SIDEBAR_STYLE a {float: left;}
+  div.page-content {margin-left: 0;}
+}
 
-  .lab-card{
-      justify-items: center;
-      color:black;
-      font-weight: bold;
+/* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+@media screen and (max-width: 400px) {
+  .SIDEBAR_STYLE {
+    float: none;
   }
+}
 
-  .mussel {
-    color:black;
-    align-items: center;
-    margin-left: 1.5em;
-    width: 180pt;
-    height: 140pt;
+
+.card-cols{
+  justify-content: center;
+}
+
+@media screen and (max-width: 600px) {
+  .card-cols {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
   }
-  .mayfly {
-    color:black;
-    align-items: center;
-    margin-left: 1.5em;
-    width: 180pt;
-    height: 140pt;
-  }
-  .microbes {
-    color:black;
-    align-items: center;
-    margin-left: 1.6em;
-    width: 180pt;
-    height: 140pt;
-  }
-  .longnose-dace {
-    color:black;
-    align-items: center;
-    margin-left: 1.5em;
-    width: 180pt;
-    height: 140pt;
-  }
-  .blind-salamander {
-    color:black;
-    align-items: center;
-    margin-left: 1.5em;
-    width: 180pt;
-    height: 140pt;
-  }
-  .copopod {
-    color:black;
-    align-items: center;
-    margin-left: 1.5em;
-    width: 180pt;
-    height: 140pt;
-  }
+}

@@ -18,23 +18,23 @@ from datetime import datetime
 app = dash.Dash(external_stylesheets=[dbc.themes.BOOTSTRAP])
 
 # the style arguments for the sidebar. We use position:fixed and a fixed width
-SIDEBAR_STYLE = {
-    "position": "fixed",
-    "top": 0,
-    "left": 0,
-    "bottom": 0,
-    "width": "16rem",
-    "padding": "2rem 1rem",
-    "background-color": "black",
-    "color":"white",
-    #this fucking sucks
-}
+# SIDEBAR_STYLE = {
+#     "position": "fixed",
+#     "top": 0,
+#     "left": 0,
+#     "bottom": 0,
+#     "width": "16rem",
+#     "padding": "2rem 1rem",
+#     "background-color": "black",
+#     "color":"white",
+#     #this fucking sucks
+# }
 
 
 CONTENT_STYLE = {
     "position":"static",
-    "margin-left": "18rem",
-    "margin-right": "2rem",
+    "margin-left": "13rem",
+    "margin-right": "1rem",
     "padding": "2rem 1rem",
     "color": "black",
     
@@ -56,19 +56,22 @@ IMG_STYLE = {
 sidebar = html.Div([
     dbc.Row([
         dbc.Col([html.P("T", style={"color":"black", "background-color":"white", "font-size":"22px", "font-weight":"bolder", "border-radius":"100%", "width":"44px", "height":"44px", "text-align":"center", "border":"7px solid #000",}),]),
-        dbc.Col([html.H2("TRIAGE", style={"font-size":"25pt", "color":"white", }),], style={"justify-content": "left", "padding-right":"6rem"}),
-        ]),
+         ]),
+    dbc.Row([
+            dbc.Col([html.H2("TRIAGE", style={"font-size":"25pt", "color":"white", }),], style={"justify-content": "left",}),
+    ]),     
+       
 
         html.Hr(),
         
         dbc.Nav(
             [
-                dbc.NavLink("Home", style={"color":"white", "font-size":"12pt"}, href="#start", external_link=True),
+                dbc.NavLink("Home", style={"color":"white", "font-size":"12pt"}, href="#start", external_link=True, className="links"),
                 dbc.NavLink("About", style={"color":"white", "font-size":"12pt"}, href="#mid",external_link=True),
                 dbc.NavLink("Teams", style={"color":"white", "font-size":"12pt"}, href="#mid2",external_link=True),
                 dbc.NavLink("Projects", style={"color":"white", "font-size":"12pt"}, href="#mid3",external_link=True),
                 dbc.NavLink("Publications", style={"color":"white", "font-size":"12pt"}, href="#end",external_link=True),
-                html.P('Developed by: Bianca A. Hernandez', style={"font-size": "8pt", "margin-top":"28rem", "text-align":"center"}),
+                # html.P('Developed by: Bianca A. Hernandez', style={"font-size": "8pt", "margin-top":"28rem", "text-align":"center"}),
                 
                 
         ],
@@ -76,7 +79,7 @@ sidebar = html.Div([
             pills=True,
         ),
     ],
-    style=SIDEBAR_STYLE, className="SIDEBAR_STYLE"
+    className="SIDEBAR_STYLE"
 )
 
 content = html.Div(
@@ -113,7 +116,7 @@ content = html.Div(
                             dbc.Row([
                                         html.A("Schwalb: Stream Ecology", href="https://streamecology.wp.txstate.edu/current-students/", style={"color":"black", "font-size":"18pt", "margin-left":"1rem"}), 
                             ]),
-                            ],style={"text-align":"center"}),
+                            ],className="card-cols"),
                             dbc.Col([
                                  dbc.Card([
                                     dbc.CardImg(src="/assets/ephemeoptera.svg",style=IMG_STYLE), 
@@ -121,7 +124,7 @@ content = html.Div(
                                 dbc.Row([
                                         html.A("Nowlin: Aquatic Ecology", href="https://nowlinaquatecollab.wp.txstate.edu/nowlin-lab-folks/", style={"color":"black", "font-size":"18pt", "margin-left":"1.5rem"}), 
                             ]),
-                            ],style={"justify-content":"center"}),
+                            ],className="card-cols"),
                             dbc.Col([
                                  dbc.Card([
                                     dbc.CardImg(src="/assets/microbes.svg",style={"color":"black", "width":"180pt", "height":"140",  "margin-left":"1rem", "margin-top":"1rem"}),
@@ -130,8 +133,8 @@ content = html.Div(
                                     # ]), 
                                 ],style={"width":"200pt", "height":"160pt", "vertical-align":"middle"})
                                 
-                            ],style={"justify-content":"center"}),
-                    ], style={"padding-top":"1rem", "padding-left":"2rem"}),
+                            ],className="card-cols"),
+                    ], style={"padding-top":"1rem", "padding-left":"5rem"}),
                 dbc.Row([
                     dbc.Col([
                         dbc.Card([
@@ -140,7 +143,7 @@ content = html.Div(
                                     #     html.A("Schwalb: Stream Ecology", href="https://streamecology.wp.txstate.edu/current-students/", style={"color":"black"}),
                                     # ]), 
                                 ],style={"width":"200pt", "height":"160pt", "vertical-align":"middle"})
-                            ],style={"justify-content":"center"}),
+                            ],className="card-cols"),
                             dbc.Col([
                                  dbc.Card([
                                     dbc.CardImg(src="/assets/blind_salamander.svg",style=IMG_STYLE), 
@@ -148,7 +151,7 @@ content = html.Div(
                                     #     html.A("Nowlin: Aquatic Ecology", href="https://nowlinaquatecollab.wp.txstate.edu/nowlin-lab-folks/", style={"color":"black"}),
                                     # ]), 
                                 ],style={"width":"200pt", "height":"160pt", "vertical-align":"middle"})
-                            ],style={"justify-content":"center"}),
+                            ],className="card-cols"),
                             dbc.Col([
                                  dbc.Card([
                                     dbc.CardImg(src="/assets/copopod.svg",style=IMG_STYLE),
@@ -157,13 +160,13 @@ content = html.Div(
                                     # ]), 
                                 ],style={"width":"200pt", "height":"160pt", "vertical-align":"middle"})
                                 
-                            ],style={"justify-content":"center"}),
-                    ], style={"padding-top":"1rem", "padding-left":"2rem"}),
+                            ],className="card-cols"),
+                    ], style={"padding-top":"1rem", "padding-left":"5rem"}),
                 ] + 
                     [html.Br()]*50 +
                 [dbc.Row([
                     html.P("Projects", id="mid3", style={"font-weight":"bold", "font-size":"28pt", "padding": "2rem 1rem",}),
-                  ], style={"justify-content":"center"}),
+                  ], className="card-cols"),
                 html.Hr(),
                 dbc.Row([
                     html.P("Space to highlight projects", style={"font-size":"18pt","text-align":"justify", "padding": "2rem 1rem",})
@@ -191,7 +194,7 @@ content = html.Div(
                 ])
                 ]      
                                  ),
-    id="page-content", style=CONTENT_STYLE)
+    id="page-content", style=CONTENT_STYLE,)
 
 
 
