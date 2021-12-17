@@ -4,7 +4,7 @@ import dash
 import dash_bootstrap_components as dbc
 import dash_core_components as dcc
 import dash_html_components as html
-from dash.dependencies import Input, Output, State
+from dash.dependencies import Input, Output
 
 import plotly
 import plotly.graph_objects as go
@@ -15,428 +15,134 @@ import numpy as np
 
 from datetime import datetime
 
-content = html.Div([
-    dbc.Container([
-            dbc.Row([
-                dbc.Col([html.P("T", style={"color":"white", "background-color":"black", "font-size":"22px", "font-weight":"bolder", "border-radius":"100%", "width":"44px", "height":"44px", "text-align":"center", "border":"7px solid #000", "margin-left":"25px"}),], className="small-logo"),
-            html.Ul([
-                html.Li([
-                dbc.NavLink("HOME", href="/", active="exact", style={"color": "black", "border-style":"none", "margin":"10px", "font-size": 20, "background":"white","cursor":"pointer", }),
-                dbc.NavLink("ABOUT", href="/page-1", active="exact", style={"color": "black", "border-style":"none", "margin":"10px", "font-size": 20, "background":"white","cursor":"pointer"}),
-                dbc.NavLink("TEAMS", href="/page-2", active="exact", style={"color": "black", "border-style":"none", "margin":"10px", "font-size": 20, "background":"white","cursor":"pointer"}),
-                dbc.NavLink("PROJECTS", href="/page-3", active="exact", style={"color": "black", "border-style":"none", "margin":"10px", "font-size": 20, "background":"white","cursor":"pointer"}),
-                dbc.NavLink("PUBLICATIONS", href="/page-4", active="exact", style={"color": "black", "border-style":"none", "margin":"10px", "font-size": 20, "background":"white","cursor":"pointer"}),
-                dbc.NavLink("EVENTS", href="/page-5", active="exact", style={"color": "black", "border-style":"none", "margin":"10px", "font-size": 20, "background":"white","cursor":"pointer", "text-align":"right"}),
-            ], className="nav-li"),  
-            ], className="nav-ul"),
-        ],className='tab-row'),
-    ], fluid=True, className="link-container"),
-   dbc.Container([
-       dbc.Row([
-           dbc.Card([
-                html.Div([
-                    html.P(["Welcome to TRIAGE"],className='card-header'),
-                    ],),
-                dbc.CardBody([
-                    dbc.Row([
-                        dbc.Col([
-                            dbc.Row([html.P('T',style={"color": "black", "font-size": 50, "font-weight":"bolder", "margin-top": "0rem","margin-left":"5rem"}),html.P('exas', style={"color": "black", "font-size": 30, "font-weight":"normal", "margin-top": "1rem","text-align":"right"} ),]),
-                            dbc.Row([html.P('R',style={"color": "black", "font-size": 50, "font-weight":"bolder","margin-top": "0rem","margin-left":"5rem"}),html.P('esearch', style={"color": "black", "font-size": 30, "font-weight":"normal","margin-top": "1rem","text-align":"right"} ),]),
-                            dbc.Row([html.P('I',style={"color": "black", "font-size": 50, "font-weight":"bolder","margin-top": "0rem","margin-left":"5rem" }),html.P('nstitute for', style={"color": "black", "font-size": 30, "font-weight":"normal","margin-top": "1rem", "text-align":"right"} ),]),
-                            dbc.Row([html.P('A',style={"color": "black", "font-size": 50, "font-weight":"bolder","margin-top": "0rem","margin-left":"5rem" }),html.P('quatic &', style={"color": "black", "font-size": 30, "font-weight":"normal","margin-top": "1rem", "text-align":"right"} ),]),
-                            dbc.Row([html.P('G',style={"color": "black", "font-size": 50, "font-weight":"bolder","margin-top": "0rem","margin-left":"5rem" }),html.P('roundwater', style={"color": "black", "font-size": 30, "font-weight":"normal","margin-top": "1rem", "text-align":"right"} ),]),
-                            dbc.Row([html.P('E',style={"color": "black", "font-size": 50, "font-weight":"bolder","margin-top": "0rem","margin-left":"5rem" }),html.P('cology', style={"color": "black", "font-size": 30, "font-weight":"normal","margin-top": "1rem", "text-align":"right"} ),]),
-                            
-                            ],className='triage-col'),
-                        dbc.Col([
-                            html.P("T", style={"color":"white", "background-color":"black", "font-size":"200px", "border-radius":"100%", "padding":"0rem", "width":"280px", "height":"280px", "border":"10px solid #000","text-align":"center"})
-                        ],className="logo-col"),
-                        dbc.Col([
-                                html.P("We are a cooperative research group centered at Texas State University that examines basic and applied ecological questions in aquatic and groundwater systems.",),
-                            ],className='welcome-col3'),
-                        ],className="welcome-box"),
-            ]),
-        ], className='card-style'),
-   ],className="triage-row"),
-    ], className='card-container', fluid=True),
-    dbc.Row([
-        dbc.Col([
-            html.P("© 2021 TRIAGE")
-        ],className="copyright-col"),
-        dbc.Col([
-            html.P("Follow us on:"),
-        ], className="follow-us"),
-        dbc.Col([
-            html.A(href="https://www.facebook.com/Texas-Research-Institute-for-Aquatic-and-Groundwater-Ecology-104627268475583",
-            children=[
-                html.Img(src="https://img.icons8.com/material-rounded/48/000000/facebook-new.png",className="facebook-icon")]
-            ),
-            html.Img(src="https://img.icons8.com/material-rounded/48/000000/instagram-new.png",className="instagram-icon"),
-            html.Img(src="https://img.icons8.com/material-rounded/48/000000/twitter.png"),
+app = dash.Dash(external_stylesheets=[dbc.themes.BOOTSTRAP])
 
-        ], className="social-col")
-    ], className="footer-row")
-], id="page-content", className='content-style')
+# the style arguments for the sidebar. We use position:fixed and a fixed width
+SIDEBAR_STYLE = {
+    "position": "fixed",
+    "top": 0,
+    "left": 0,
+    "bottom": 0,
+    "width": "16rem",
+    "padding": "2rem 1rem",
+    "background-color": "black",
+    "color":"white",
+}
 
-# home = html.Div([
+CONTENT_STYLE = {
+    "position":"static",
+    "margin-left": "18rem",
+    "margin-right": "2rem",
+    "padding": "2rem 1rem",
+    "color": "black",
     
-# ], id="home")
-mission= html.Div([
-    dbc.Container([
-            dbc.Row([
-                dbc.Col([html.P("T", style={"color":"white", "background-color":"black", "font-size":"22px", "font-weight":"bolder", "border-radius":"100%", "width":"44px", "height":"44px", "text-align":"center", "border":"7px solid #000", "margin-left":"25px"}),], className="small-logo"),
-            html.Ul([
-                html.Li([
-                dbc.NavLink("HOME", href="/", active="exact", style={"color": "black", "border-style":"none", "margin":"10px", "font-size": 20, "background":"white","cursor":"pointer", }),
-                dbc.NavLink("ABOUT", href="/page-1", active="exact", style={"color": "black", "border-style":"none", "margin":"10px", "font-size": 20, "background":"white","cursor":"pointer"}),
-                dbc.NavLink("TEAMS", href="/page-2", active="exact", style={"color": "black", "border-style":"none", "margin":"10px", "font-size": 20, "background":"white","cursor":"pointer"}),
-                dbc.NavLink("PROJECTS", href="/page-3", active="exact", style={"color": "black", "border-style":"none", "margin":"10px", "font-size": 20, "background":"white","cursor":"pointer"}),
-                dbc.NavLink("PUBLICATIONS", href="/page-4", active="exact", style={"color": "black", "border-style":"none", "margin":"10px", "font-size": 20, "background":"white","cursor":"pointer"}),
-                dbc.NavLink("EVENTS", href="/page-5", active="exact", style={"color": "black", "border-style":"none", "margin":"10px", "font-size": 20, "background":"white","cursor":"pointer", "text-align":"right"}),
-            ], className="nav-li"),  
-            ], className="nav-ul"),
-        ],className='tab-row'),
-    ], fluid=True, className="link-container"),
-   dbc.Container([
-       dbc.Row([
-           dbc.Card([
-                html.Div([
-                    html.P(["Mission & Goals"],className='card-header'),
-                    ],),
-                dbc.CardBody([
-                    dbc.Row([
-                        dbc.Col([
-                            html.P("The climate crisis is affecting and threatening aquatic ecosystems and the benefits and services these systems provide. Our collaborative research aims to better understand and predict the impacts of climatic changes on aquatic communities. A central focus of research is determining the factors underlying the distribution of aquatic organisms and how increased frequency and intensity of hydrological disturbances will affect the ecology of aquatic ecosystems. The key mission of TRIAGE is to contribute to an increase in diversity (visible and invisible) in aquatic sciences by building and maintaining a diverse and inclusive research team, educating and training students from diverse backgrounds, and promoting broader engagement through outreach to the public.")
-                        ])
-                        ],className="mission-content"),          
-            ]),
-        ],className='card-style'),
-       ],className="triage-row"),
-    ], className='card-container', fluid=True),
-    dbc.Row([
-        dbc.Col([
-            html.P("© 2021 TRIAGE")
-        ],className="copyright-col"),
-        dbc.Col([
-            html.P("Follow us on:"),
-        ], className="follow-us"),
-        dbc.Col([
-            html.A(href="https://www.facebook.com/Texas-Research-Institute-for-Aquatic-and-Groundwater-Ecology-104627268475583",
-            children=[
-                html.Img(src="https://img.icons8.com/material-rounded/48/000000/facebook-new.png",className="facebook-icon")]
-            ),
-            html.Img(src="https://img.icons8.com/material-rounded/48/000000/instagram-new.png",className="instagram-icon"),
-            html.Img(src="https://img.icons8.com/material-rounded/48/000000/twitter.png"),
+    
+}
 
-        ], className="social-col"),
-    ], className="footer-row"),
-], id="page-content", className='content-style')
-# carousel = dbc.Carousel(
-#     items=[
-#         {"key": "1", "src":""},
-#         {"key": "2", "src":""},
-#         {"key": "3", "src":""},
-#     ],
-#     controls=True,
-#     indicators=True,
-# )
-teams=html.Div([
-    dbc.Container([
-            dbc.Row([
-                dbc.Col([html.P("T", style={"color":"white", "background-color":"black", "font-size":"22px", "font-weight":"bolder", "border-radius":"100%", "width":"44px", "height":"44px", "text-align":"center", "border":"7px solid #000", "margin-left":"25px"}),], className="small-logo"),
-            html.Ul([
-                html.Li([
-                dbc.NavLink("HOME", href="/", active="exact", style={"color": "black", "border-style":"none", "margin":"10px", "font-size": 20, "background":"white","cursor":"pointer", }),
-                dbc.NavLink("ABOUT", href="/page-1", active="exact", style={"color": "black", "border-style":"none", "margin":"10px", "font-size": 20, "background":"white","cursor":"pointer"}),
-                dbc.NavLink("TEAMS", href="/page-2", active="exact", style={"color": "black", "border-style":"none", "margin":"10px", "font-size": 20, "background":"white","cursor":"pointer"}),
-                dbc.NavLink("PROJECTS", href="/page-3", active="exact", style={"color": "black", "border-style":"none", "margin":"10px", "font-size": 20, "background":"white","cursor":"pointer"}),
-                dbc.NavLink("PUBLICATIONS", href="/page-4", active="exact", style={"color": "black", "border-style":"none", "margin":"10px", "font-size": 20, "background":"white","cursor":"pointer"}),
-                dbc.NavLink("EVENTS", href="/page-5", active="exact", style={"color": "black", "border-style":"none", "margin":"10px", "font-size": 20, "background":"white","cursor":"pointer", "text-align":"right"}),
-            ], className="nav-li"),  
-            ], className="nav-ul"),
-        ],className='tab-row'),
-    ], fluid=True, className="link-container"),
-   dbc.Container([
-       dbc.Row([
-           dbc.Card([
-               html.Div([
-                    html.P(["Meet the Labs"],className='card-header'),
-                    ],),
-                dbc.CardBody([
-                    html.Div([
-                        dbc.Row([
-                            dbc.Col([
+# the styles for the main content position it to the right of the sidebar and
+# add some padding.
+
+
+sidebar = html.Div([
+    dbc.Row([
+        dbc.Col([html.P("T", style={"color":"black", "background-color":"white", "font-size":"22px", "font-weight":"bolder", "border-radius":"100%", "width":"44px", "height":"44px", "text-align":"center", "border":"7px solid #000",}),]),
+        dbc.Col([html.H2("TRIAGE", style={"font-size":"25pt", "color":"white", }),], style={"justify-content": "left", "padding-right":"3rem"}),
+        ]),
+
+        html.Hr(),
+        
+        dbc.Nav(
+            [
+                dbc.NavLink("Home", style={"color":"white", "font-size":"12pt"}, href="#start", external_link=True),
+                dbc.NavLink("About", style={"color":"white", "font-size":"12pt"}, href="#mid",external_link=True),
+                dbc.NavLink("Teams", style={"color":"white", "font-size":"12pt"}, href="#mid2",external_link=True),
+                dbc.NavLink("Projects", style={"color":"white", "font-size":"12pt"}, href="#mid3",external_link=True),
+                dbc.NavLink("Publications", style={"color":"white", "font-size":"12pt"}, href="#end",external_link=True),
+                html.P('Developed by: Bianca A. Hernandez', style={"font-size": "8pt", "margin-top":"28rem", "text-align":"center"}),
+                
+                
+        ],
+            vertical=True,
+            pills=True,
+        ),
+    ],
+    style=SIDEBAR_STYLE,
+)
+
+content = html.Div(
+            html.Div([
+                dbc.Row(id="start", style={"height":"25rem","background-image":"url('assets/background.jpeg')", "background-position":"center center", "border":"black",}),
+                dbc.Row([
+                    html.P("Texas Research Institute for Aquatic & Groundwater Ecology", style={"font-weight":"bold", "font-size":"28pt", "padding": "2rem 1rem",}),
+                  ], style={"justify-content":"center",}),
+                html.Hr(),
+                dbc.Row([
+                    html.P("A cooperative research group centered at Texas State University that examines basic and applied ecological questions in aquatic and groundwater systems.", style={"font-size":"18pt","text-align":"justify", "padding": "2rem 1rem",}),
+                    ]),
+                ] +
+                [html.Br()]*50 + 
+                [dbc.Row([
+                    html.P("Mission & Goals", id="mid", style={"font-weight":"bold", "font-size":"28pt", "padding": "2rem 1rem",}),
+                  ], style={"justify-content":"center"}),
+                html.Hr(),
+                dbc.Row([
+                    html.P("The climate crisis is affecting and threatening aquatic ecosystems and the benefits and services these systems provide. Our collaborative research aims to better understand and predict the impacts of climatic changes on aquatic communities. A central focus of research is determining the factors underlying the distribution of aquatic organisms and how increased frequency and intensity of hydrological disturbances will affect the ecology of aquatic ecosystems. The key mission of TRIAGE is to contribute to an increase in diversity (visible and invisible) in aquatic sciences by building and maintaining a diverse and inclusive research team, educating and training students from diverse backgrounds, and promoting broader engagement through outreach to the public.", style={"font-size":"18pt","text-align":"justify", "padding": "2rem 1rem",})
+                    ]),
+                ] +           
+                [html.Br()]*50 +
+
+                [dbc.Row([
+                    html.P("Teams", id="mid2", style={"font-weight":"bold", "font-size":"28pt", "padding": "2rem 1rem",}),
+                  ], style={"justify-content":"center"}),
+                html.Hr(),
+                dbc.Row([
+                    dbc.Col([
                                 dbc.Card([
-                                    dbc.CardImg(src="/assets/fatmucket.svg", className="mussel",), 
-                                    dbc.CardBody([
-                                        html.A("Schwalb: Stream Ecology", href="https://streamecology.wp.txstate.edu/current-students/", style={"color":"black"}),
-                                    ]), 
-                                ],style={"width":"240pt", "height":"200pt"})
-                            ], className="lab-card"),
+                                    dbc.CardImg(src="/assets/fatmucket.svg", style={"color":"black", "width":"180pt", "height":"140"}), 
+                                    # dbc.CardBody([
+                                    #     html.A("Schwalb: Stream Ecology", href="https://streamecology.wp.txstate.edu/current-students/", style={"color":"black"}),
+                                    # ]), 
+                                ],style={"width":"200pt", "height":"160pt",})
+                            ],),
+# color:black;
+# align-items: center;
+# margin-left: 1.5em;
+# width: 180pt;
+# height: 140pt;
                             dbc.Col([
                                  dbc.Card([
-                                    dbc.CardImg(src="/assets/ephemeoptera.svg", className="mayfly"), 
-                                    dbc.CardBody([
-                                        html.A("Nowlin: Aquatic Ecology", href="https://nowlinaquatecollab.wp.txstate.edu/nowlin-lab-folks/", style={"color":"black"}),
-                                    ]), 
-                                ],style={"width":"240pt", "height":"200pt"})
-                            ], className="lab-card"),
+                                    dbc.CardImg(src="/assets/ephemeoptera.svg",style={"color":"black", "width":"180pt", "height":"140pt"}), 
+                                    # dbc.CardBody([
+                                    #     html.A("Nowlin: Aquatic Ecology", href="https://nowlinaquatecollab.wp.txstate.edu/nowlin-lab-folks/", style={"color":"black"}),
+                                    # ]), 
+                                ],style={"wwidth":"200pt", "height":"160pt"})
+                            ]),
                             dbc.Col([
                                  dbc.Card([
-                                    dbc.CardImg(src="/assets/microbes.svg", className = "microbes"),
-                                    dbc.CardBody([
-                                        html.A("Another Lab", href="", style={"color":"black"}),
-                                    ]), 
-                                ],style={"width":"240pt", "height":"200pt"})
+                                    dbc.CardImg(src="/assets/microbes.svg",style={"color":"black", "width":"180pt", "height":"140pt"}),
+                                    # dbc.CardBody([
+                                    #     html.A("Another Lab", href="", style={"color":"black"}),
+                                    # ]), 
+                                ],style={"width":"200pt", "height":"160pt"})
                                 
-                            ], className="lab-card"),
-                            ],className="teams-cards",),
-                        dbc.Row([
-                            dbc.Col([
-                               dbc.Card([
-                                   dbc.CardImg(src="/assets/longnose_dace.svg", className = "longnose-dace"), 
-                                    dbc.CardBody([
-                                        html.A("Another Lab", href="", style={"color":"black"}),
-                                    ]), 
-                                ],style={"width":"240pt", "height":"200pt"}) 
-                            ], className="lab-card"),
-                            dbc.Col([
-                                dbc.Card([
-                                    dbc.CardImg(src="/assets/blind_salamander.svg", className="blind-salamander",),  
-                                    dbc.CardBody([
-                                        html.A("Another Lab", href="", style={"color":"black"}),
-                                    ], style={"color":"black", "justify-content":"center"}), 
-                                ],style={"width":"240pt", "height":"200pt"})
-                            ], className="lab-card"),
-                            dbc.Col([
-                                dbc.Card([
-                                    dbc.CardImg(src="/assets/copopod.svg", className = "copopod"), 
-                                    dbc.CardBody([
-                                        html.A("Another Lab", href="", style={"color":"black"}),
-                                    ]), 
-                                ],style={"width":"240pt", "height":"200pt"})
-                            ], className="lab-card"),
-                            ],className="teams-cards",),
-                    ], className="teams-div")
-            ]),
-        ],className='card-style'),
-       ],className="triage-row"),
-    ], className='card-container', fluid=True),
-    dbc.Row([
-        dbc.Col([
-            html.P("© 2021 TRIAGE")
-        ],className="copyright-col"),
-        dbc.Col([
-            html.P("Follow us on:"),
-        ], className="follow-us"),
-        dbc.Col([
-            html.A(href="https://www.facebook.com/Texas-Research-Institute-for-Aquatic-and-Groundwater-Ecology-104627268475583",
-            children=[
-                html.Img(src="https://img.icons8.com/material-rounded/48/000000/facebook-new.png",className="facebook-icon")]
-            ),
-            html.Img(src="https://img.icons8.com/material-rounded/48/000000/instagram-new.png",className="instagram-icon"),
-            html.Img(src="https://img.icons8.com/material-rounded/48/000000/twitter.png"),
-
-        ], className="social-col")
-    ], className="footer-row")
-], id="page-content", className='content-style')
-projects= html.Div([
-    dbc.Container([
-            dbc.Row([
-                dbc.Col([html.P("T", style={"color":"white", "background-color":"black", "font-size":"22px", "font-weight":"bolder", "border-radius":"100%", "width":"44px", "height":"44px", "text-align":"center", "border":"7px solid #000", "margin-left":"25px"}),], className="small-logo"),
-            html.Ul([
-                html.Li([
-                dbc.NavLink("HOME", href="/", active="exact", style={"color": "black", "border-style":"none", "margin":"10px", "font-size": 20, "background":"white","cursor":"pointer", }),
-                dbc.NavLink("ABOUT", href="/page-1", active="exact", style={"color": "black", "border-style":"none", "margin":"10px", "font-size": 20, "background":"white","cursor":"pointer"}),
-                dbc.NavLink("TEAMS", href="/page-2", active="exact", style={"color": "black", "border-style":"none", "margin":"10px", "font-size": 20, "background":"white","cursor":"pointer"}),
-                dbc.NavLink("PROJECTS", href="/page-3", active="exact", style={"color": "black", "border-style":"none", "margin":"10px", "font-size": 20, "background":"white","cursor":"pointer"}),
-                dbc.NavLink("PUBLICATIONS", href="/page-4", active="exact", style={"color": "black", "border-style":"none", "margin":"10px", "font-size": 20, "background":"white","cursor":"pointer"}),
-                dbc.NavLink("EVENTS", href="/page-5", active="exact", style={"color": "black", "border-style":"none", "margin":"10px", "font-size": 20, "background":"white","cursor":"pointer", "text-align":"right"}),
-            ], className="nav-li"),  
-            ], className="nav-ul"),
-        ],className='tab-row'),
-    ], fluid=True, className="link-container"),
-   dbc.Container([
-       dbc.Row([
-           dbc.Card([
-                html.Div([
-                    html.P(["Projects"],className='card-header'),
-                    ],),
-                dbc.CardBody([
-                    dbc.Row([
-                        dbc.Col([
-                            html.P("Space to highlight projects...")
-                                                ])
-                        ],className="mission-content"),          
-            ]),
-        ],className='card-style'),
-       ],className="triage-row"),
-    ], className='card-container', fluid=True),
-    dbc.Row([
-        dbc.Col([
-            html.P("© 2021 TRIAGE")
-        ],className="copyright-col"),
-        dbc.Col([
-            html.P("Follow us on:"),
-        ], className="follow-us"),
-        dbc.Col([
-            html.A(href="https://www.facebook.com/Texas-Research-Institute-for-Aquatic-and-Groundwater-Ecology-104627268475583",
-            children=[
-                html.Img(src="https://img.icons8.com/material-rounded/48/000000/facebook-new.png",className="facebook-icon")]
-            ),
-            html.Img(src="https://img.icons8.com/material-rounded/48/000000/instagram-new.png",className="instagram-icon"),
-            html.Img(src="https://img.icons8.com/material-rounded/48/000000/twitter.png"),
-
-        ], className="social-col"),
-    ], className="footer-row"),
-], id="page-content", className='content-style')
-publications= html.Div([
-    dbc.Container([
-            dbc.Row([
-                dbc.Col([html.P("T", style={"color":"white", "background-color":"black", "font-size":"22px", "font-weight":"bolder", "border-radius":"100%", "width":"44px", "height":"44px", "text-align":"center", "border":"7px solid #000", "margin-left":"25px"}),], className="small-logo"),
-            html.Ul([
-                html.Li([
-                dbc.NavLink("HOME", href="/", active="exact", style={"color": "black", "border-style":"none", "margin":"10px", "font-size": 20, "background":"white","cursor":"pointer", }),
-                dbc.NavLink("ABOUT", href="/page-1", active="exact", style={"color": "black", "border-style":"none", "margin":"10px", "font-size": 20, "background":"white","cursor":"pointer"}),
-                dbc.NavLink("TEAMS", href="/page-2", active="exact", style={"color": "black", "border-style":"none", "margin":"10px", "font-size": 20, "background":"white","cursor":"pointer"}),
-                dbc.NavLink("PROJECTS", href="/page-3", active="exact", style={"color": "black", "border-style":"none", "margin":"10px", "font-size": 20, "background":"white","cursor":"pointer"}),
-                dbc.NavLink("PUBLICATIONS", href="/page-4", active="exact", style={"color": "black", "border-style":"none", "margin":"10px", "font-size": 20, "background":"white","cursor":"pointer"}),
-                dbc.NavLink("EVENTS", href="/page-5", active="exact", style={"color": "black", "border-style":"none", "margin":"10px", "font-size": 20, "background":"white","cursor":"pointer", "text-align":"right"}),
-            ], className="nav-li"),  
-            ], className="nav-ul"),
-        ],className='tab-row'),
-    ], fluid=True, className="link-container"),
-   dbc.Container([
-       dbc.Row([
-           dbc.Card([
-                html.Div([
-                    html.P(["Publications"],className='card-header'),
-                    ],),
-                dbc.CardBody([
-                    dbc.Row([
-                        dbc.Col([
-                            html.P("Space to highlight publications...")
-                                                ])
-                        ],className="mission-content"),          
-            ]),
-        ],className='card-style'),
-       ],className="triage-row"),
-    ], className='card-container', fluid=True),
-    dbc.Row([
-        dbc.Col([
-            html.P("© 2021 TRIAGE")
-        ],className="copyright-col"),
-        dbc.Col([
-            html.P("Follow us on:"),
-        ], className="follow-us"),
-        dbc.Col([
-            html.A(href="https://www.facebook.com/Texas-Research-Institute-for-Aquatic-and-Groundwater-Ecology-104627268475583",
-            children=[
-                html.Img(src="https://img.icons8.com/material-rounded/48/000000/facebook-new.png",className="facebook-icon")]
-            ),
-            html.Img(src="https://img.icons8.com/material-rounded/48/000000/instagram-new.png",className="instagram-icon"),
-            html.Img(src="https://img.icons8.com/material-rounded/48/000000/twitter.png"),
-
-        ], className="social-col"),
-    ], className="footer-row"),
-], id="page-content", className='content-style')
-
-events=html.Div([
-    dbc.Container([
-            dbc.Row([
-                dbc.Col([html.P("T", style={"color":"white", "background-color":"black", "font-size":"22px", "font-weight":"bolder", "border-radius":"100%", "width":"44px", "height":"44px", "text-align":"center", "border":"7px solid #000", "margin-left":"25px"}),], className="small-logo"),
-            html.Ul([
-                html.Li([
-                dbc.NavLink("HOME", href="/", active="exact", style={"color": "black", "border-style":"none", "margin":"10px", "font-size": 20, "background":"white","cursor":"pointer", }),
-                dbc.NavLink("ABOUT", href="/page-1", active="exact", style={"color": "black", "border-style":"none", "margin":"10px", "font-size": 20, "background":"white","cursor":"pointer"}),
-                dbc.NavLink("TEAMS", href="/page-2", active="exact", style={"color": "black", "border-style":"none", "margin":"10px", "font-size": 20, "background":"white","cursor":"pointer"}),
-                dbc.NavLink("PROJECTS", href="/page-3", active="exact", style={"color": "black", "border-style":"none", "margin":"10px", "font-size": 20, "background":"white","cursor":"pointer"}),
-                dbc.NavLink("PUBLICATIONS", href="/page-4", active="exact", style={"color": "black", "border-style":"none", "margin":"10px", "font-size": 20, "background":"white","cursor":"pointer"}),
-                dbc.NavLink("EVENTS", href="/page-5", active="exact", style={"color": "black", "border-style":"none", "margin":"10px", "font-size": 20, "background":"white","cursor":"pointer", "text-align":"right"}),
-            ], className="nav-li"),  
-            ], className="nav-ul"),
-        ],className='tab-row'),
-    ], fluid=True, className="link-container"),
-   dbc.Container([
-       dbc.Row([
-           dbc.Card([
-                html.Div([
-                    html.P(["Events"],className='card-header'),
-                    ],),
-                dbc.CardBody([
-                    dbc.Row([
-                        dbc.Col([
-                            html.P("Space to highlight events...")
-                                                ])
-                        ],className="mission-content"),          
-            ]),
-        ],className='card-style'),
-       ],className="triage-row"),
-    ], className='card-container', fluid=True),
-    dbc.Row([
-        dbc.Col([
-            html.P("© 2021 TRIAGE")
-        ],className="copyright-col"),
-        dbc.Col([
-            html.P("Follow us on:"),
-        ], className="follow-us"),
-        dbc.Col([
-            html.A(href="https://www.facebook.com/Texas-Research-Institute-for-Aquatic-and-Groundwater-Ecology-104627268475583",
-            children=[
-                html.Img(src="https://img.icons8.com/material-rounded/48/000000/facebook-new.png",className="facebook-icon")]
-            ),
-            html.Img(src="https://img.icons8.com/material-rounded/48/000000/instagram-new.png",className="instagram-icon"),
-            html.Img(src="https://img.icons8.com/material-rounded/48/000000/twitter.png"),
-
-        ], className="social-col"),
-    ], className="footer-row"),
-], id="page-content", className='content-style')
-
-# def _content():
-#     heading=content
-#     return heading
-# def _mission():
-#     heading=mission
-#     return heading 
-# def _teams():
-#     heading=teams
-#     return heading
-# def _projects():
-#     heading=projects
-#     return heading 
-# def _publications():
-#     heading=publications
-#     return heading
-# def _events():
-#     heading = events
-#     return heading 
+                            ]),
+                    ], style={"align-items":"center"}),
+                ] +    
+                                  [html.Br()]*50 +
+                [html.P("Projects", id="mid3")] +
+                                  [html.Br()]*50 +
+                [html.P("Publications", id="end")]
+                                 ),
+    id="page-content", style=CONTENT_STYLE)
 
 
-def Dashboard():
-    layout= html.Div([
-    dcc.Location(id="url"), 
-    content, 
-    ])
-    return layout
 
-app = dash.Dash(__name__, suppress_callback_exceptions=True, external_stylesheets=[dbc.themes.SANDSTONE])
+
+app = dash.Dash( __name__, meta_tags=[
+        {"name": "viewport", "content": "width=device-width, initial-scale=1"}], suppress_callback_exceptions=True, external_stylesheets=[dbc.themes.SANDSTONE], )
 server = app.server
-app.layout = Dashboard()
+app.layout = html.Div([sidebar, content])
 
-@app.callback(Output("page-content", "children"), [Input("url", "pathname")])
-def render_page_content(pathname):
-    if pathname == "/":
-        return content
-    elif pathname == "/page-1":
-        return mission
-    elif pathname == "/page-2":
-        return teams
-    elif pathname == "/page-3":
-        return projects
-    elif pathname == "/page-4":
-        return publications
-    elif pathname == "/page-5":
-        return events
 
 if __name__ == "__main__":
     app.run_server(debug=True)
