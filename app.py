@@ -56,7 +56,7 @@ IMG_STYLE = {
 
 sidebar = html.Div([
     dbc.Row([
-        dbc.Col([html.P("T", style={"color":"black", "background-color":"white", "font-size":"22px", "font-weight":"bolder", "border-radius":"100%", "width":"44px", "height":"44px", "text-align":"center", "border":"7px solid #000", "margin-top":"0rem",}),]),
+        dbc.Col([],),
          ]),
     dbc.Row([
             dbc.Col([html.H2("TRIAGE", style={"font-size":"25pt", "color":"white", }),], style={"justify-content": "left",}),
@@ -73,7 +73,7 @@ sidebar = html.Div([
                 dbc.NavLink("Projects", style={"color":"white", "font-size":"12pt"}, href="#mid3",external_link=True),
                 dbc.NavLink("Publications", style={"color":"white", "font-size":"12pt"}, href="#end",external_link=True),
                 # html.P('Developed by: Bianca A. Hernandez', style={"font-size": "8pt", "margin-top":"28rem", "text-align":"center"}),
-                
+                html.P("T", style={"color":"black", "background-color":"white", "font-size":"22px", "font-weight":"bolder", "border-radius":"100%", "width":"44px", "height":"44px", "margin-top":"25.5rem", "text-align":"center", "border":"7px solid #000",})
                 
         ],
             vertical=True,
