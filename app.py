@@ -72,6 +72,7 @@ IMG_STYLE = {
 
 CARD_STYLE = {
     "display": "block",
+    "margin-left":"3rem",
     "justify-content":"center",
     "vertical-align":"middle",
     "width":"200pt", 
