@@ -11,6 +11,27 @@
     /* #this fucking sucks */
 }
 
+.SIDEBAR_LINKS {
+  color: white; 
+  font-weight: bold;
+  font-size: 12pt;
+}
+
+.MINI_LOGO {
+  color: black; 
+  background-color: white; 
+  font-size: 22px; 
+  font-weight: bolder; 
+  border-radius: 100%; 
+  width: 44px; 
+  height: 44px; 
+  bottom: 0; 
+  position: fixed; 
+  margin-left: 3rem; 
+  text-align: center; 
+  border: 7px solid #000
+}
+
 @media screen and (max-width: 400px) {
   .SIDEBAR_STYLE {
     width: 100%;
@@ -19,6 +40,61 @@
   }
   .SIDEBAR_STYLE a {float: left;}
 }
+
+.CONTENT_STYLE {
+  position:static;
+  margin-left: 13rem;
+  margin-right: 1rem;
+  padding: 2rem 1rem;
+  color: black;  
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 100%
+}
+
+.HEADER_STYLE {
+  font-weight: bold; 
+  font-size: 28pt; 
+  padding: 1rem
+}
+
+.CARD_ROW {
+    
+  display:flexbox; 
+  padding:1rem;
+  margin:0 auto; 
+  text-align: center; 
+  row-gap: 2rem;
+  object-fit: cover;
+  justify-items: center
+
+}
+
+.CARD_STYLE  {
+  display: block;
+  justify-content: center;
+  vertical-align: middle;
+  width: 200pt; 
+  height: 160pt;
+
+}
+
+.IMG_STYLE {
+  margin-top: 1rem;
+  color: black; 
+  width: 160pt; 
+  height: 120; 
+}
+
+.FOOTER_STYLE {
+  display:flexbox; 
+  bottom:0;
+  position:sticky; 
+  width:100%;
+  justify-content:right
+  
+  }
 /* 
 /* On screens that are less than 400px, display the bar vertically, instead of horizontally */
 @media screen and (max-width: 400px) {
@@ -28,8 +104,10 @@
 } */
 
 
-.card-cols{
-  justify-content: center;
+/* .card-cols{
+  display:inline-block;
+  vertical-align: middle;
+  float: none;
 }
 
 @media screen and (max-width: 600px) {
@@ -38,4 +116,4 @@
     display: block;
     margin-bottom: 20px;
   }
-}
+} */
