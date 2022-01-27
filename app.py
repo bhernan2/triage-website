@@ -124,7 +124,7 @@ content = html.Div(
                     html.P("A cooperative research group centered at Texas State University that examines basic and applied ecological questions in aquatic and groundwater systems.", style={"font-size":"18pt","text-align":"justify", "padding": "2rem 1rem",}),
                     ]),
                 ] +
-                [html.Br()]*50 + 
+                # [html.Br()]*50 + 
                 [dbc.Row([
                     html.P("Mission & Goals", id="about", style=HEADER_STYLE),
                   ], style={"justify-content":"center"}),
@@ -221,7 +221,7 @@ content = html.Div(
                                     html.Img(src="https://img.icons8.com/material-rounded/48/000000/instagram-new.png",style={"margin-bottom":"1rem"}),
                                     html.Img(src="https://img.icons8.com/material-rounded/48/000000/twitter.png", style={"margin-bottom":"1rem"}),
                 ], style= {"display":"flexbox", "bottom":"0", "position":"sticky", "width":"100%","justify-content":"right"})
-                ]      
+                ], style = {"overflow-y":"hidden"}      
                                  ),
     id="page-content", className="CONTENT_STYLE",)
 
