@@ -17,7 +17,7 @@ import numpy as np
 from datetime import datetime
 
 content = html.Div([
-    html.Br(),
+    # html.Br(),
     dbc.Container([
         dbc.Row([
             dbc.NavLink("HOME", href="/", active="exact", style={"color": "black", "border-style":"none", "margin":"10px", "font-size": 20, "background":"white","cursor":"pointer"}),
@@ -34,10 +34,11 @@ content = html.Div([
         #     dbc.Button("PUBLICATIONS", id="tab-5", style={"color": "black", "border-style":"none", "margin":"10px", "font-size": 20, "background":"white","cursor":"pointer"}),
         #     dbc.Button("EVENTS", id="tab-6", style={"color": "black", "border-style":"none", "margin":"10px", "font-size": 20, "background":"white","cursor":"pointer"}),
         # ],className="buttons", id="tabs"),
-    ],className='tab-row'),
+    ],className='tab-row', justified=True),
     ], className="button-container"),
    dbc.Container([
-        dbc.Card([
+       dbc.Row([
+           dbc.Card([
                 dbc.Row([
                 html.Div([
                     html.P(["Welcome to TRIAGE"],),
@@ -47,36 +48,27 @@ content = html.Div([
                 html.Div([
                     dbc.Row([
                         dbc.Col([
-                            dbc.Row([
-                                    dbc.CardImg(src="/assets/mayfly.gif",className='left-fly-col'),
-                                    ]),
+                            dbc.CardImg(src="/assets/mayfly.gif",className="mayfly-col" )
                         ]),
                         dbc.Col([
-                            dbc.Row([html.P('T',style={"color": "black", "font-size": 50, "font-weight":"bolder", "margin-top": "0rem"}),html.P('exas', style={"color": "black", "font-size": 30, "font-weight":"normal", "margin-top": "1.1rem",} ),]),
-                            dbc.Row([html.P('R',style={"color": "black", "font-size": 50, "font-weight":"bolder","margin-top": "0rem"}),html.P('esearch', style={"color": "black", "font-size": 30, "font-weight":"normal","margin-top": "1.1rem"} ),]),
-                            dbc.Row([html.P('I',style={"color": "black", "font-size": 50, "font-weight":"bolder","margin-top": "0rem"}),html.P('nstitute for', style={"color": "black", "font-size": 30, "font-weight":"normal","margin-top": "1.1rem"} ),]),
-                            dbc.Row([html.P('A',style={"color": "black", "font-size": 50, "font-weight":"bolder","margin-top": "0rem"}),html.P('quatic &', style={"color": "black", "font-size": 30, "font-weight":"normal","margin-top": "1.1rem"} ),]),
-                            dbc.Row([html.P('G',style={"color": "black", "font-size": 50, "font-weight":"bolder","margin-top": "0rem"}),html.P('roundwater', style={"color": "black", "font-size": 30, "font-weight":"normal","margin-top": "1rem"} ),]),
-                            dbc.Row([html.P('E',style={"color": "black", "font-size": 50, "font-weight":"bolder","margin-top": "0rem"}),html.P('cology', style={"color": "black", "font-size": 30, "font-weight":"normal","margin-top": "1.2rem"} ),]),
+                            dbc.Row([html.P('T',style={"color": "black", "font-size": 40, "font-weight":"bolder", "margin-top": "0rem"}),html.P('exas', style={"color": "black", "font-size": 20, "font-weight":"normal", "margin-top": "1.1rem",} ),]),
+                            dbc.Row([html.P('R',style={"color": "black", "font-size": 40, "font-weight":"bolder","margin-top": "0rem"}),html.P('esearch', style={"color": "black", "font-size": 20, "font-weight":"normal","margin-top": "1.1rem"} ),]),
+                            dbc.Row([html.P('I',style={"color": "black", "font-size": 40, "font-weight":"bolder","margin-top": "0rem"}),html.P('nstitute for', style={"color": "black", "font-size": 20, "font-weight":"normal","margin-top": "1.1rem"} ),]),
+                            dbc.Row([html.P('A',style={"color": "black", "font-size": 40, "font-weight":"bolder","margin-top": "0rem"}),html.P('quatic &', style={"color": "black", "font-size": 20, "font-weight":"normal","margin-top": "1.1rem"} ),]),
+                            dbc.Row([html.P('G',style={"color": "black", "font-size": 40, "font-weight":"bolder","margin-top": "0rem"}),html.P('roundwater', style={"color": "black", "font-size": 20, "font-weight":"normal","margin-top": "1rem"} ),]),
+                            dbc.Row([html.P('E',style={"color": "black", "font-size": 40, "font-weight":"bolder","margin-top": "0rem"}),html.P('cology', style={"color": "black", "font-size": 20, "font-weight":"normal","margin-top": "1.2rem"} ),]),
                             ], className='triage-col'),
+                        ],className="welcome-box")
+                    ]),
                         dbc.Col([
-                            dbc.Row([
-                                    dbc.CardImg(src="/assets/mayfly.gif",className="right-fly-col" )
-                                    ]),
-                            ],),
-                        ],)
-                    ],),
-                        dbc.Row([
-                            dbc.Col([
-                                html.P("We are a cooperative research group centered at Texas State University that examines basic and applied ecological questions in aquatic and groundwater systems.",),
+                            html.P("We are a cooperative research group centered at Texas State University that examines basic and applied ecological questions in aquatic and groundwater systems.",),
                                 
                             ], className='welcome-col3')
-                          
-                        ]),
             
             ], className="teams-content"),
         ],className='card-style'),
-    ], className='card-container', fluid=True,),
+       ])
+    ], className='card-container',),
     
 ], id="page-content", className='content-style')
 
@@ -281,6 +273,9 @@ events=html.Div([
     ], className='card-container', fluid=True,),
 ], id="page-content", className='content-style')
 footer = dbc.Row([
+        dbc.Col([
+            html.P("Created by: Bianca A. Hernandez"),
+        ], className="signature"),
         dbc.Col([
             html.P("© 2021 TRIAGE")
         ],className="copyright-col"),
